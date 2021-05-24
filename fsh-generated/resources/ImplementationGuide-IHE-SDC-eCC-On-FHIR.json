@@ -1,0 +1,54 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "IHE-SDC-eCC-On-FHIR",
+  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/IHE-SDC-eCC-On-FHIR",
+  "version": "0.1.0",
+  "name": "IHESDCeCCOnFHIR",
+  "status": "draft",
+  "packageId": "IHE-SDC-eCC-On-FHIR",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-DiagnosticReport"
+        },
+        "name": "IHE SDC/eCC on FHIR DiagnosticReport",
+        "description": "A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/eCCDiagnosticReport0"
+        },
+        "name": "eCC Diagnostic Report",
+        "description": "Example eCC Diagnostic report ",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
