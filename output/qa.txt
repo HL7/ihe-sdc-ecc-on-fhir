@@ -1,13 +1,14 @@
 ﻿IHESDCeCCOnFHIR : Validation Results
 =========================================
 
-err = 2, warn = 2, info = 2
+err = 4, warn = 2, info = 3
 IG Publisher Version: 1.1.76
-Generated Tue Jun 29 11:05:05 EDT 2021. FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = http://bhl7.org/fhir/ihe-sdc-on-fhir)
+Generated Tue Jun 29 17:17:44 EDT 2021. FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = http://bhl7.org/fhir/ihe-sdc-on-fhir)
 
- Build Errors : 36 / 0 / 0
+ Build Errors : 43 / 0 / 0
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR : 0 / 0 / 1
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/observation-SDCeCCObservationCodeEx : 2 / 0 / 3
+ /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/observation-SDCeCCObservationTextEx : 2 / 0 / 2
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-DiagnosticReport : 0 / 1 / 1
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-DocumentReference : 0 / 1 / 1
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation : 0 / 0 / 1
@@ -20,6 +21,13 @@ ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SD
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationCodeEx.json.html#/html/body/div/div/div/p/a at Line 251, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationCodeEx.ttl.html#/html/body/div/div/div/p/a at Line 257, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationCodeEx.xml.html#/html/body/div/div/div/p/a at Line 240, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 257: The link 'bibata-amadou' for "bibata-amadou" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 358: The link 'pathpract1' for "pathpract1" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/p/a at Line 192, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.json.html#/html/body/div/div/div/p/a at Line 243, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.ttl.html#/html/body/div/div/div/p/a at Line 251, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/Observation-SDCeCCObservationTextEx.xml.html#/html/body/div/div/div/p/a at Line 234, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-definitions.html#/html/body/div/div/div/p/a at Line 590, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-examples.html#/html/body/div/div/div/p/a at Line 239, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-mappings.html#/html/body/div/div/div/p/a at Line 317, column 28: The link '' for "" cannot be resolved
@@ -37,16 +45,16 @@ ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefin
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.ttl.html#/html/body/div/div/div/p/a at Line 2391, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.xml.html#/html/body/div/div/div/p/a at Line 2494, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation-definitions.html#/html/body/div/div/div/p/a at Line 802, column 28: The link '' for "" cannot be resolved
-ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation-examples.html#/html/body/div/div/div/p/a at Line 260, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation-examples.html#/html/body/div/div/div/p/a at Line 266, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation-mappings.html#/html/body/div/div/div/p/a at Line 407, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation.html#/html/body/div/div/div/p/a at Line 875, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation.profile.history.html#/html/body/div/div/div/p/a at Line 238, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation.profile.json.html#/html/body/div/div/div/p/a at Line 2986, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation.profile.ttl.html#/html/body/div/div/div/p/a at Line 2668, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/StructureDefinition-ihe-sdc-ecc-Observation.profile.xml.html#/html/body/div/div/div/p/a at Line 2749, column 28: The link '' for "" cannot be resolved
-ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/artifacts.html#/html/body/div/div/div/p/a at Line 222, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/artifacts.html#/html/body/div/div/div/p/a at Line 231, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/dataextraction.html#/html/body/div/div/div/p/a at Line 183, column 28: The link '' for "" cannot be resolved
-ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/index.html#/html/body/div/div/div/p/a at Line 204, column 28: The link '' for "" cannot be resolved
+ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/index.html#/html/body/div/div/div/p/a at Line 207, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/terminology.html#/html/body/div/div/div/p/a at Line 162, column 28: The link '' for "" cannot be resolved
 ERROR: /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/output/toc.html#/html/body/div/div/div/p/a at Line 143, column 28: The link '' for "" cannot be resolved
 == /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR.json ==
@@ -55,6 +63,10 @@ INFORMATION: Observation/SDCeCCObservationCodeEx: Observation.code.coding[0]: Co
 ERROR: Observation/SDCeCCObservationCodeEx: Observation.subject: Unable to resolve resource 'bibata-amadou'
 ERROR: Observation/SDCeCCObservationCodeEx: Observation.performer[0]: Unable to resolve resource 'pathpract1'
 INFORMATION: Observation/SDCeCCObservationCodeEx: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated
+== /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationTextEx.json ==
+INFORMATION: Observation/SDCeCCObservationTextEx: Observation.code.coding[0]: Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated
+ERROR: Observation/SDCeCCObservationTextEx: Observation.subject: Unable to resolve resource 'bibata-amadou'
+ERROR: Observation/SDCeCCObservationTextEx: Observation.performer[0]: Unable to resolve resource 'pathpract1'
 == /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.json ==
 WARNING: StructureDefinition.where(url = 'http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport'): The Implementation Guide contains no examples for this profile
 == /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DocumentReference.json ==

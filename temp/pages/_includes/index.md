@@ -38,3 +38,6 @@ Metadata
 
 ## Transport of the IHE SDC Forms within FHIR
 A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form shall be Base64 encoded and included for transport much like a CDA document or PDF might be.
+
+## Must Support
+The elements labelled Must Support in this guide should be sent if available. If they are unavailable, refer to cardinality of the element. For implementers using these resources if the data is unavailable they do not need to include the element. 

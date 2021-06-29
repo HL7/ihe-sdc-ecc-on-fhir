@@ -42,6 +42,14 @@
         "name": "SDCeCCObservationCodeEx",
         "description": "Example Observation using codes from SDC",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/SDCeCCObservationTextEx"
+        },
+        "name": "SDCeCCObservationTextEx",
+        "description": "Example Observation using text fill in from SDC",
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       }
     ],
     "page": {
