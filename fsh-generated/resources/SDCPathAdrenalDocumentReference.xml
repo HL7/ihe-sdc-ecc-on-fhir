@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentReference xmlns="http://hl7.org/fhir">
+    <masterIdentifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI"/>
+    </masterIdentifier>
+    <!-- ID for this resource appended FormID.FormInstanceVersionURI -->
+    <identifier>
+        <value value="Adrenal.Bx.Res.129"/>
+    </identifier>
+    <!-- Matches SDC Lineage -->
+    <identifier>
+        <value value="3.002.011.RC1"/>
+    </identifier>
+    <!-- Matches SDC form Version -->
+    <identifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1"/>
+    </identifier>
+    <!-- Matches SDC FormID; should be unique to this Form -->
+    <identifier>
+        <value value="1223456"/>
+    </identifier>
+    <!-- Matches SDC FormInstanceURI -->
+    <status value="current"/>
+    <docStatus value="final"/>
+    <!-- Must use FHIR statuses for docStatus -->
+    <subject>
+        <reference value="Patient/bibata.amidou@chudequebec.ca"/>
+        <display value="Bibata Amidou"/>
+    </subject>
+    <date value="2018-12-24T09:43:41+11:00"/>
+    <author>
+        <reference value="Practitioner/f202"/>
+        <display value="Luigi Maas"/>
+    </author>
+    <content>
+        <attachment>
+            <contentType value="application/xml"/>
+            <language value="en-US"/>
+            <!-- likely en-US or en-CA --> 
+            <url value="https://devsdt.cap.org/SDCApp/submissiongethtml.aspx?transaction_id=1228"/>
+        </attachment>
+    </content>
+    <context>
+        <related>
+            <reference value="Observation/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324"/>
+        </related>
+        <related>
+            <reference value="Observation/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271"/>
+        </related>
+    </context>
+</DocumentReference>

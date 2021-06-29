@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ihe-sdc-ecc-DocumentReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Documents"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference",
+  "version": "0.1.0",
+  "name": "DocumentReferenceSDCeCC",
+  "title": "IHE SDC/eCC on FHIR DocumentReference",
+  "status": "active",
+  "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "fhircomposition",
+      "uri": "http://hl7.org/fhir/composition",
+      "name": "FHIR Composition"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "xds",
+      "uri": "http://ihe.net/xds",
+      "name": "XDS metadata equivalent"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.masterIdentifier",
+        "path": "DocumentReference.masterIdentifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.relatesTo",
+        "path": "DocumentReference.relatesTo",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.securityLabel",
+        "path": "DocumentReference.securityLabel",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "mustSupport": true
+      }
+    ]
+  }
+}

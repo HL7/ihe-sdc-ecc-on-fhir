@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <identifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157"/>
+        <!-- FormID.FormInstanceVersionURI.QuestionID should be included here -->
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://cap.org"/>
+            <!-- For multiselect questions include the QuestionID-->
+            <code value="2157"/>
+            <display value="Cannot Be Assessed"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/bibata.amidou@chudequebec.ca"/>
+        <display value="Bibata Amidou"/>
+    </subject>
+    <issued value="2018-12-24T09:43:41+11:00"/>
+    <performer>
+        <reference value="Practitioner/f202"/>
+        <display value="Luigi Maas"/>
+    </performer>
+    <valueString value="Tumor sample was insufficient"/>
+    <derivedFrom>
+        <reference
+            value="DocumentReference/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI"/>
+        <!-- referencing Document Reference to SDC Form -->
+    </derivedFrom>
+    <derivedFrom>
+        <reference
+            value="Observation/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2153"/>
+        <!-- referencing any child questions of this observations - creating members to parents can be optional due to complexity -->
+    </derivedFrom>
+</Observation>
+

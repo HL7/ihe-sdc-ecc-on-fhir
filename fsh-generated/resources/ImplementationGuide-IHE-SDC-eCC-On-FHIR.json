@@ -21,6 +21,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-DocumentReference"
+        },
+        "name": "IHE SDC/eCC on FHIR DocumentReference",
+        "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation",
+        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/eCCDiagnosticReport0"
         },
         "name": "eCC Diagnostic Report",
@@ -36,6 +52,16 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "dataextraction.html",
+          "title": "Dataextraction",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
           "generation": "markdown"
         }
       ]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <identifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271"/>
+        <!-- check if FormInstanceVersionURI already includes the FormID -->
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://CAP.org"/>
+            <code value="56271"/>
+            <display value="Tumor invades into other adjacent organ(s)"/>
+        </coding>
+    </code>
+    <!-- For multiselect questions include the QuestionID in the code-->
+    <subject>
+        <reference value="Patient/bibata.amidou@chudequebec.ca"/>
+        <display value="Bibata Amidou"/>
+    </subject>
+    <issued value="2018-12-24T09:43:41+11:00"/>
+    <performer>
+        <reference value="Practitioner/f202"/>
+        <display value="Luigi Maas"/>
+    </performer>
+    <component>
+        <!-- can we have multiple body sites in the codings for bodysite -->
+        <code>
+            <coding>
+                <system value="https://CAP.org"/>
+                <!-- Should we specify that this is a answer code? -->
+                <code value="41409"/>
+                <display value="Liver"/>
+            </coding>
+        </code>
+    </component>
+    <component>
+        <!-- can we have multiple body sites in the codings for bodysite -->
+        <code>
+            <coding>
+                <system value="https://CAP.org"/>
+                <!-- Should we specify that this is a answer code? -->
+                <code value="56752"/>
+                <display value="Kidney"/>
+            </coding>
+        </code>
+    </component>
+    <derivedFrom>
+        <reference
+            value="DocumentReference/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI"/>
+        <!-- referencing Document Reference to SDC Form -->
+    </derivedFrom>
+    <!-- can we use Component for a multi-select question with several answers?--> 
+    <derivedFrom>
+        <reference
+            value="Observation/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.51265"/>
+        <!-- referencing any child questions of this observations - creating members to parents can be optional due to complexity -->
+    </derivedFrom>
+</Observation>
+
