@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "SDCeCCObservationCodeEx",
+  "meta": {
+    "profile": [
+      "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "code": "ACSN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Accession ID"
+          }
+        ]
+      },
+      "system": "http://hospital.example.org",
+      "value": "SDCeCCObservationCodeEx0"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "56271",
+        "system": "http://cap.org/eCC",
+        "display": "Tumor invades into other adjacent organ(s)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "bibata-amadou"
+  },
+  "effectiveDateTime": "2021-05-11",
+  "performer": [
+    {
+      "reference": "pathpract1"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "56752",
+        "system": "http://cap.org/eCC",
+        "display": "Kidney"
+      }
+    ]
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/IHE-SDC-eCC-On-FHIR",
-  "name": "IHESDCeCCOnFHIR",
-  "package-id": "IHE-SDC-eCC-On-FHIR",
-  "ig-ver": "0.1.0",
-  "date": "Mon, 28 Jun, 2021 13:33:07 -0400",
-  "version": "4.0.1",
-  "tool": "4.6.0 (3)"
-}

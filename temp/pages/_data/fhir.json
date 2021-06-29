@@ -1,0 +1,30 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir",
+  "igId": "IHE-SDC-eCC-On-FHIR",
+  "igName": "IHESDCeCCOnFHIR",
+  "packageId": "IHE-SDC-eCC-On-FHIR",
+  "igVer": "0.1.0",
+  "errorCount": 2,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.6.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.6.0 (3)",
+  "totalFiles": 5,
+  "processedFiles": 14,
+  "genDate": "Tue, Jun 29, 2021 11:04-0400",
+  "genDay": "29/06/2021",
+  "ig": {
+    "id": "IHE-SDC-eCC-On-FHIR",
+    "name": "IHESDCeCCOnFHIR",
+    "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/IHE-SDC-eCC-On-FHIR",
+    "version": "0.1.0",
+    "status": "draft",
+    "experimental": false,
+    "gitstatus": "main",
+    "date": "2021-06-29T11:04:46-04:00",
+    "fhirVersion": "4.0.1"
+  }
+}

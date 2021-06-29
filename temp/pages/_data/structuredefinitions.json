@@ -1,0 +1,50 @@
+{
+  "ihe-sdc-ecc-DiagnosticReport": {
+    "index": 0,
+    "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport",
+    "name": "DiagnosticReportSDCeCC",
+    "path": "StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html",
+    "kind": "resource",
+    "type": "DiagnosticReport",
+    "base": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+    "basename": "DiagnosticReport",
+    "basepath": "http://hl7.org/fhir/R4/diagnosticreport.html",
+    "status": "active",
+    "date": "Tue Jun 29 11:04:46 EDT 2021",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form"
+  },
+  "ihe-sdc-ecc-DocumentReference": {
+    "index": 1,
+    "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference",
+    "name": "DocumentReferenceSDCeCC",
+    "path": "StructureDefinition-ihe-sdc-ecc-DocumentReference.html",
+    "kind": "resource",
+    "type": "DocumentReference",
+    "base": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+    "basename": "DocumentReference",
+    "basepath": "http://hl7.org/fhir/R4/documentreference.html",
+    "status": "active",
+    "date": "Tue Jun 29 11:04:46 EDT 2021",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank"
+  },
+  "ihe-sdc-ecc-Observation": {
+    "index": 2,
+    "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation",
+    "name": "ObservationSDCeCC",
+    "path": "StructureDefinition-ihe-sdc-ecc-Observation.html",
+    "kind": "resource",
+    "type": "Observation",
+    "base": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "basename": "Observation",
+    "basepath": "http://hl7.org/fhir/R4/observation.html",
+    "status": "active",
+    "date": "Tue Jun 29 11:04:46 EDT 2021",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"
+  }
+}
