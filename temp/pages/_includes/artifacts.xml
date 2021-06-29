@@ -67,6 +67,14 @@
                <td>{% capture desc %}Example Observation using codes from SDC{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-SDCeCCObservationTextEx.html"
+                     title="Observation/SDCeCCObservationTextEx">SDCeCCObservationTextEx</a>
+               </td>
+               <td>{% capture desc %}Example Observation using text fill in from SDC{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
          </tbody>
       </table>
    </p>

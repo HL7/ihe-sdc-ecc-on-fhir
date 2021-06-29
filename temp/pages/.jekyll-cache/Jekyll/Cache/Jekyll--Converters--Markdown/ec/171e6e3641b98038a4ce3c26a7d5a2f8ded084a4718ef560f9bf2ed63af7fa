@@ -1,0 +1,54 @@
+I"K<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="ihe-sdc-ecc-on-fhir">IHE-SDC-eCC-On-FHIR</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>IHE Structured Data Capture (SDC) on FHIR uses a form driven workflow to capture and encode data by creating FHIR Observations from the captured data. The primary use case for this implementation guide is point of care reporting for clinicians using structured forms to capture high quality data for care and reporting purposes. Structured data can enable easier auto-population of future medical documents, easily queriable data, and high quality reporting for quality measurement and evaluation, and research.</p>
+
+<p>The SDC initiative was established by the ONC in 2013 to develop two implementation guides:</p>
+<ul>
+  <li><a href="https://wiki.ihe.net/index.php/Structured_Data_Capture">IHE SDC Technical Framework</a></li>
+  <li><a href="http://hl7.org/fhir/us/sdc/">HL7 FHIR SDC Profile</a>
+˜
+On March 30, 2017 both initiatives transitioned into community led projects focused on data capture. The ideal scenario is that data captured in any manner can exist in FHIR for maximum interoperability.  Both initiatives focus on improving data capture within healthcare. The CAP has already developed and implemented IHE SDC for their collection of <a href="https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC">electronic Cancer Checklists (eCCs)</a>, and being able to extract data from these cancer checklists to create FHIR Observations will enhance interoperability.</li>
+</ul>
+
+<h2 id="fhir-version">FHIR Version</h2>
+<p>This FHIR implementation guide is based on FHIR R4.</p>
+
+<h2 id="purpose">Purpose</h2>
+<p>This implementation guide specifies a pattern of use for IHE SDC with applicable FHIR resource to enable use of data captured from IHE SDC forms within FHIR. 
+This guide supports:</p>
+<ul>
+  <li>Creation of structured data in FHIR</li>
+  <li>Use of that data</li>
+</ul>
+
+<h2 id="common-use-cases">Common use cases</h2>
+<p>Use cases for IHE SDC/eCC  on FHIR include:</p>
+<ul>
+  <li>Public health reporting (e.g. Cancer Registry reporting)</li>
+  <li>Quality measurement and evaluation</li>
+  <li>Clinical guideline concordance evaluation</li>
+  <li>Auto-population of future forms</li>
+</ul>
+
+<h2 id="scope">Scope</h2>
+<p>This implementation guide establishes a pattern for how to transport IHE SDC forms using FHIR DocumentReference, and DiagnosticReport, and how to extract data from IHE SDC forms to FHIR Resources, namely Observations.</p>
+
+<h2 id="audience">Audience</h2>
+<p>This implementation guide is intended for those Form designers, systems developers and integrators, and clinical informaticists. The audiences for this implementation guide should consider how IHE SDC forms and data may be used within FHIR.</p>
+
+<h2 id="sdc-form-structure">SDC Form Structure</h2>
+<p>IDs
+Question Answer Sets (QAS)<br />
+Metadata</p>
+
+<h2 id="transport-of-the-ihe-sdc-forms-within-fhir">Transport of the IHE SDC Forms within FHIR</h2>
+<p>A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form shall be Base64 encoded and included for transport much like a CDA document or PDF might be.</p>
+
+<h2 id="must-support">Must Support</h2>
+<p>The elements labelled Must Support in this guide should be sent if available. If they are unavailable, refer to cardinality of the element. For implementers using these resources if the data is unavailable they do not need to include the element.</p>
+:ET

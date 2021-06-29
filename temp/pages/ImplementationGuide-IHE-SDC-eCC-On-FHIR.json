@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "IHESDCeCCOnFHIR",
   "status": "draft",
-  "date": "2021-06-29T11:04:46-04:00",
+  "date": "2021-06-29T17:17:25-04:00",
   "packageId": "IHE-SDC-eCC-On-FHIR",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -320,6 +320,20 @@
         },
         "name": "SDCeCCObservationCodeEx",
         "description": "Example Observation using codes from SDC",
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/SDCeCCObservationTextEx"
+        },
+        "name": "SDCeCCObservationTextEx",
+        "description": "Example Observation using text fill in from SDC",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       }
     ],
