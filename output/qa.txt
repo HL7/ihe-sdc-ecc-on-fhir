@@ -3,7 +3,7 @@
 
 err = 4, warn = 2, info = 3
 IG Publisher Version: 1.1.76
-Generated Tue Jun 29 17:17:44 EDT 2021. FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = http://bhl7.org/fhir/ihe-sdc-on-fhir)
+Generated Tue Jun 29 19:34:55 EDT 2021. FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = http://bhl7.org/fhir/ihe-sdc-on-fhir)
 
  Build Errors : 43 / 0 / 0
  /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR : 0 / 0 / 1

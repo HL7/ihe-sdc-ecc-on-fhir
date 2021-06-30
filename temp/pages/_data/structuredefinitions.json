@@ -10,7 +10,7 @@
     "basename": "DiagnosticReport",
     "basepath": "http://hl7.org/fhir/R4/diagnosticreport.html",
     "status": "active",
-    "date": "Tue Jun 29 17:17:25 EDT 2021",
+    "date": "Tue Jun 29 19:34:35 EDT 2021",
     "abstract": false,
     "derivation": "constraint",
     "description": "A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form"
@@ -26,7 +26,7 @@
     "basename": "DocumentReference",
     "basepath": "http://hl7.org/fhir/R4/documentreference.html",
     "status": "active",
-    "date": "Tue Jun 29 17:17:25 EDT 2021",
+    "date": "Tue Jun 29 19:34:35 EDT 2021",
     "abstract": false,
     "derivation": "constraint",
     "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank"
@@ -42,7 +42,7 @@
     "basename": "Observation",
     "basepath": "http://hl7.org/fhir/R4/observation.html",
     "status": "active",
-    "date": "Tue Jun 29 17:17:25 EDT 2021",
+    "date": "Tue Jun 29 19:34:35 EDT 2021",
     "abstract": false,
     "derivation": "constraint",
     "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"

@@ -6,7 +6,7 @@
     "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/IHE-SDC-eCC-On-FHIR",
     "name": "IHESDCeCCOnFHIR",
     "version": "0.1.0",
-    "date": "2021-06-29T17:17:25-04:00",
+    "date": "2021-06-29T19:34:35-04:00",
     "status": {
       "class": "colsd",
       "status": "Draft"
@@ -20,7 +20,7 @@
     "name": "DiagnosticReportSDCeCC",
     "title": "IHE SDC/eCC on FHIR DiagnosticReport",
     "version": "0.1.0",
-    "date": "2021-06-29T17:17:25-04:00",
+    "date": "2021-06-29T19:34:35-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -34,7 +34,7 @@
     "name": "DocumentReferenceSDCeCC",
     "title": "IHE SDC/eCC on FHIR DocumentReference",
     "version": "0.1.0",
-    "date": "2021-06-29T17:17:25-04:00",
+    "date": "2021-06-29T19:34:35-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -48,7 +48,7 @@
     "name": "ObservationSDCeCC",
     "title": "IHE SDC/eCC on FHIR Observation",
     "version": "0.1.0",
-    "date": "2021-06-29T17:17:25-04:00",
+    "date": "2021-06-29T19:34:35-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
