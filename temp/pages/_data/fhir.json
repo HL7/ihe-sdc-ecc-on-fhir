@@ -14,8 +14,8 @@
   "toolingVersionFull": "4.6.0 (3)",
   "totalFiles": 6,
   "processedFiles": 15,
-  "genDate": "Tue, Jun 29, 2021 19:34-0400",
-  "genDay": "29/06/2021",
+  "genDate": "Thu, Jul 1, 2021 11:22-0400",
+  "genDay": "01/07/2021",
   "ig": {
     "id": "IHE-SDC-eCC-On-FHIR",
     "name": "IHESDCeCCOnFHIR",
@@ -24,7 +24,7 @@
     "status": "draft",
     "experimental": false,
     "gitstatus": "master",
-    "date": "2021-06-29T19:34:35-04:00",
+    "date": "2021-07-01T11:22:19-04:00",
     "fhirVersion": "4.0.1"
   }
 }

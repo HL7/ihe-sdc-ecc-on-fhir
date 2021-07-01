@@ -13,7 +13,7 @@
    <version value="0.1.0"/>
    <name value="IHESDCeCCOnFHIR"/>
    <status value="draft"/>
-   <date value="2021-06-29T19:34:35-04:00"/>
+   <date value="2021-07-01T11:22:19-04:00"/>
    <packageId value="IHE-SDC-eCC-On-FHIR"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>

@@ -170,9 +170,9 @@ This guide supports:</p>
 <p>This implementation guide is intended for those Form designers, systems developers and integrators, and clinical informaticists. The audiences for this implementation guide should consider how IHE SDC forms and data may be used within FHIR.</p>
 
 <h2 id="sdc-form-structure">SDC Form Structure</h2>
-<p>IDs
-Question Answer Sets (QAS)<br/>
-Metadata</p>
+<p>IHE SDC ustilizes Identifiers on all Question and Answer Sets (QAS). These IDs within the QAS better allow for mapping between IHE SDC forms, standard or local terminology, billing codes, etc. They enable implementers to better capture and utilize their structured data within databases.</p>
+
+<p>IHE SDC forms also have a robust metadata section that allows for the capture of important copyright information on the form, its disease site and other important information such as versioning. More detail on this can be found in the <a href="https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf">IHE SDC Technical Framework Supplement</a></p>
 
 <h2 id="transport-of-the-ihe-sdc-forms-within-fhir">Transport of the IHE SDC Forms within FHIR</h2>
 <p>A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form shall be Base64 encoded and included for transport much like a CDA document or PDF might be.</p>
@@ -203,8 +203,8 @@ Metadata</p>
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="9b87a300-d557-4201-80d6-8532cdea7054">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package IHE-SDC-eCC-On-FHIR#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 29, 2021 19:34-0400">2021-06-29</span>
+        <p><a name="c6051a79-cb26-43d9-93a1-cc346b222b4e">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package IHE-SDC-eCC-On-FHIR#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 1, 2021 11:22-0400">2021-07-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
