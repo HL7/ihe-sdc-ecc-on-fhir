@@ -20,7 +20,7 @@
   "name": "ObservationSDCeCCint",
   "title": "IHE SDC/eCC on FHIR Observation",
   "status": "active",
-  "date": "2021-10-14T13:09:30-04:00",
+  "date": "2021-10-14T13:26:40-04:00",
   "description": "A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger",
   "fhirVersion": "4.0.1",
   "mapping": [

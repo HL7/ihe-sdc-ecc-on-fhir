@@ -1,2 +1,0 @@
-I"ç<p>A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime</p>
-:ET

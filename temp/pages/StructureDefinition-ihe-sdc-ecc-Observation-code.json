@@ -20,7 +20,7 @@
   "name": "ObservationSDCeCCcode",
   "title": "IHE SDC/eCC on FHIR Observation Code",
   "status": "active",
-  "date": "2021-10-14T13:09:30-04:00",
+  "date": "2021-10-14T13:26:40-04:00",
   "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
   "fhirVersion": "4.0.1",
   "mapping": [
