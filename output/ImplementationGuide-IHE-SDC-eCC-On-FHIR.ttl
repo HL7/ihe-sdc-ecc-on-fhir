@@ -16,7 +16,7 @@
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "IHESDCeCCOnFHIR"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-10-14T12:55:27-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-10-14T13:09:30-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.packageId [ fhir:value "IHE-SDC-eCC-On-FHIR"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
@@ -292,7 +292,7 @@
          fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-code>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/ihe-sdc-ecc-Observation-code" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation Code" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -306,8 +306,8 @@
          fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-date>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/ihe-sdc-ecc-Observation-date" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation Date" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 4;
@@ -321,7 +321,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/ihe-sdc-ecc-Observation-integer" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -335,7 +335,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/ihe-sdc-ecc-Observation-quantity" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture quantity Question and Answer Sets from an IHE SDC Form. Any answer that has a quantity datatype in IHE SDC, or any datatype requiring a UCUM unit should be represented using this profile which requires the Observation.valueQuantity" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
@@ -348,8 +348,8 @@
          fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/ihe-sdc-ecc-Observation-text" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "IHE SDC/eCC on FHIR Observation Text" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Observation Profile meant to capture text Question and Answer Sets from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 7;

@@ -19,11 +19,11 @@
     "Observation": [
       {
         "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-code",
-        "title": "IHE SDC/eCC on FHIR Observation"
+        "title": "IHE SDC/eCC on FHIR Observation Code"
       },
       {
         "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-date",
-        "title": "IHE SDC/eCC on FHIR Observation"
+        "title": "IHE SDC/eCC on FHIR Observation Date"
       },
       {
         "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-integer",
@@ -35,7 +35,7 @@
       },
       {
         "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text",
-        "title": "IHE SDC/eCC on FHIR Observation"
+        "title": "IHE SDC/eCC on FHIR Observation Text"
       }
     ]
   },

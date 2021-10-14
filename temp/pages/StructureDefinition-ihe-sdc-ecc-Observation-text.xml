@@ -22,10 +22,10 @@
   <url value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text"/>
   <version value="0.1.0"/>
   <name value="ObservationSDCeCCtext"/>
-  <title value="IHE SDC/eCC on FHIR Observation"/>
+  <title value="IHE SDC/eCC on FHIR Observation Text"/>
   <status value="active"/>
-  <date value="2021-10-14T12:55:27-04:00"/>
-  <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
+  <date value="2021-10-14T13:09:30-04:00"/>
+  <description value="A Observation Profile meant to capture text Question and Answer Sets from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="workflow"/>
