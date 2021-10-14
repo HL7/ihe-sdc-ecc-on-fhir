@@ -29,7 +29,39 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ihe-sdc-ecc-Observation"
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-code"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation",
+        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-date"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation",
+        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-integer"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation",
+        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-quantity"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation",
+        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-text"
         },
         "name": "IHE SDC/eCC on FHIR Observation",
         "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
@@ -41,7 +73,7 @@
         },
         "name": "SDCeCCObservationCodeEx",
         "description": "Example Observation using codes from SDC",
-        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-code"
       },
       {
         "reference": {
@@ -49,7 +81,23 @@
         },
         "name": "SDCeCCObservationTextEx",
         "description": "Example Observation using text fill in from SDC",
-        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/eCCDiagnosticReport0"
+        },
+        "name": "eCC Diagnostic Report",
+        "description": "Example eCC Diagnostic report ",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/eCCDocRef0"
+        },
+        "name": "SDC eCC DocumentReference",
+        "description": "Example DocumentReference with eCC attached as URL",
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference"
       }
     ],
     "page": {

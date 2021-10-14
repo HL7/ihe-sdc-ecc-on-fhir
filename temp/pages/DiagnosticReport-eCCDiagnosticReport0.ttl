@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://bhl7.org/fhir/ihe-sdc-on-fhir/DiagnosticReport/eCCDiagnosticReport0> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "eCCDiagnosticReport0"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 60568-3}\">Pathology Synoptic report</span> (<span title=\"Codes: {http://loinc.org LP7839-6}\">Pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Unable to get Patient Details</td></tr><tr><td>When For</td><td>2021-01-14</td></tr><tr><td>Identifier:</td><td> Accession ID: eCCDiagnosticReport0 (USUAL)</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td colspan=\"2\"><i>Observation</i></td></tr><tr><td colspan=\"2\"><i>Observation</i></td></tr><tr><td colspan=\"2\"><i>Observation</i></td></tr><tr><td colspan=\"2\"><i>Observation</i></td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "ACSN" ];
+         fhir:Coding.display [ fhir:value "Accession ID" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.example.org" ];
+     fhir:Identifier.value [ fhir:value "eCCDiagnosticReport0" ]
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LP7839-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LP7839-6" ];
+       fhir:Coding.display [ fhir:value "Pathology" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:60568-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "60568-3" ];
+       fhir:Coding.display [ fhir:value "Pathology Synoptic report" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:Reference.reference [ fhir:value "q201" ];
+     fhir:Reference.display [ fhir:value "Bibata Amadou" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2021-01-14"^^xsd:date];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "pathpract1" ];
+     fhir:Reference.display [ fhir:value "Luigi Maas" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157" ]
+  ], [
+     fhir:index 1;
+     fhir:Reference.reference [ fhir:value "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF.f96d3fea-62b3-47e9-8443-f199c2f946f0.ver1.49275.100004300" ]
+  ], [
+     fhir:index 2;
+     fhir:Reference.reference [ fhir:value "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324" ]
+  ], [
+     fhir:index 3;
+     fhir:Reference.reference [ fhir:value "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271" ]
+  ];
+  fhir:DiagnosticReport.presentedForm [
+     fhir:index 0;
+     fhir:Attachment.url [ fhir:value "http://test.org/pathology/eCCDiagnosticReport0" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://bhl7.org/fhir/ihe-sdc-on-fhir/DiagnosticReport/eCCDiagnosticReport0.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

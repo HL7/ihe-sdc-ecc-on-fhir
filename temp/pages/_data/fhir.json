@@ -5,17 +5,17 @@
   "igName": "IHESDCeCCOnFHIR",
   "packageId": "IHE-SDC-eCC-On-FHIR",
   "igVer": "0.1.0",
-  "errorCount": 4,
+  "errorCount": 10,
   "version": "4.0.1",
   "revision": "a53ec6ee1b",
   "versionFull": "4.0.1-a53ec6ee1b",
   "toolingVersion": "4.6.0",
   "toolingRevision": "3",
   "toolingVersionFull": "4.6.0 (3)",
-  "totalFiles": 6,
-  "processedFiles": 15,
-  "genDate": "Tue, Jun 29, 2021 17:17-0400",
-  "genDay": "29/06/2021",
+  "totalFiles": 12,
+  "processedFiles": 21,
+  "genDate": "Thu, Oct 14, 2021 12:55-0400",
+  "genDay": "14/10/2021",
   "ig": {
     "id": "IHE-SDC-eCC-On-FHIR",
     "name": "IHESDCeCCOnFHIR",
@@ -23,8 +23,8 @@
     "version": "0.1.0",
     "status": "draft",
     "experimental": false,
-    "gitstatus": "main",
-    "date": "2021-06-29T17:17:25-04:00",
+    "gitstatus": "master",
+    "date": "2021-10-14T12:55:27-04:00",
     "fhirVersion": "4.0.1"
   }
 }

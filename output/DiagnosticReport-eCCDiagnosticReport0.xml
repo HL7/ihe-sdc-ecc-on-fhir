@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="eCCDiagnosticReport0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {http://loinc.org 60568-3}">Pathology Synoptic report</span> (<span title="Codes: {http://loinc.org LP7839-6}">Pathology</span>) </h2><table class="grid"><tr><td>Subject</td><td>Unable to get Patient Details</td></tr><tr><td>When For</td><td>2021-01-14</td></tr><tr><td>Identifier:</td><td> Accession ID: eCCDiagnosticReport0 (USUAL)</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td colspan="2"><i>Observation</i></td></tr><tr><td colspan="2"><i>Observation</i></td></tr><tr><td colspan="2"><i>Observation</i></td></tr><tr><td colspan="2"><i>Observation</i></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+    </type>
+    <system value="http://hospital.example.org"/>
+    <value value="eCCDiagnosticReport0"/>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LP7839-6"/>
+      <display value="Pathology"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60568-3"/>
+      <display value="Pathology Synoptic report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="q201"/>
+    <display value="Bibata Amadou"/>
+  </subject>
+  <effectiveDateTime value="2021-01-14"/>
+  <performer>
+    <reference value="pathpract1"/>
+    <display value="Luigi Maas"/>
+  </performer>
+  <result>
+    <reference value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157"/>
+  </result>
+  <result>
+    <reference value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF.f96d3fea-62b3-47e9-8443-f199c2f946f0.ver1.49275.100004300"/>
+  </result>
+  <result>
+    <reference value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324"/>
+  </result>
+  <result>
+    <reference value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271"/>
+  </result>
+  <presentedForm>
+    <url value="http://test.org/pathology/eCCDiagnosticReport0"/>
+  </presentedForm>
+</DiagnosticReport>

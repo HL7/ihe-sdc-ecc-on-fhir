@@ -25,7 +25,7 @@
   <name value="DiagnosticReportSDCeCC"/>
   <title value="IHE SDC/eCC on FHIR DiagnosticReport"/>
   <status value="active"/>
-  <date value="2021-06-29T17:17:25-04:00"/>
+  <date value="2021-10-14T12:55:27-04:00"/>
   <description value="A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form"/>
   <fhirVersion value="4.0.1"/>
   <mapping>
