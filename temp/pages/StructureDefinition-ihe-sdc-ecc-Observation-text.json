@@ -20,7 +20,7 @@
   "name": "ObservationSDCeCCtext",
   "title": "IHE SDC/eCC on FHIR Observation Text",
   "status": "active",
-  "date": "2021-10-14T13:09:30-04:00",
+  "date": "2021-10-14T13:26:40-04:00",
   "description": "A Observation Profile meant to capture text Question and Answer Sets from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString",
   "fhirVersion": "4.0.1",
   "mapping": [

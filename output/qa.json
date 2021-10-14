@@ -3,10 +3,8 @@
   "name": "IHESDCeCCOnFHIR",
   "package-id": "IHE-SDC-eCC-On-FHIR",
   "ig-ver": "0.1.0",
-  "date": "Thu, 14 Oct, 2021 13:09:30 -0400",
-  "errs": 10,
-  "warnings": 6,
-  "hints": 3,
+  "date": "Thu, 14 Oct, 2021 13:26:40 -0400",
+  "exception": "Fatal error during transformation using /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/template/scripts/onGenerate.genProperties.xslt: Processing terminated by xsl:message at line 34 in onGenerate.genProperties.xslt; SystemID: file:/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/template/scripts/onGenerate.genProperties.xslt; Line#: 34; Column#: -1",
   "version": "4.0.1",
   "tool": "4.6.0 (3)"
 }

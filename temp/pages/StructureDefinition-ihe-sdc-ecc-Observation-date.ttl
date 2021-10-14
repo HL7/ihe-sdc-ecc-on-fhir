@@ -26,7 +26,7 @@
   fhir:StructureDefinition.name [ fhir:value "ObservationSDCeCCdate"];
   fhir:StructureDefinition.title [ fhir:value "IHE SDC/eCC on FHIR Observation Date"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-10-14T13:09:30-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-10-14T13:26:40-04:00"^^xsd:dateTime];
   fhir:StructureDefinition.description [ fhir:value "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
