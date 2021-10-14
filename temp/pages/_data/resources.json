@@ -6,7 +6,7 @@
     "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
     "name": "IHESDCeCCOnFHIR",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colsd",
       "status": "Draft"
@@ -20,7 +20,7 @@
     "name": "DiagnosticReportSDCeCC",
     "title": "IHE SDC/eCC on FHIR DiagnosticReport",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -34,7 +34,7 @@
     "name": "DocumentReferenceSDCeCC",
     "title": "IHE SDC/eCC on FHIR DocumentReference",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -48,7 +48,7 @@
     "name": "ObservationSDCeCCcode",
     "title": "IHE SDC/eCC on FHIR Observation Code",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -62,7 +62,7 @@
     "name": "ObservationSDCeCCdate",
     "title": "IHE SDC/eCC on FHIR Observation Date",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -76,7 +76,7 @@
     "name": "ObservationSDCeCCint",
     "title": "IHE SDC/eCC on FHIR Observation",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -90,7 +90,7 @@
     "name": "ObservationSDCeCCquantity",
     "title": "IHE SDC/eCC on FHIR Observation",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
@@ -104,7 +104,7 @@
     "name": "ObservationSDCeCCtext",
     "title": "IHE SDC/eCC on FHIR Observation Text",
     "version": "0.1.0",
-    "date": "2021-10-14T14:08:49-04:00",
+    "date": "2021-10-14T14:15:14-04:00",
     "status": {
       "class": "colstu",
       "status": "Active"
