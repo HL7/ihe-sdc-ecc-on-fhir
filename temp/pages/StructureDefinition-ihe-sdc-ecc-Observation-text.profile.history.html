@@ -1,0 +1,20 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='ihe-sdc-ecc-Observation-text' %}
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='ihe-sdc-ecc-Observation-text' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: ObservationSDCeCCtext - Change History</h2>
+  <p>Changes in the ihe-sdc-ecc-Observation-text {{modelType | downcase}}.</p>
+
+  {%include StructureDefinition-ihe-sdc-ecc-Observation-text-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -1,0 +1,2 @@
+I"í<p>A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger</p>
+:ET

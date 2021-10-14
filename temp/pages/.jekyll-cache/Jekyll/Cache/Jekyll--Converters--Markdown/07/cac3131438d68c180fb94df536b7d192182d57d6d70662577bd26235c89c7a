@@ -1,0 +1,30 @@
+I"-	<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="data-extraction">Data Extraction</h1>
+<p>IHE Structured Data Capture (SDC) on FHIR uses a form driven workflow to capture and encode data by creating FHIR Observations or other relevant resources from the captured data. This guide will focus on 2 types of data extraction: Observation-based and Definition-based. These concepts are borrowed from the FHIR SDC.</p>
+
+<h2 id="data-extraction-1">Data Extraction</h2>
+
+<h3 id="observation-based-extraction">Observation-Based Extraction</h3>
+<p>Observations can be used to capture Question and Answer Sets from SDC. Each Observation should capture the Question ID from SDC in the code element, and the answer in the value element. There are several question types that are described below on best practices for capture.</p>
+
+<h4 id="single-select">Single-Select</h4>
+<p>Single Select questions in SDC should be captured as valueCodeableConcept with the SDC ID for as the coding, and the question title as text.</p>
+
+<h4 id="multi-select">Multi-Select</h4>
+<p>Similar to Single Select questions in SDC should be captured as valueCodeableConcept with the SDC ID for as the coding, and the question title as text, however the multiple answers should be stored in multiple Observation.component elements so that the context of the complete question and answer set can be maintained.</p>
+
+<h4 id="text-answers">Text Answers</h4>
+<p>Observations for text based questions should be captured as valueString for simplicity.</p>
+
+<h4 id="other-data-types">Other Data Types</h4>
+<p>Other data types should be captured in value[x] as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. There is a profile in this iGuide for each of these data types.</p>
+
+<h2 id="definition-based-extraction">Definition-Based Extraction</h2>
+<p>TBD</p>
+
+<h2 id="data-storage-considerations">Data Storage Considerations</h2>
+<p>Mapping can be accomplished in order to promote robust data models that allow for advanced data analytics and shareable data models. There are a number of intersections for SDC and data models such as OHDSI. For example SDC and OHDSI both have a heavy reliance on identifiers.</p>
+:ET

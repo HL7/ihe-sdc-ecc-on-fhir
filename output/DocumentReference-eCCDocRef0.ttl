@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://bhl7.org/fhir/ihe-sdc-on-fhir/DocumentReference/eCCDocRef0> a fhir:DocumentReference;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "eCCDocRef0"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference";
+       fhir:index 0;
+       fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>masterIdentifier</b>: Accession ID: masterIdentifiereCCDocRef0 (USUAL)</p><p><b>identifier</b>: Accession ID: identifiereCCDocRef0 (USUAL)</p><p><b>status</b>: current</p><p><b>category</b>: <span title=\"Codes: {http://loinc.org LP7839-6}\">Pathology</span></p><blockquote><p><b>content</b></p></blockquote></div>"
+  ];
+  fhir:DocumentReference.masterIdentifier [
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "ACSN" ];
+         fhir:Coding.display [ fhir:value "Accession ID" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://master.hospital.example.org" ];
+     fhir:Identifier.value [ fhir:value "masterIdentifiereCCDocRef0" ]
+  ];
+  fhir:DocumentReference.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "ACSN" ];
+         fhir:Coding.display [ fhir:value "Accession ID" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.example.org" ];
+     fhir:Identifier.value [ fhir:value "identifiereCCDocRef0" ]
+  ];
+  fhir:DocumentReference.status [ fhir:value "current"];
+  fhir:DocumentReference.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LP7839-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LP7839-6" ];
+       fhir:Coding.display [ fhir:value "Pathology" ]
+     ]
+  ];
+  fhir:DocumentReference.content [
+     fhir:index 0;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.title [ fhir:value "example.org/sdc-ecc/eCCDocRef0" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://bhl7.org/fhir/ihe-sdc-on-fhir/DocumentReference/eCCDocRef0.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

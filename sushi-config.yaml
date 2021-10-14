@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: IHE-SDC-eCC-On-FHIR
+id: hl7.fhir.uv.ihesdconfhir
 canonical: http://bhl7.org/fhir/ihe-sdc-on-fhir
 name: IHE-SDC-eCC-On-FHIR
 status: draft
