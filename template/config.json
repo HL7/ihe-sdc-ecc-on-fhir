@@ -1,4 +1,5 @@
 {
+  "script": "scripts/ant.xml",
   "targets": {
     "onLoad": "onLoad",
     "onGenerate": "onGenerate"
@@ -29,7 +30,7 @@
       "isHistory": true
     }
   ],
-  "_formats-documentation": "Lists the formats in the order format-specific pages should be generated.  (Note that suppressed formats won\u0027t appear, even if listed here.)",
+  "_formats-documentation": "Lists the formats in the order format-specific pages should be generated.  (Note that suppressed formats won't appear, even if listed here.)",
   "formats": [
     "xml",
     "json",
@@ -93,7 +94,7 @@
     "ImplementationGuide": {
       "template-base": "",
       "template-format": "",
-      "template-change-history": ""
+      "template-change-history":""
     },
     "StructureDefinition:extension": {
       "template-base": "template/layouts/layout-ext.html",
@@ -150,6 +151,6 @@
       "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
       "change-history": "{{[type]}}-{{[id]}}.change.history.html"
     }
-  },
-  "script": "scripts/ant-hl7.xml"
+  }
 }
+
