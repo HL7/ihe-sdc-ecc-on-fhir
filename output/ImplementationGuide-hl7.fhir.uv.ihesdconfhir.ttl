@@ -16,7 +16,7 @@
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "IHESDCeCCOnFHIR"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-10-14T14:08:49-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-10-14T14:15:14-04:00"^^xsd:dateTime];
   fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.uv.ihesdconfhir"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
