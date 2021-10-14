@@ -1,8 +1,8 @@
 Profile: ObservationSDCeCCdate
 Parent: Observation
 Id: ihe-sdc-ecc-Observation-date
-Title: "IHE SDC/eCC on FHIR Observation"
-Description: "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"
+Title: "IHE SDC/eCC on FHIR Observation Date"
+Description: "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime"
 * identifier 1..* MS 
 * bodySite MS 
 * hasMember MS 

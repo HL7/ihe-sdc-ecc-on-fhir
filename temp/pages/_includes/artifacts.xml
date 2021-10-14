@@ -43,7 +43,7 @@
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-ihe-sdc-ecc-Observation-code.html"
-                     title="StructureDefinition/ihe-sdc-ecc-Observation-code">IHE SDC/eCC on FHIR Observation</a>
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-code">IHE SDC/eCC on FHIR Observation Code</a>
                </td>
                <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
 {{ desc | markdownify}}</td>
@@ -51,9 +51,9 @@
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-ihe-sdc-ecc-Observation-date.html"
-                     title="StructureDefinition/ihe-sdc-ecc-Observation-date">IHE SDC/eCC on FHIR Observation</a>
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-date">IHE SDC/eCC on FHIR Observation Date</a>
                </td>
-               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+               <td>{% capture desc %}A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@
                   <a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.html"
                      title="StructureDefinition/ihe-sdc-ecc-Observation-integer">IHE SDC/eCC on FHIR Observation</a>
                </td>
-               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+               <td>{% capture desc %}A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
             <tr>
@@ -69,15 +69,15 @@
                   <a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html"
                      title="StructureDefinition/ihe-sdc-ecc-Observation-quantity">IHE SDC/eCC on FHIR Observation</a>
                </td>
-               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+               <td>{% capture desc %}A Observation Profile meant to capture quantity Question and Answer Sets from an IHE SDC Form. Any answer that has a quantity datatype in IHE SDC, or any datatype requiring a UCUM unit should be represented using this profile which requires the Observation.valueQuantity{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-ihe-sdc-ecc-Observation-text.html"
-                     title="StructureDefinition/ihe-sdc-ecc-Observation-text">IHE SDC/eCC on FHIR Observation</a>
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-text">IHE SDC/eCC on FHIR Observation Text</a>
                </td>
-               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+               <td>{% capture desc %}A Observation Profile meant to capture text Question and Answer Sets from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
          </tbody>

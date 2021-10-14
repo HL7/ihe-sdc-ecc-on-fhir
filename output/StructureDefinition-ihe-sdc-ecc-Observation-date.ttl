@@ -24,10 +24,10 @@
   fhir:StructureDefinition.url [ fhir:value "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-date"];
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
   fhir:StructureDefinition.name [ fhir:value "ObservationSDCeCCdate"];
-  fhir:StructureDefinition.title [ fhir:value "IHE SDC/eCC on FHIR Observation"];
+  fhir:StructureDefinition.title [ fhir:value "IHE SDC/eCC on FHIR Observation Date"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-10-14T12:55:27-04:00"^^xsd:dateTime];
-  fhir:StructureDefinition.description [ fhir:value "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"];
+  fhir:StructureDefinition.date [ fhir:value "2021-10-14T13:09:30-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.description [ fhir:value "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

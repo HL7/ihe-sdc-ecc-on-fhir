@@ -20,7 +20,7 @@
   "name": "DocumentReferenceSDCeCC",
   "title": "IHE SDC/eCC on FHIR DocumentReference",
   "status": "active",
-  "date": "2021-10-14T12:55:27-04:00",
+  "date": "2021-10-14T13:09:30-04:00",
   "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank",
   "fhirVersion": "4.0.1",
   "mapping": [
