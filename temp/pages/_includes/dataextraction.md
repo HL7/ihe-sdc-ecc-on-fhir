@@ -16,7 +16,7 @@ Similar to Single Select questions in SDC should be captured as valueCodeableCon
 Observations for text based questions should be captured as valueString for simplicity. 
 
 #### Other Data Types
-Other data types should be captured in value[x] as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. 
+Other data types should be captured in value[x] as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. There is a profile in this iGuide for each of these data types.  
 
 ## Definition-Based Extraction
 TBD

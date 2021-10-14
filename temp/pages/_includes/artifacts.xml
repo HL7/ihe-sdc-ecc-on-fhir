@@ -42,8 +42,40 @@
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-ihe-sdc-ecc-Observation.html"
-                     title="StructureDefinition/ihe-sdc-ecc-Observation">IHE SDC/eCC on FHIR Observation</a>
+                  <a href="StructureDefinition-ihe-sdc-ecc-Observation-code.html"
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-code">IHE SDC/eCC on FHIR Observation</a>
+               </td>
+               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-ihe-sdc-ecc-Observation-date.html"
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-date">IHE SDC/eCC on FHIR Observation</a>
+               </td>
+               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.html"
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-integer">IHE SDC/eCC on FHIR Observation</a>
+               </td>
+               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html"
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-quantity">IHE SDC/eCC on FHIR Observation</a>
+               </td>
+               <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-ihe-sdc-ecc-Observation-text.html"
+                     title="StructureDefinition/ihe-sdc-ecc-Observation-text">IHE SDC/eCC on FHIR Observation</a>
                </td>
                <td>{% capture desc %}A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers{% endcapture %}
 {{ desc | markdownify}}</td>
@@ -73,6 +105,22 @@
                      title="Observation/SDCeCCObservationTextEx">SDCeCCObservationTextEx</a>
                </td>
                <td>{% capture desc %}Example Observation using text fill in from SDC{% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="DiagnosticReport-eCCDiagnosticReport0.html"
+                     title="DiagnosticReport/eCCDiagnosticReport0">eCC Diagnostic Report</a>
+               </td>
+               <td>{% capture desc %}Example eCC Diagnostic report {% endcapture %}
+{{ desc | markdownify}}</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="DocumentReference-eCCDocRef0.html"
+                     title="DocumentReference/eCCDocRef0">SDC eCC DocumentReference</a>
+               </td>
+               <td>{% capture desc %}Example DocumentReference with eCC attached as URL{% endcapture %}
 {{ desc | markdownify}}</td>
             </tr>
          </tbody>

@@ -10,9 +10,9 @@
   fhir:Resource.id [ fhir:value "SDCeCCObservationTextEx"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation";
+       fhir:value "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text";
        fhir:index 0;
-       fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation>
+       fhir:link <http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text>
      ]
   ];
   fhir:DomainResource.text [

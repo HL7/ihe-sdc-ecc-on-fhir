@@ -127,8 +127,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ihe-sdc-ecc-on-fhir" id="markdown-toc-ihe-sdc-ecc-on-fhir">IHE-SDC-eCC-On-FHIR</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+      <li><a href="#fhir-version" id="markdown-toc-fhir-version">FHIR Version</a></li>
+      <li><a href="#purpose" id="markdown-toc-purpose">Purpose</a>        <ul>
+          <li><a href="#the-college-of-american-pathologists-eccs" id="markdown-toc-the-college-of-american-pathologists-eccs">The College of American Pathologists eCCs</a></li>
+        </ul>
+      </li>
+      <li><a href="#common-use-cases" id="markdown-toc-common-use-cases">Common use cases</a>        <ul>
+          <li><a href="#public-health-reporting-eg-cancer-registry-reporting" id="markdown-toc-public-health-reporting-eg-cancer-registry-reporting">Public health reporting (e.g. Cancer Registry reporting)</a></li>
+          <li><a href="#quality-measurement-and-evaluation" id="markdown-toc-quality-measurement-and-evaluation">Quality measurement and evaluation</a></li>
+          <li><a href="#clinical-guideline-concordance-evaluation" id="markdown-toc-clinical-guideline-concordance-evaluation">Clinical guideline concordance evaluation</a></li>
+          <li><a href="#auto-population-of-future-forms" id="markdown-toc-auto-population-of-future-forms">Auto-population of future forms</a></li>
+        </ul>
+      </li>
+      <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+      <li><a href="#audience" id="markdown-toc-audience">Audience</a></li>
+      <li><a href="#sdc-form-structure" id="markdown-toc-sdc-form-structure">SDC Form Structure</a></li>
+      <li><a href="#transport-of-the-ihe-sdc-forms-within-fhir" id="markdown-toc-transport-of-the-ihe-sdc-forms-within-fhir">Transport of the IHE SDC Forms within FHIR</a></li>
+      <li><a href="#must-support" id="markdown-toc-must-support">Must Support</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="ihe-sdc-ecc-on-fhir">IHE-SDC-eCC-On-FHIR</h1>
 
@@ -154,6 +177,15 @@ This guide supports:</p>
   <li>Use of that data</li>
 </ul>
 
+<p>Leveraging IHE SDC and FHIR allows for data to be shared more easily and enables improved data management and analysis as well as pre-population of data in new forms. The coding of structured data automates the interpretation and utilization of the data thereby allowing for the automation of processes, and increasing efficiency and accuracy. The representation of data as a FHIR resource can remove barriers that exist between different datasets while improving interoperability and making data more useful to providers, hospitals, and cancer registries.</p>
+
+<h3 id="the-college-of-american-pathologists-eccs">The College of American Pathologists eCCs</h3>
+<p>The College of American Pathologists (CAP) Cancer Reporting Protocols offer a guideline for the collection of key data elements for reporting of malignant tumours. The protocols can be used in a number of different tumour types and procedures such as biopsies and resections. Protocols are made up of two parts: the case summary and the explanatory notes.</p>
+
+<p>The case summary section contains core data elements and optional data elements. Core data elements are the mandatory elements which must be reported whether or not they are applicable to the case. A subset of the core elements are conditional data elements which are only completed if applicable to the case. Optional data elements are fields which may be required for reporting based on practice standards at local institutions or different jurisdictions. These elements are identified with a “+”.</p>
+
+<p>The explanatory notes within the cancer protocols aim to provide guidance and support the accurate completion of the case summaries.</p>
+
 <h2 id="common-use-cases">Common use cases</h2>
 <p>Use cases for IHE SDC/eCC  on FHIR include:</p>
 <ul>
@@ -162,6 +194,18 @@ This guide supports:</p>
   <li>Clinical guideline concordance evaluation</li>
   <li>Auto-population of future forms</li>
 </ul>
+
+<h3 id="public-health-reporting-eg-cancer-registry-reporting">Public health reporting (e.g. Cancer Registry reporting)</h3>
+<p>In this use case the conversion of SDC forms to FHIR resources has the potential of enabling high-quality public health reporting through improved ease of data collection and transmission, and improved accuracy of data. Ultimately this can be used to better integrate with cancer registries for public health planning and reporting. The coding of data to a common standard helps to remove the discrepancies that may exist between different datasets which can allow registries to more easily compare and correlate data. This allows for public health decision-making that effectively combines different datasets, improves efficiency through automation, and limits errors through the removal of human interaction.</p>
+
+<h3 id="quality-measurement-and-evaluation">Quality measurement and evaluation</h3>
+<p>In this use case the conversion of SDC forms to FHIR resources could enable institutions to more easily collect data as it relates to pathology or radiology reporting through a common and standardized format. This would enable improved analysis of data which could then be used for quality measurement and evaluation activities at the facility or physician level. Based on the data collected institutions could introduce quality improvement initiatives or additional training opportunities for providers.</p>
+
+<h3 id="clinical-guideline-concordance-evaluation">Clinical guideline concordance evaluation</h3>
+<p>In this use case the conversion of SDC forms to FHIR resources enables the evaluation of concordance against computable representations of narrative clinical guidelines. As new guidelines are introduced, specific measures can be identified as methods of assessing concordance to the guideline. Having SDC form data available in a standardized format enables the assessment of concordance against guidelines by hospitals or governing bodies.</p>
+
+<h3 id="auto-population-of-future-forms">Auto-population of future forms</h3>
+<p>In this use case information collected through SDC forms could be used to auto-populate future forms. Data collected as a FHIR resource can be linked to a patient record so that any future forms relating to that patient can be automatically pre-populated with existing relevant data. One example is a patient having a second biopsy, in which case all relevant data from the first biopsy can be automatically included in a report to the treating physician. This would improve efficiency, while reducing errors and ensuring that all relevant data is available to the care team.</p>
 
 <h2 id="scope">Scope</h2>
 <p>This implementation guide establishes a pattern for how to transport IHE SDC forms using FHIR DocumentReference, and DiagnosticReport, and how to extract data from IHE SDC forms to FHIR Resources, namely Observations.</p>
@@ -203,8 +247,8 @@ This guide supports:</p>
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="c6051a79-cb26-43d9-93a1-cc346b222b4e">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package IHE-SDC-eCC-On-FHIR#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 1, 2021 11:22-0400">2021-07-01</span>
+        <p><a name="l486">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package IHE-SDC-eCC-On-FHIR#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 14, 2021 12:55-0400">2021-10-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

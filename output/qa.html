@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 43, errors = 4, warn = 2, info = 3 -->
+<!-- broken links = 85, errors = 10, warn = 6, info = 3 -->
 <head>
   <title>IHESDCeCCOnFHIR : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
   </style>
   <script>
     function flip(id) {
@@ -19,13 +21,24 @@
         span.innerHTML = 'Show Reasoning';
       }
     }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
   </script>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for IHESDCeCCOnFHIR</h1>
- <p>Generated Thu Jul 01 11:22:42 EDT 2021, FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = <a href="http://bhl7.org/fhir/ihe-sdc-on-fhir">http://bhl7.org/fhir/ihe-sdc-on-fhir</a> (<a href="http://bhl7.org/fhir/ihe-sdc-on-fhir/history.html">history</a>)). See <a href="/users/alex/documents/github/ihe-sdc-ecc-on-fhir-ig/output/qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Oct 14 12:55:52 EDT 2021, FHIR version 4.0.1 for IHE-SDC-eCC-On-FHIR#0.1.0 (canonical = <a href="http://bhl7.org/fhir/ihe-sdc-on-fhir">http://bhl7.org/fhir/ihe-sdc-on-fhir</a> (<a href="http://bhl7.org/fhir/ihe-sdc-on-fhir/history.html">history</a>)). See <a href="/users/alex/documents/github/ihe-sdc-ecc-on-fhir-ig/output/qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.82</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = IHE-SDC-eCC-On-FHIR, Canonical = http://bhl7.org/fhir/ihe-sdc-on-fhir</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Version Check:</td><td>0.1.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
@@ -36,17 +49,23 @@
  <tr><td>Publication Rules:</td><td>Code = n/a. package-list.json: file not found in /Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://bhl7.org/fhir/ihe-sdc-on-fhir (Problem #1 with package-list.json at http://bhl7.org/fhir/ihe-sdc-on-fhir: bhl7.org)</td></tr>
- <tr><td>Summary:</td><td> broken links = 43, errors = 4, warn = 2, info = 3</td></tr>
+ <tr><td>Summary:</td><td> broken links = 85, errors = 10, warn = 6, info = 3</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>43</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>85</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_ImplementationGuide-IHE-SDC-eCC-On-FHIR"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_ImplementationGuide-IHE-SDC-eCC-On-FHIR"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_diagnosticreport-eCCDiagnosticReport0"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/diagnosticreport-eCCDiagnosticReport0</b></a></td><td><b>6</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_documentreference-eCCDocRef0"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/documentreference-eCCDocRef0</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_observation-SDCeCCObservationCodeEx"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/observation-SDCeCCObservationCodeEx</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>2</b></td>
@@ -58,159 +77,343 @@
      <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-DiagnosticReport"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-DiagnosticReport</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-DocumentReference"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-DocumentReference</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-DocumentReference"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-DocumentReference</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-code"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation-code</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-date"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation-date</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-integer"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation-integer</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-quantity"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation-quantity</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-text"><b>/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/structuredefinition-ihe-sdc-ecc-Observation-text</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
 <a name="internal"> </a>
-<h2><a href="">n/a</a></h2>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.change.history.html#7a985717-c684-4fac-8309-b9541edff363">Observation-SDCeCCObservationCodeEx.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DiagnosticReport-eCCDiagnosticReport0.change.history.html#l289">output/DiagnosticReport-eCCDiagnosticReport0.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#97ba1032-c6ea-4c84-8a23-9a8b4518ddea">Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 291</a></b></td><td><b>error</b></td><td><b>The link 'bibata-amadou' for &quot;bibata-amadou&quot; cannot be resolved</b></td>
+     <td><b><a href="DiagnosticReport-eCCDiagnosticReport0.html#l349">output/DiagnosticReport-eCCDiagnosticReport0.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#1df7d7a4-ae28-4c86-b219-d256a9368584">Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 392</a></b></td><td><b>error</b></td><td><b>The link 'pathpract1' for &quot;pathpract1&quot; cannot be resolved</b></td>
+     <td><b><a href="DiagnosticReport-eCCDiagnosticReport0.json.html#l427">output/DiagnosticReport-eCCDiagnosticReport0.json.html#/html/body/div/div/div/p/a at Line 269, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#67284451-e09e-4461-b1ac-c58f14705c2e">Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DiagnosticReport-eCCDiagnosticReport0.ttl.html#l530">output/DiagnosticReport-eCCDiagnosticReport0.ttl.html#/html/body/div/div/div/p/a at Line 274, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.json.html#a173334f-97c6-40b5-8cae-1f650d87858f">Observation-SDCeCCObservationCodeEx.json.html#/html/body/div/div/div/p/a at Line 251, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DiagnosticReport-eCCDiagnosticReport0.xml.html#l508">output/DiagnosticReport-eCCDiagnosticReport0.xml.html#/html/body/div/div/div/p/a at Line 257, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.ttl.html#42ed4a38-52b7-44ba-a98b-56bb09963884">Observation-SDCeCCObservationCodeEx.ttl.html#/html/body/div/div/div/p/a at Line 257, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DocumentReference-eCCDocRef0.change.history.html#l289">output/DocumentReference-eCCDocRef0.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationCodeEx.xml.html#d622a0ab-9964-4479-a3ab-6e905757eae0">Observation-SDCeCCObservationCodeEx.xml.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DocumentReference-eCCDocRef0.html#l324">output/DocumentReference-eCCDocRef0.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.change.history.html#8346a4ad-3f41-4134-91b2-8f5e02f0a60e">Observation-SDCeCCObservationTextEx.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="DocumentReference-eCCDocRef0.json.html#l412">output/DocumentReference-eCCDocRef0.json.html#/html/body/div/div/div/p/a at Line 256, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.html#8395e9ff-900e-4e4a-a740-f348e7ae8836">Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 257</a></b></td><td><b>error</b></td><td><b>The link 'bibata-amadou' for &quot;bibata-amadou&quot; cannot be resolved</b></td>
+     <td><b><a href="DocumentReference-eCCDocRef0.ttl.html#l491">output/DocumentReference-eCCDocRef0.ttl.html#/html/body/div/div/div/p/a at Line 261, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.html#a3f3101b-b8b8-446b-bd39-5543fc7b21ed">Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 358</a></b></td><td><b>error</b></td><td><b>The link 'pathpract1' for &quot;pathpract1&quot; cannot be resolved</b></td>
+     <td><b><a href="DocumentReference-eCCDocRef0.xml.html#l469">output/DocumentReference-eCCDocRef0.xml.html#/html/body/div/div/div/p/a at Line 243, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.html#fde7f31a-c16b-4977-becf-a6b7fa3e6319">Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.change.history.html#l289">output/Observation-SDCeCCObservationCodeEx.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.json.html#57555a78-beea-497e-a2d2-23f3a90a46cc">Observation-SDCeCCObservationTextEx.json.html#/html/body/div/div/div/p/a at Line 243, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#l273">output/Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 291</a></b></td><td><b>error</b></td><td><b>The link 'bibata-amadou' for &quot;bibata-amadou&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.ttl.html#d3f02398-c03f-418f-bd59-1b488f9ca731">Observation-SDCeCCObservationTextEx.ttl.html#/html/body/div/div/div/p/a at Line 251, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#l283">output/Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 392</a></b></td><td><b>error</b></td><td><b>The link 'pathpract1' for &quot;pathpract1&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="Observation-SDCeCCObservationTextEx.xml.html#8f5243c0-766b-4745-9b1f-666c42940275">Observation-SDCeCCObservationTextEx.xml.html#/html/body/div/div/div/p/a at Line 234, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.html#l335">output/Observation-SDCeCCObservationCodeEx.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-definitions.html#05b69cae-eab5-4dcc-b3c0-364759aa74c8">StructureDefinition-ihe-sdc-ecc-DiagnosticReport-definitions.html#/html/body/div/div/div/p/a at Line 590, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.json.html#l406">output/Observation-SDCeCCObservationCodeEx.json.html#/html/body/div/div/div/p/a at Line 251, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-examples.html#eebc478e-586e-492b-9125-5d2dc57e10e0">StructureDefinition-ihe-sdc-ecc-DiagnosticReport-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.ttl.html#l479">output/Observation-SDCeCCObservationCodeEx.ttl.html#/html/body/div/div/div/p/a at Line 257, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-mappings.html#cf552e5d-ddbf-400e-af3e-3c5584bd3418">StructureDefinition-ihe-sdc-ecc-DiagnosticReport-mappings.html#/html/body/div/div/div/p/a at Line 317, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationCodeEx.xml.html#l460">output/Observation-SDCeCCObservationCodeEx.xml.html#/html/body/div/div/div/p/a at Line 240, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html#6a2870f4-2802-4d2d-8eb6-1ad13255ef2e">StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html#/html/body/div/div/div/p/a at Line 672, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.change.history.html#l289">output/Observation-SDCeCCObservationTextEx.change.history.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.history.html#3b1a2be1-d119-48e1-a873-9072a1f23ce1">StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.html#l273">output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 257</a></b></td><td><b>error</b></td><td><b>The link 'bibata-amadou' for &quot;bibata-amadou&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.json.html#817482d5-a5d8-49d2-9e81-2a82b553cb7d">StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.json.html#/html/body/div/div/div/p/a at Line 1954, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.html#l283">output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 358</a></b></td><td><b>error</b></td><td><b>The link 'pathpract1' for &quot;pathpract1&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.ttl.html#8eca0c1f-5f88-424a-bd21-544a5336d402">StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.ttl.html#/html/body/div/div/div/p/a at Line 1807, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.html#l333">output/Observation-SDCeCCObservationTextEx.html#/html/body/div/div/div/p/a at Line 192, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.xml.html#87d278c7-24ea-4b6e-9f46-4d88d68765db">StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.xml.html#/html/body/div/div/div/p/a at Line 1777, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.json.html#l394">output/Observation-SDCeCCObservationTextEx.json.html#/html/body/div/div/div/p/a at Line 243, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-definitions.html#23d34462-314b-455a-b601-3ff2c43e4f02">StructureDefinition-ihe-sdc-ecc-DocumentReference-definitions.html#/html/body/div/div/div/p/a at Line 693, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.ttl.html#l458">output/Observation-SDCeCCObservationTextEx.ttl.html#/html/body/div/div/div/p/a at Line 251, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-examples.html#b14e3620-0fe1-47ee-9b0d-dd67baa0505a">StructureDefinition-ihe-sdc-ecc-DocumentReference-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="Observation-SDCeCCObservationTextEx.xml.html#l442">output/Observation-SDCeCCObservationTextEx.xml.html#/html/body/div/div/div/p/a at Line 234, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-mappings.html#a12454f5-cc31-44f8-a1de-8090e7586e50">StructureDefinition-ihe-sdc-ecc-DocumentReference-mappings.html#/html/body/div/div/div/p/a at Line 411, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-definitions.html#l2595">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-definitions.html#/html/body/div/div/div/p/a at Line 590, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.html#c364e727-a21c-4910-b702-d6d4147ef7c7">StructureDefinition-ihe-sdc-ecc-DocumentReference.html#/html/body/div/div/div/p/a at Line 748, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-examples.html#l305">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.history.html#ada713f5-99f0-4df2-a4c7-c0d7c4cd919e">StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport-mappings.html#l841">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport-mappings.html#/html/body/div/div/div/p/a at Line 317, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.json.html#b7227899-10ac-423d-992f-a39133fd8311">StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.json.html#/html/body/div/div/div/p/a at Line 2708, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html#l3725">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html#/html/body/div/div/div/p/a at Line 672, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.ttl.html#3f199c6f-9524-4e63-be06-7ae8503d5711">StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.ttl.html#/html/body/div/div/div/p/a at Line 2391, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.history.html#l300">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.xml.html#914c662e-3597-4cb2-bddc-71ebb14b311e">StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.xml.html#/html/body/div/div/div/p/a at Line 2494, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.json.html#l3518">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.json.html#/html/body/div/div/div/p/a at Line 1954, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-definitions.html#77b12e73-e2f8-4b8b-a6dd-d34ad6e13642">StructureDefinition-ihe-sdc-ecc-Observation-definitions.html#/html/body/div/div/div/p/a at Line 802, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.ttl.html#l7473">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.ttl.html#/html/body/div/div/div/p/a at Line 1807, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-examples.html#48201592-de12-4c9e-8445-82a78537a5bb">StructureDefinition-ihe-sdc-ecc-Observation-examples.html#/html/body/div/div/div/p/a at Line 266, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.xml.html#l6725">output/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.profile.xml.html#/html/body/div/div/div/p/a at Line 1777, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-mappings.html#b57cf311-01d8-4413-8353-e969ecd6c432">StructureDefinition-ihe-sdc-ecc-Observation-mappings.html#/html/body/div/div/div/p/a at Line 407, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-definitions.html#l3264">output/StructureDefinition-ihe-sdc-ecc-DocumentReference-definitions.html#/html/body/div/div/div/p/a at Line 703, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation.html#85b6e636-cc18-444d-87a0-230962d8fb02">StructureDefinition-ihe-sdc-ecc-Observation.html#/html/body/div/div/div/p/a at Line 875, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-examples.html#l337">output/StructureDefinition-ihe-sdc-ecc-DocumentReference-examples.html#/html/body/div/div/div/p/a at Line 260, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation.profile.history.html#b6541c24-78e5-4d76-967e-dfae610902a2">StructureDefinition-ihe-sdc-ecc-Observation.profile.history.html#/html/body/div/div/div/p/a at Line 238, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference-mappings.html#l1415">output/StructureDefinition-ihe-sdc-ecc-DocumentReference-mappings.html#/html/body/div/div/div/p/a at Line 421, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation.profile.json.html#e57cf325-d09d-4fbc-b1ec-ce3d5d1f9b74">StructureDefinition-ihe-sdc-ecc-Observation.profile.json.html#/html/body/div/div/div/p/a at Line 2986, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.html#l4647">output/StructureDefinition-ihe-sdc-ecc-DocumentReference.html#/html/body/div/div/div/p/a at Line 758, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation.profile.ttl.html#cd0fb813-de1f-485a-ba01-de78fd5ecd05">StructureDefinition-ihe-sdc-ecc-Observation.profile.ttl.html#/html/body/div/div/div/p/a at Line 2668, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.history.html#l306">output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.history.html#/html/body/div/div/div/p/a at Line 238, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation.profile.xml.html#944b5c3f-c6a1-49bb-ab84-95efc6e3aff0">StructureDefinition-ihe-sdc-ecc-Observation.profile.xml.html#/html/body/div/div/div/p/a at Line 2749, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.json.html#l4991">output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.json.html#/html/body/div/div/div/p/a at Line 2718, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="artifacts.html#fa135f5f-5daf-4b01-b360-b26f6e25f89f">artifacts.html#/html/body/div/div/div/p/a at Line 231, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.ttl.html#l10455">output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.ttl.html#/html/body/div/div/div/p/a at Line 2401, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="dataextraction.html#a233c546-c6f8-426d-8d1e-8a8cf55d8997">dataextraction.html#/html/body/div/div/div/p/a at Line 183, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.xml.html#l9467">output/StructureDefinition-ihe-sdc-ecc-DocumentReference.profile.xml.html#/html/body/div/div/div/p/a at Line 2504, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="index.html#c6051a79-cb26-43d9-93a1-cc346b222b4e">index.html#/html/body/div/div/div/p/a at Line 207, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code-definitions.html#l4083">output/StructureDefinition-ihe-sdc-ecc-Observation-code-definitions.html#/html/body/div/div/div/p/a at Line 817, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="terminology.html#ed789ecb-8f9f-48aa-bcc3-9c8b36219186">terminology.html#/html/body/div/div/div/p/a at Line 162, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code-examples.html#l337">output/StructureDefinition-ihe-sdc-ecc-Observation-code-examples.html#/html/body/div/div/div/p/a at Line 260, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="toc.html#d67f9031-6019-443a-ae87-6537bc442689">toc.html#/html/body/div/div/div/p/a at Line 143, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code-mappings.html#l1321">output/StructureDefinition-ihe-sdc-ecc-Observation-code-mappings.html#/html/body/div/div/div/p/a at Line 411, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.html#l5534">output/StructureDefinition-ihe-sdc-ecc-Observation-code.html#/html/body/div/div/div/p/a at Line 861, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.profile.history.html#l306">output/StructureDefinition-ihe-sdc-ecc-Observation-code.profile.history.html#/html/body/div/div/div/p/a at Line 238, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.profile.json.html#l5594">output/StructureDefinition-ihe-sdc-ecc-Observation-code.profile.json.html#/html/body/div/div/div/p/a at Line 3048, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.profile.ttl.html#l11853">output/StructureDefinition-ihe-sdc-ecc-Observation-code.profile.ttl.html#/html/body/div/div/div/p/a at Line 2721, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.profile.xml.html#l10655">output/StructureDefinition-ihe-sdc-ecc-Observation-code.profile.xml.html#/html/body/div/div/div/p/a at Line 2799, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date-definitions.html#l4077">output/StructureDefinition-ihe-sdc-ecc-Observation-date-definitions.html#/html/body/div/div/div/p/a at Line 807, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date-examples.html#l305">output/StructureDefinition-ihe-sdc-ecc-Observation-date-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date-mappings.html#l1315">output/StructureDefinition-ihe-sdc-ecc-Observation-date-mappings.html#/html/body/div/div/div/p/a at Line 401, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.html#l5528">output/StructureDefinition-ihe-sdc-ecc-Observation-date.html#/html/body/div/div/div/p/a at Line 851, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.profile.history.html#l300">output/StructureDefinition-ihe-sdc-ecc-Observation-date.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.profile.json.html#l5588">output/StructureDefinition-ihe-sdc-ecc-Observation-date.profile.json.html#/html/body/div/div/div/p/a at Line 3038, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.profile.ttl.html#l11847">output/StructureDefinition-ihe-sdc-ecc-Observation-date.profile.ttl.html#/html/body/div/div/div/p/a at Line 2711, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.profile.xml.html#l10649">output/StructureDefinition-ihe-sdc-ecc-Observation-date.profile.xml.html#/html/body/div/div/div/p/a at Line 2789, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer-definitions.html#l4077">output/StructureDefinition-ihe-sdc-ecc-Observation-integer-definitions.html#/html/body/div/div/div/p/a at Line 807, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer-examples.html#l305">output/StructureDefinition-ihe-sdc-ecc-Observation-integer-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer-mappings.html#l1315">output/StructureDefinition-ihe-sdc-ecc-Observation-integer-mappings.html#/html/body/div/div/div/p/a at Line 401, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.html#l5528">output/StructureDefinition-ihe-sdc-ecc-Observation-integer.html#/html/body/div/div/div/p/a at Line 851, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.history.html#l300">output/StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.json.html#l5588">output/StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.json.html#/html/body/div/div/div/p/a at Line 3038, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.ttl.html#l11847">output/StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.ttl.html#/html/body/div/div/div/p/a at Line 2711, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.xml.html#l10649">output/StructureDefinition-ihe-sdc-ecc-Observation-integer.profile.xml.html#/html/body/div/div/div/p/a at Line 2789, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity-definitions.html#l4077">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity-definitions.html#/html/body/div/div/div/p/a at Line 807, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity-examples.html#l305">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity-examples.html#/html/body/div/div/div/p/a at Line 239, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity-mappings.html#l1315">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity-mappings.html#/html/body/div/div/div/p/a at Line 401, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html#l5528">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity.html#/html/body/div/div/div/p/a at Line 851, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.history.html#l300">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.history.html#/html/body/div/div/div/p/a at Line 228, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.json.html#l5588">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.json.html#/html/body/div/div/div/p/a at Line 3038, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.ttl.html#l11847">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.ttl.html#/html/body/div/div/div/p/a at Line 2711, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.xml.html#l10649">output/StructureDefinition-ihe-sdc-ecc-Observation-quantity.profile.xml.html#/html/body/div/div/div/p/a at Line 2789, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text-definitions.html#l4083">output/StructureDefinition-ihe-sdc-ecc-Observation-text-definitions.html#/html/body/div/div/div/p/a at Line 817, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text-examples.html#l337">output/StructureDefinition-ihe-sdc-ecc-Observation-text-examples.html#/html/body/div/div/div/p/a at Line 260, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text-mappings.html#l1321">output/StructureDefinition-ihe-sdc-ecc-Observation-text-mappings.html#/html/body/div/div/div/p/a at Line 411, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.html#l5534">output/StructureDefinition-ihe-sdc-ecc-Observation-text.html#/html/body/div/div/div/p/a at Line 861, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.profile.history.html#l306">output/StructureDefinition-ihe-sdc-ecc-Observation-text.profile.history.html#/html/body/div/div/div/p/a at Line 238, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.profile.json.html#l5594">output/StructureDefinition-ihe-sdc-ecc-Observation-text.profile.json.html#/html/body/div/div/div/p/a at Line 3048, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.profile.ttl.html#l11853">output/StructureDefinition-ihe-sdc-ecc-Observation-text.profile.ttl.html#/html/body/div/div/div/p/a at Line 2721, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.profile.xml.html#l10655">output/StructureDefinition-ihe-sdc-ecc-Observation-text.profile.xml.html#/html/body/div/div/div/p/a at Line 2799, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l501">output/artifacts.html#/html/body/div/div/div/p/a at Line 285, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="dataextraction.html#l321">output/dataextraction.html#/html/body/div/div/div/p/a at Line 183, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l486">output/index.html#/html/body/div/div/div/p/a at Line 251, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="terminology.html#l279">output/terminology.html#/html/body/div/div/div/p/a at Line 162, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#l385">output/toc.html#/html/body/div/div/div/p/a at Line 143, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
    </tr>
 </table>
 <hr/>
 <a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_ImplementationGuide-IHE-SDC-eCC-On-FHIR"> </a>
-<h2><a href="ImplementationGuide-IHE-SDC-eCC-On-FHIR.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR.json</a></h2>
+<h2><a href="ImplementationGuide-IHE-SDC-eCC-On-FHIR.html">fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"></div>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.definition.resource[9].description</b></td><td><b>warning</b></td><td title="Type_Specific_Checks_DT_String_WS"><b>value should not start or finish with whitespace</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_diagnosticreport-eCCDiagnosticReport0"> </a>
+<h2><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>DiagnosticReport: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.subject (l42/c25)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'q201'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.performer[0] (l47/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'pathpract1'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.result[0] (l53/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.result[1] (l56/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF.f96d3fea-62b3-47e9-8443-f199c2f946f0.ver1.49275.100004300'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.result[2] (l59/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DiagnosticReport.result[3] (l62/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_documentreference-eCCDocRef0"> </a>
+<h2><a href="DocumentReference-eCCDocRef0.html">fsh-generated/resources/DocumentReference-eCCDocRef0.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>DocumentReference: Validated against <i>this.</i><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.html">IHE SDC/eCC on FHIR DocumentReference</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>DocumentReference.content[0].attachment (l55/c8)</b></td><td><b>warning</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_ATT_NO_CONTENT"><b>Attachments have data and/or url, or else SHOULD have either contentType and/or language</b></td>
    </tr>
 </table>
 <hr/>
 <a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_observation-SDCeCCObservationCodeEx"> </a>
-<h2><a href="Observation-SDCeCCObservationCodeEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-ihe-sdc-ecc-Observation.html">IHE SDC/eCC on FHIR Observation</a></li></ul>
-
+<h2><a href="Observation-SDCeCCObservationCodeEx.html">fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.html">IHE SDC/eCC on FHIR Observation</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
@@ -230,9 +433,9 @@
 </table>
 <hr/>
 <a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_observation-SDCeCCObservationTextEx"> </a>
-<h2><a href="Observation-SDCeCCObservationTextEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-ihe-sdc-ecc-Observation.html">IHE SDC/eCC on FHIR Observation</a></li></ul>
-
+<h2><a href="Observation-SDCeCCObservationTextEx.html">fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.html">IHE SDC/eCC on FHIR Observation</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
@@ -249,9 +452,9 @@
 </table>
 <hr/>
 <a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-DiagnosticReport"> </a>
-<h2><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DiagnosticReport.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
@@ -262,22 +465,68 @@
 </table>
 <hr/>
 <a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-DocumentReference"> </a>
-<h2><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DocumentReference.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-ihe-sdc-ecc-DocumentReference.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-DocumentReference.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-code"> </a>
+<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation-code.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation-code.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-date"> </a>
+<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation-date.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation-date.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition.where(url = 'http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+     <td><b>StructureDefinition.where(url = 'http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-date')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
-<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation"> </a>
-<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-integer"> </a>
+<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation-integer.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation-integer.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-integer')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-quantity"> </a>
+<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation-quantity.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-quantity')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_alex_Documents_GitHub_ihe-sdc-ecc-on-fhir-IG_fsh-generated_resources_structuredefinition-ihe-sdc-ecc-Observation-text"> </a>
+<h2><a href="StructureDefinition-ihe-sdc-ecc-Observation-text.html">fsh-generated/resources/StructureDefinition-ihe-sdc-ecc-Observation-text.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -292,16 +541,42 @@
 <h2>Reference_REF_CantResolve</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Observation-SDCeCCObservationCodeEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Unable to resolve resource 'bibata-amadou'</b></td>
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'q201'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Observation-SDCeCCObservationCodeEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Unable to resolve resource 'pathpract1'</b></td>
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'pathpract1'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Observation-SDCeCCObservationTextEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Unable to resolve resource 'bibata-amadou'</b></td>
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Observation-SDCeCCObservationTextEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Unable to resolve resource 'pathpract1'</b></td>
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF.f96d3fea-62b3-47e9-8443-f199c2f946f0.ver1.49275.100004300'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="DiagnosticReport-eCCDiagnosticReport0.html">fsh-generated/resources/DiagnosticReport-eCCDiagnosticReport0.json</a></td><td><b>Unable to resolve resource 'Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-SDCeCCObservationCodeEx.html">fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Unable to resolve resource 'bibata-amadou'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-SDCeCCObservationCodeEx.html">fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Unable to resolve resource 'pathpract1'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-SDCeCCObservationTextEx.html">fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Unable to resolve resource 'bibata-amadou'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-SDCeCCObservationTextEx.html">fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Unable to resolve resource 'pathpract1'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="TYPE_SPECIFIC_CHECKS_DT_ATT_NO_CONTENT"> </a>
+<h2>TYPE_SPECIFIC_CHECKS_DT_ATT_NO_CONTENT</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="DocumentReference-eCCDocRef0.html">fsh-generated/resources/DocumentReference-eCCDocRef0.json</a></td><td><b>Attachments have data and/or url, or else SHOULD have either contentType and/or language</b></td>
    </tr>
 </table>
 <hr/>
@@ -309,13 +584,21 @@
 <h2>Terminology_TX_System_NotKnown</h2>
  <table class="grid">
    <tr style="background-color: #fffff2">
-     <td><a href="Observation-SDCeCCObservationCodeEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
+     <td><a href="Observation-SDCeCCObservationCodeEx.html">fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Observation-SDCeCCObservationCodeEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
+     <td><a href="Observation-SDCeCCObservationCodeEx.html">fsh-generated/resources/Observation-SDCeCCObservationCodeEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Observation-SDCeCCObservationTextEx.html">/Users/alex/Documents/GitHub/ihe-sdc-ecc-on-fhir-IG/fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
+     <td><a href="Observation-SDCeCCObservationTextEx.html">fsh-generated/resources/Observation-SDCeCCObservationTextEx.json</a></td><td><b>Code System URI 'http://cap.org/eCC' is unknown so the code cannot be validated</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_String_WS"> </a>
+<h2>Type_Specific_Checks_DT_String_WS</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="ImplementationGuide-IHE-SDC-eCC-On-FHIR.html">fsh-generated/resources/ImplementationGuide-IHE-SDC-eCC-On-FHIR.json</a></td><td><b>value should not start or finish with whitespace</b></td>
    </tr>
 </table>
 </body>

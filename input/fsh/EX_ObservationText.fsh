@@ -1,5 +1,5 @@
 Instance: SDCeCCObservationTextEx
-InstanceOf: ObservationSDCeCC
+InstanceOf: ObservationSDCeCCtext
 Description: "Example Observation using text fill in from SDC"
 
 * identifier.use = #usual 

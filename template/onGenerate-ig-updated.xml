@@ -13,7 +13,7 @@
    <version value="0.1.0"/>
    <name value="IHESDCeCCOnFHIR"/>
    <status value="draft"/>
-   <date value="2021-07-01T11:22:19-04:00"/>
+   <date value="2021-10-14T12:55:27-04:00"/>
    <packageId value="IHE-SDC-eCC-On-FHIR"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
@@ -81,10 +81,70 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation.html"/>
+            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation-code.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/ihe-sdc-ecc-Observation"/>
+            <reference value="StructureDefinition/ihe-sdc-ecc-Observation-code"/>
+         </reference>
+         <name value="IHE SDC/eCC on FHIR Observation"/>
+         <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation-date.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ihe-sdc-ecc-Observation-date"/>
+         </reference>
+         <name value="IHE SDC/eCC on FHIR Observation"/>
+         <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation-integer.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ihe-sdc-ecc-Observation-integer"/>
+         </reference>
+         <name value="IHE SDC/eCC on FHIR Observation"/>
+         <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ihe-sdc-ecc-Observation-quantity"/>
+         </reference>
+         <name value="IHE SDC/eCC on FHIR Observation"/>
+         <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ihe-sdc-ecc-Observation-text.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ihe-sdc-ecc-Observation-text"/>
          </reference>
          <name value="IHE SDC/eCC on FHIR Observation"/>
          <description value="A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers"/>
@@ -103,7 +163,7 @@
          </reference>
          <name value="SDCeCCObservationCodeEx"/>
          <description value="Example Observation using codes from SDC"/>
-         <exampleCanonical value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"/>
+         <exampleCanonical value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-code"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -118,7 +178,37 @@
          </reference>
          <name value="SDCeCCObservationTextEx"/>
          <description value="Example Observation using text fill in from SDC"/>
-         <exampleCanonical value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"/>
+         <exampleCanonical value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DiagnosticReport"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DiagnosticReport-eCCDiagnosticReport0.html"/>
+         </extension>
+         <reference>
+            <reference value="DiagnosticReport/eCCDiagnosticReport0"/>
+         </reference>
+         <name value="eCC Diagnostic Report"/>
+         <description value="Example eCC Diagnostic report "/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-eCCDocRef0.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/eCCDocRef0"/>
+         </reference>
+         <name value="SDC eCC DocumentReference"/>
+         <description value="Example DocumentReference with eCC attached as URL"/>
+         <exampleCanonical value="http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference"/>
          <groupingId value="-ex-example"/>
       </resource>
       <page>
@@ -155,7 +245,27 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation.html"/>
+               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation-code.html"/>
+               <title value="IHE SDC/eCC on FHIR Observation"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation-date.html"/>
+               <title value="IHE SDC/eCC on FHIR Observation"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation-integer.html"/>
+               <title value="IHE SDC/eCC on FHIR Observation"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation-quantity.html"/>
+               <title value="IHE SDC/eCC on FHIR Observation"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ihe-sdc-ecc-Observation-text.html"/>
                <title value="IHE SDC/eCC on FHIR Observation"/>
                <generation value="generated"/>
             </page>
@@ -167,6 +277,16 @@
             <page>
                <nameUrl value="Observation-SDCeCCObservationTextEx.html"/>
                <title value="SDCeCCObservationTextEx"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DiagnosticReport-eCCDiagnosticReport0.html"/>
+               <title value="eCC Diagnostic Report"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DocumentReference-eCCDocRef0.html"/>
+               <title value="SDC eCC DocumentReference"/>
                <generation value="generated"/>
             </page>
          </page>
