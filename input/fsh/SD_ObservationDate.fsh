@@ -4,9 +4,10 @@ Id: ihe-sdc-ecc-Observation-date
 Title: "IHE SDC/eCC on FHIR Observation Date"
 Description: "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime"
 * identifier 1..* MS 
-* bodySite MS 
+* identifier ^definition = "The identifier should match the SDC answer instance-GUID"
+* code ^definition = "The code should match the question ID from the SDC form. In a given Observation group, there might be repeating codes for multiselect questions"
 * hasMember MS 
+* hasMember ^definition = "hasMember should be used to capture any child questions in related Observations"
 * derivedFrom MS 
-* component MS 
+* derivedFrom ^definition = "derivedFrom should be used to define a parent Observation or the parent DocumentReference"
 * valueDateTime 1..1 MS
-* component MS 

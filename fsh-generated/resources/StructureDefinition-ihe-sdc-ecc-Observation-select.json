@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ihe-sdc-ecc-Observation-quantity",
+  "id": "ihe-sdc-ecc-Observation-select",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-quantity",
+  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-select",
   "version": "0.1.0",
-  "name": "ObservationSDCeCCquantity",
-  "title": "IHE SDC/eCC on FHIR Observation",
+  "name": "ObservationSDCeCCdselect",
+  "title": "IHE SDC/eCC on FHIR Observation Single Select",
   "status": "active",
-  "description": "A Observation Profile meant to capture quantity Question and Answer Sets from an IHE SDC Form. Any answer that has a quantity datatype in IHE SDC, or any datatype requiring a UCUM unit should be represented using this profile which requires the Observation.valueQuantity",
+  "description": "This Observation Profile is mean to capture single select Question-Answer Pairs as a valueCodeableConcept. If the question is Multiselect multiple Observations with the same Question Code may be created",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -85,13 +85,14 @@
         "min": 1
       },
       {
-        "id": "Observation.valueQuantity",
-        "path": "Observation.valueQuantity",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
+        "definition": "The valueCodeableConcept should match the question ID from the SDC form. Unique Observations should be created for each multi-select answer",
         "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "Quantity"
+            "code": "CodeableConcept"
           }
         ],
         "mustSupport": true
