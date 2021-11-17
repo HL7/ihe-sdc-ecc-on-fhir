@@ -1,0 +1,34 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <id value ="[local id]"/>
+    <identifier>
+        <system value="https://CAP.org/eCC"/>
+        <value value="[Answer instanceGUID]"/>
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://CAP.org/eCC"/>
+            <!-- do not put repeat suffix on CKey-->
+            <code value="[Question CKey]"/>
+            <!-- Check in this priority order -->
+            <display value="[AltText, ReportText, Title, {no title}]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="[Patient Resource ID]"/>
+    </subject>
+    <performer>
+        <reference value="[Practitioner Resource ID]"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="https://CAP.org/eCC"/>
+            <!-- do not put repeat suffix on CKey-->
+            <code value="[Answer CKey]"/>
+            <display value="[ReportText, Answer Title]"/>
+        </coding>
+    </valueCodeableConcept>
+    <specimen>
+        <reference value="[Specimen Resource ID]"/>
+    </specimen>
+</Observation>

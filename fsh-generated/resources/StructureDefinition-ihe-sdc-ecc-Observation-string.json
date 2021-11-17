@@ -62,7 +62,10 @@
         "path": "Observation.identifier",
         "definition": "The identifier should match the SDC answer instance-GUID",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "description": "The identifier should match the SDC answer instance-GUID"
+        }
       },
       {
         "id": "Observation.code",

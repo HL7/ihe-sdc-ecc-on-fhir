@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <identifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2129_F"/>
+        <!-- fill in identifier adds an _F-->
+    </identifier>
+    <status value="final"/>
+    <!-- question is the same code for the selected value and the typed value-->
+    <code>
+        <coding>
+            <system value="https://CAP.org"/>
+            <code value="2129"/>
+            <display value="Tumor Size (Note A)"/>
+        </coding>
+    </code>
+    <!-- For multiselect questions include the QuestionID in the code-->
+    <subject>
+        <reference value="Patient/bibata.amidou@chudequebec.ca"/>
+        <display value="Bibata Amidou"/>
+    </subject>
+    <issued value="2018-12-24T09:43:41+11:00"/>
+    <performer>
+        <reference value="Practitioner/f202"/>
+        <display value="Luigi Maas"/>
+    </performer>
+        <!-- can we have multiple body sites in the codings for bodysite -->
+    <valueString value="additional answer to this question typed out"/>
+<derivedFrom>
+    <reference value="DocumentReference/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI"/>
+    <!-- referencing Document Reference to SDC Form -->
+</derivedFrom>
+<!-- add a derived from the parent select/multi-select question-->
+<derivedFrom>
+    <reference value="Observation/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2129"/>
+    <!-- referencing any child questions of this observations - creating members to parents can be optional due to complexity -->
+</derivedFrom>
+</Observation>
+
