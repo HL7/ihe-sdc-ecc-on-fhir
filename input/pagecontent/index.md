@@ -5,7 +5,7 @@
 
 The SDC initiative was established by the ONC in 2013 to develop two implementation guides:
 +   [IHE SDC Technical Framework](https://wiki.ihe.net/index.php/Structured_Data_Capture) 
-+   [HL7 FHIR SDC Profile](http://hl7.org/fhir/us/sdc/)
++   [HL7 FHIR SDC Implementation Guide](http://hl7.org/fhir/us/sdc/)
 
 On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC). This implementation guide will enable implementers to transmit eCC data in FHIR resources. 
 

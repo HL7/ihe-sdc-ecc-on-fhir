@@ -24,7 +24,7 @@
     </performer>
         <!-- can we have multiple body sites in the codings for bodysite -->
         <valueCodeableConcept>
-        <coding>
+            <coding>
                 <system value="https://CAP.org/eCC"/>
                 <!-- Should we specify that this is a answer code? -->
                 <code value="2130"/>
