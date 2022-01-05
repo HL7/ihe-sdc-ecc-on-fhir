@@ -41,4 +41,6 @@
         <!-- the implementation guide will specify what value type should be used for what SDC Answer Type -->
         <valueString value="[Response Value]"/>
     </component>
+    <hasMember value="Observation/[Child Observation ID]"/>
+    <derivedFrom value="Obervation/[Parent Observation ID]"
 </Observation>

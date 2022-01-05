@@ -27,4 +27,6 @@
     <specimen>
         <reference value="[Specimen Resource ID]"/>
     </specimen>
+    <hasMember value="Observation/[Child Observation ID]"/>
+    <derivedFrom value="Obervation/[Parent Observation ID]"
 </Observation>
