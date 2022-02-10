@@ -1,0 +1,33 @@
+<Observation xmlns="http://hl7.org/fhir">
+   <!-- For Multiselect questions create a separate Observation for each answer where the Question Ckey is the same for QM-->
+   <id value ="local id"/>
+   <identifier>
+      <system value="https://CAP.org/eCC"/>
+      <value value="[answer instanceGUID]"/>
+   </identifier>
+   <status value="final"/>
+   <code>
+      <coding>
+         <system value="https://CAP.org/eCC"/>
+         <code value="[Question CKey]"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="urn:uuid:a71f49f9-336c-466e-abf5-e11c9bbd9cce"/>
+   </subject>
+   <performer>
+      <reference value="Practitioner/pathpract1"/>
+   </performer>
+   <valueCodeableConcept>
+      <coding>
+         <system value="https://CAP.org/eCC"/>
+         <code value="[Answer CKey]"/>
+         <display value="[DisplayText]"/>
+      </coding>
+   </valueCodeableConcept>
+   <specimen>
+      <reference value="Specimen/specimen875758333"/>
+   </specimen>
+   <hasMember value="Observation/[Child Observation ID]"/>
+   <derivedFrom value="Obervation/[Parent Observation ID]"
+</Observation>

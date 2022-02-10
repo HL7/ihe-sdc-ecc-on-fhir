@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <identifier>
+        <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2129"/>
+        <!-- check if FormInstanceVersionURI already includes the FormID -->
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://CAP.org"/>
+            <code value="2129"/>
+            <display value="Tumor Size (Note A)"/>
+        </coding>
+    </code>
+    <!-- For multiselect questions include the QuestionID in the code-->
+    <subject>
+        <reference value="Patient/bibata.amidou@chudequebec.ca"/>
+        <display value="Bibata Amidou"/>
+    </subject>
+    <issued value="2018-12-24T09:43:41+11:00"/>
+    <performer>
+        <reference value="Practitioner/f202"/>
+        <display value="Luigi Maas"/>
+    </performer>
+        <!-- can we have multiple body sites in the codings for bodysite -->
+        <valueCodeableConcept>
+            <coding>
+                <system value="https://CAP.org/eCC"/>
+                <!-- Should we specify that this is a answer code? -->
+                <code value="2130"/>
+                <display value="Cannot be determined (explain)"/>
+            </coding>
+        </valueCodeableConcept>
+<derivedFrom>
+    <reference value="DocumentReference/Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI"/>
+    <!-- referencing Document Reference to SDC Form -->
+</derivedFrom>
+<!-- can we use Component for a multi-select question with several answers?-->
+</Observation>
+

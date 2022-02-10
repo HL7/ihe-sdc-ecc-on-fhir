@@ -4,8 +4,33 @@
   "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
   "version": "0.1.0",
   "name": "IHESDCeCCOnFHIR",
+  "title": "IHE SDC/eCC on FHIR",
   "status": "draft",
+  "publisher": "HL7 International - Orders and Observations",
+  "contact": [
+    {
+      "name": "HL7 International - Orders and Observations",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.org/special/committees/orders/index.cfm"
+        }
+      ]
+    },
+    {
+      "name": "Alex Goel",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "agoel@cap.org",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": null,
   "packageId": "hl7.fhir.uv.ihesdconfhir",
+  "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -29,10 +54,34 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-code"
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-LIRdate"
         },
-        "name": "IHE SDC/eCC on FHIR Observation Code",
-        "description": "A Observation Profile meant to capture Question and Answer Sets from an IHE SDC Form. Questions shold be added as a code and the answer should be added as an appropriate data type. If the answer is a single select it should be added as a valueCodeableConcept. If a Question is a Multiselect then component may be used to list multiple answers",
+        "name": "IHE SDC/eCC on FHIR Observation ListItemResponse Date",
+        "description": "This Observation Profile is mean to capture Single or Multiselect answers as a valueCodeableConcept with additional date fill in answers in an Observation.component.valueDate",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-LIRint"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation ListItemResponse Integer",
+        "description": "This Observation Profile is mean to capture Single or Multiselect answers as a valueCodeableConcept with additional integer fill in answers in an Observation.component.valueInteger",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-LIRquantity"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation ListItemResponse Quantity",
+        "description": "This Observation Profile is mean to capture Single or Multiselect answers as a valueCodeableConcept with additional quantity fill in answers in an Observation.component.valueQuantity",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-LIRstring"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation ListItemResponse String",
+        "description": "This Observation Profile is mean to capture Single or Multiselect answers as a valueCodeableConcept with additional text fill in answers in an Observation.component.valueString",
         "exampleBoolean": false
       },
       {
@@ -40,7 +89,23 @@
           "reference": "StructureDefinition/ihe-sdc-ecc-Observation-date"
         },
         "name": "IHE SDC/eCC on FHIR Observation Date",
-        "description": "A Observation Profile meant to capture date Question and Answer Sets from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime",
+        "description": "A Observation Profile meant to capture date fill-in values from an IHE SDC Form. Any answer that has a date datatype in IHE SDC should be represented using this profile which requires the Observation.valueDateTime",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-section"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation Section",
+        "description": "This Observation Profile is mean to ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-select"
+        },
+        "name": "IHE SDC/eCC on FHIR Observation Single Select",
+        "description": "This Observation Profile is mean to capture single select Question-Answer Pairs as a valueCodeableConcept. If the question is Multiselect multiple Observations with the same Question Code may be created",
         "exampleBoolean": false
       },
       {
@@ -48,7 +113,7 @@
           "reference": "StructureDefinition/ihe-sdc-ecc-Observation-integer"
         },
         "name": "IHE SDC/eCC on FHIR Observation",
-        "description": "A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger",
+        "description": "A Observation Profile meant to capture integer fill-in values from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger",
         "exampleBoolean": false
       },
       {
@@ -56,15 +121,15 @@
           "reference": "StructureDefinition/ihe-sdc-ecc-Observation-quantity"
         },
         "name": "IHE SDC/eCC on FHIR Observation",
-        "description": "A Observation Profile meant to capture quantity Question and Answer Sets from an IHE SDC Form. Any answer that has a quantity datatype in IHE SDC, or any datatype requiring a UCUM unit should be represented using this profile which requires the Observation.valueQuantity",
+        "description": "A Observation Profile meant to capture quantity fill-in values from an IHE SDC Form. Any answer that has a numeric datatype in IHE SDC should be represented using this profile which requires the Observation.valueQuantity",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-text"
+          "reference": "StructureDefinition/ihe-sdc-ecc-Observation-string"
         },
         "name": "IHE SDC/eCC on FHIR Observation Text",
-        "description": "A Observation Profile meant to capture text Question and Answer Sets from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString",
+        "description": "A Observation Profile meant to capture string fill-in values from an IHE SDC Form. Any answer that has a string datatype in IHE SDC should be represented using this profile which requires the Observation.valueString",
         "exampleBoolean": false
       },
       {
@@ -73,15 +138,15 @@
         },
         "name": "SDCeCCObservationCodeEx",
         "description": "Example Observation using codes from SDC",
-        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-code"
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-select"
       },
       {
         "reference": {
-          "reference": "Observation/SDCeCCObservationTextEx"
+          "reference": "Observation/SDCeCCObservationStringEx"
         },
-        "name": "SDCeCCObservationTextEx",
+        "name": "SDCeCCObservationStringEx",
         "description": "Example Observation using text fill in from SDC",
-        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-text"
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-string"
       },
       {
         "reference": {

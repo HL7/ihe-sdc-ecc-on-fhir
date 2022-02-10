@@ -10,7 +10,7 @@ Observations can be used to capture Question and Answer Sets from SDC. Each Obse
 Single Select questions in SDC should be captured as valueCodeableConcept with the SDC ID for as the coding, and the question title as text. 
 
 #### Multi-Select
-Similar to Single Select questions in SDC should be captured as valueCodeableConcept with the SDC ID for as the coding, and the question title as text, however the multiple answers should be stored in multiple Observation.component elements so that the context of the complete question and answer set can be maintained. 
+Similar to Single Select questions in SDC should be captured as valueCodeableConcept with the SDC ID for as the coding as separate Observations. Therefore each answer should be uniquely represented in a separate Observation and could be linked together by referencing the same DocumentReference in the Observation.derivedFrom element or in a FHIR DiagnosticReport. 
 
 #### Text Answers
 Observations for text based questions should be captured as valueString for simplicity. 
@@ -18,8 +18,18 @@ Observations for text based questions should be captured as valueString for simp
 #### Other Data Types
 Other data types should be captured in value[x] as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. There is a profile in this iGuide for each of these data types.  
 
+| IHE SDC DataType            | FHIR Observation.value type |
+| --------------------------- | --------------------------- |
+| boolean                     | valueBoolean                |
+| date                        | valueDateTime               |
+| dateTime                    | valueDateTime               |
+| decimal                     | valueQuantity               |
+| integer                     | valueInteger                |
+| string                      | valueString                 |
+| time                        | valueTime                   |
+
 ## Definition-Based Extraction
 TBD
 
-## Data Storage Considerations
-Mapping can be accomplished in order to promote robust data models that allow for advanced data analytics and shareable data models. There are a number of intersections for SDC and data models such as OHDSI. For example SDC and OHDSI both have a heavy reliance on identifiers. 
+<!-- ## Data Storage Considerations
+Mapping can be accomplished in order to promote robust data models that allow for advanced data analytics and shareable data models. There are a number of intersections for SDC and data models such as OHDSI. For example SDC and OHDSI both have a heavy reliance on identifiers. --> 

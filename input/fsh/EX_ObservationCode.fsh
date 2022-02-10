@@ -1,5 +1,5 @@
 Instance: SDCeCCObservationCodeEx
-InstanceOf: ObservationSDCeCCcode
+InstanceOf: ObservationSDCeCCdselect
 Description: "Example Observation using codes from SDC"
 
 * identifier.use = #usual 

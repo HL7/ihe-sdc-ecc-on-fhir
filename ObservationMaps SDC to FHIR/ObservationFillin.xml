@@ -1,0 +1,32 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <!-- QR mapping-->
+    <id value ="[local id]"/>
+    <identifier>
+        <system value="https://CAP.org/eCC"/>
+        <value value="[Question instanceGUID]"/>
+        <!--For fill in questions the answer does not have a GUID, therefore the Question instanceGUID shall be used-->
+    </identifier>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="https://CAP.org/eCC"/>
+            <!-- do not put repeat suffix on CKey-->
+            <code value="[Question CKey]"/>
+            <!-- Check display in this priority order -->
+            <display value="[AltText, ReportText, Title, {no title}]"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="[Patient Resource ID]"/>
+    </subject>
+    <performer>
+        <reference value="[Practitioner Resource ID]"/>
+    </performer>
+    <!-- the implementation guide will specify what value type should be used for what SDC Answer Type -->
+    <valueString value="[Response Value]"/>
+    <specimen>
+        <reference value="[Specimen Resource ID]"/>
+    </specimen>
+    <hasMember value="Observation/[Child Observation ID]"/>
+    <derivedFrom value="Obervation/[Parent Observation ID]">
+</Observation>

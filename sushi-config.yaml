@@ -5,11 +5,24 @@
 id: hl7.fhir.uv.ihesdconfhir
 canonical: http://bhl7.org/fhir/ihe-sdc-on-fhir
 name: IHE-SDC-eCC-On-FHIR
+title: "IHE SDC/eCC on FHIR"
+license: CC0-1.0
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
+publisher:
+  name: HL7 International - Orders and Observations 
+  url: https://www.hl7.org/special/committees/orders/index.cfm
+contact: 
+  name: Alex Goel
+  telecom: 
+    system: email 
+    value: agoel@cap.org 
+    use: work 
+
+description: 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

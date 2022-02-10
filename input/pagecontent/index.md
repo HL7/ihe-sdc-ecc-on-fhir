@@ -1,13 +1,24 @@
-# IHE-SDC-eCC-On-FHIR
+# IHE SDC/eCC on FHIR
 
 ## Introduction
-IHE Structured Data Capture (SDC) on FHIR uses a form driven workflow to capture and encode data by creating FHIR Observations from the captured data. The primary use case for this implementation guide is point of care reporting for clinicians using structured forms to capture high quality data for care and reporting purposes. Structured data can enable easier auto-population of future medical documents, easily queriable data, and high quality reporting for quality measurement and evaluation, and research.
+[Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
 
 The SDC initiative was established by the ONC in 2013 to develop two implementation guides:
 +   [IHE SDC Technical Framework](https://wiki.ihe.net/index.php/Structured_Data_Capture) 
-+   [HL7 FHIR SDC Profile](http://hl7.org/fhir/us/sdc/)
-˜
-On March 30, 2017 both initiatives transitioned into community led projects focused on data capture. The ideal scenario is that data captured in any manner can exist in FHIR for maximum interoperability.  Both initiatives focus on improving data capture within healthcare. The CAP has already developed and implemented IHE SDC for their collection of [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), and being able to extract data from these cancer checklists to create FHIR Observations will enhance interoperability.
++   [HL7 FHIR SDC Implementation Guide](http://hl7.org/fhir/us/sdc/)
+
+On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC). This implementation guide will enable implementers to transmit eCC data in FHIR resources. 
+
+<!--Can we put this in the guide? shows a concrete example of what this implementation guide does
+
+There is a parser implementation available for this guide available here: https://github.com/IHE-SDC-WG/IHE-SDC-FHIR-Parser
+
+Add a note about why this is a universal IG 
+Goes beyond just Pathology, although will mostly be Pathology, and IHE SDC is implmented outside of the US. Put Link to Cancer Pathology Data Sharing IG 
+--> 
+IHE SDC is deployed in a number of different use cases, beyond Pathology and in order to accomodate those additional use cases this IG is Universal Realm. It is expected that implementers may want to apply other standards such as US-Core to this IG in order to meet their needs. This IG is intended as guidance on how to map from the IHE SDC XML form model to FHIR. 
+
+The encoded eCC/SDC xml may be included in the message as an encoded attachment data element or alternatively linked as a URL.
 
 ## FHIR Version
 This FHIR implementation guide is based on FHIR R4. 
