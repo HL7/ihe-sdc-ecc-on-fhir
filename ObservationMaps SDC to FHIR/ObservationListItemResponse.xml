@@ -42,5 +42,5 @@
         <valueString value="[Response Value]"/>
     </component>
     <hasMember value="Observation/[Child Observation ID]"/>
-    <derivedFrom value="Obervation/[Parent Observation ID]"
+    <derivedFrom value="Obervation/[Parent Observation ID]">
 </Observation>

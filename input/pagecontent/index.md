@@ -11,7 +11,11 @@ On March 30, 2017 the ONC transitioned both initiatives into community led proje
 
 <!--Can we put this in the guide? shows a concrete example of what this implementation guide does
 
-There is a parser implementation available for this guide available here: https://github.com/IHE-SDC-WG/IHE-SDC-FHIR-Parser--> 
+There is a parser implementation available for this guide available here: https://github.com/IHE-SDC-WG/IHE-SDC-FHIR-Parser
+
+Add a note about why this is a universal IG 
+Goes beyond just Pathology, although will mostly be Pathology, and IHE SDC is implmented outside of the US. Put Link to Cancer Pathology Data Sharing IG 
+--> 
 
 The encoded eCC/SDC xml may be included in the message as an encoded attachment data element or alternatively linked as a URL.
 

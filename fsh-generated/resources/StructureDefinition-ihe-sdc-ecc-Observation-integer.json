@@ -16,7 +16,7 @@
   "name": "ObservationSDCeCCint",
   "title": "IHE SDC/eCC on FHIR Observation",
   "status": "active",
-  "description": "A Observation Profile meant to capture integer Question and Answer Sets from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger",
+  "description": "A Observation Profile meant to capture integer fill-in values from an IHE SDC Form. Any answer that has an integer datatype in IHE SDC should be represented using this profile which requires the Observation.valueInteger",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -60,7 +60,7 @@
       {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
-        "definition": "The identifier should match the SDC answer instance-GUID",
+        "definition": "The identifier should match the SDC Question instance-GUID",
         "min": 1,
         "mustSupport": true
       },

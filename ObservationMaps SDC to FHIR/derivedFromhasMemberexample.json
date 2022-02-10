@@ -1,0 +1,78 @@
+{
+    "fullUrl": "urn:uuid:4a4fd2b1-8526-4b4d-bad0-80cbbffe451c",
+    "resource": {
+      "resourceType": "Observation",
+      "identifier": [ {
+        "system": "https://CAP.org/eCC",
+        "value": "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF8cda8076-67b4-4637-9b65-eb1e9f6238a4/ver1#26362.100004300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://CAP.org/eCC",
+          "code": "26362.100004300",
+          "display": "?Specify Margin, if possible"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:bd51c339-b4cf-4c93-8a4b-302e783c5a4a"
+      },
+      "performer": [ {
+        "reference": "Practitioner/pathpract1"
+      } ],
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "https://CAP.org/eCC",
+          "code": "26363.100004300",
+          "display": "Specify margin"
+        } ]
+      },
+      "specimen": {
+        "reference": "Specimen/specimen875758333"
+      },
+      "hasMember": [ {
+        "identifier": {
+            "system": "https://CAP.org/eCC",
+            "value": "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF8cda8076-67b4-4637-9b65-eb1e9f6238a4/ver1#45098.100004300"
+          } 
+    }]
+  }, {
+    "fullUrl": "urn:uuid:e5d1394a-8a3c-43f8-9578-b937d71f7ecb",
+    "resource": {
+      "resourceType": "Observation",
+      "identifier": [ {
+        "system": "https://CAP.org/eCC",
+        "value": "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF8cda8076-67b4-4637-9b65-eb1e9f6238a4/ver1#45098.100004300"
+      } ],
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "https://CAP.org/eCC",
+          "code": "45098.100004300",
+          "display": "Number of Lymph Nodes Involved"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:bd51c339-b4cf-4c93-8a4b-302e783c5a4a"
+      },
+      "performer": [ {
+        "reference": "Practitioner/pathpract1"
+      } ],
+      "valueCodeableConcept": {
+        "coding": [ {
+          "system": "https://CAP.org/eCC",
+          "code": "1874.100004300",
+          "display": "Number cannot be determined (explain)"
+        } ]
+      },
+      "specimen": {
+        "reference": "Specimen/specimen875758333"
+      },
+      "derivedFrom": [ {
+        "identifier": {
+            "system": "https://CAP.org/eCC",
+            "value": "Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF8cda8076-67b4-4637-9b65-eb1e9f6238a4/ver1#26362.100004300"
+        } 
+    }]
+    }
+  }
