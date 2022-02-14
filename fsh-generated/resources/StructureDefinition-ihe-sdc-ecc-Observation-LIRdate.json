@@ -60,6 +60,7 @@
       {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
+        "short": "the SDC answer instanceGUID",
         "definition": "The identifier should match the SDC answer instance-GUID",
         "min": 1,
         "mustSupport": true
@@ -67,6 +68,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "SDC question ID",
         "definition": "The code should match the question ID from the SDC form"
       },
       {
@@ -87,7 +89,8 @@
       {
         "id": "Observation.valueCodeableConcept",
         "path": "Observation.valueCodeableConcept",
-        "definition": "The valueCodeableConcept should match the question ID from the SDC form. In this instance the question may be something like Date",
+        "short": "the ID for multiselect answer",
+        "definition": "The valueCodeableConcept should match the answer ID from the SDC form for a multi-select that has a date List Item Response. In this instance the question may be something like Date, requiring an answer in a date format",
         "min": 1,
         "max": "1",
         "type": [
@@ -100,6 +103,7 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "short": "child question/answer reference",
         "definition": "hasMember should be used to capture any child questions in related Observations",
         "mustSupport": true
       },
@@ -127,6 +131,7 @@
       {
         "id": "Observation.component.valueDateTime",
         "path": "Observation.component.valueDateTime",
+        "short": "date text entry",
         "definition": "Any additional list item response datetime fields which were filled in should be captured in the component as valueDate",
         "min": 1,
         "max": "1",

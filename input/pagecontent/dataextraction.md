@@ -15,6 +15,21 @@ Similar to Single Select questions in SDC should be captured as valueCodeableCon
 #### Text Answers
 Observations for text based questions should be captured as valueString for simplicity. 
 
+#### List Item Responses (LIR)
+There are a number of questions in IHE SDC which have sub-question types directly attached in the parent. These are known as List Item Responses. For example a single select list may have a question like "Tumor Size" with answer options of: 
+* Greatest dimension in cm
+* Cannot be determined (explain)
+
+For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as <ListItemResponseFields> and require the Observation to the component element to capture the additional filled information. The following profiles reflect this data type: 
+<!-- make the following bullets links-->
+* [IHE SDC/eCC on FHIR Observation ListItemResponse Date](StructureDefinition-ihe-sdc-ecc-Observation-LIRdate.html)
+* IHE SDC/eCC on FHIR Observation ListItemResponse Integer
+* IHE SDC/eCC on FHIR Observation ListItemResponse Quantity 
+* IHE SDC/eCC on FHIR Observation ListItemResponse String 
+
+#### Sections
+Sections should be captured in Observations and used as groupers 
+
 #### Other Data Types
 Other data types should be captured in value[x] as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. There is a profile in this iGuide for each of these data types.  
 
@@ -28,8 +43,17 @@ Other data types should be captured in value[x] as their closest IHE SDC for mat
 | string                      | valueString                 |
 | time                        | valueTime                   |
 
+<!--
 ## Definition-Based Extraction
-TBD
+Definition-based extraction may be used to to write to specific FHIR Resources rather than a
+--> 
+
+## Structure Map 
+The Structure Map may be used to cover complex types of questions which have unique needs in terms of mapping to FHIR resources. For example if a group of questions needs to be represented in a single Observation a Structure Map could specify how to add those answers to Observation.component elements. This would enable more complex and accurate mapping to FHIR resources. 
+
+Additionally Structure Map could be used to write to different FHIR resources other than Observation, where a resource such as Condition or Procedure may be more appropriate. 
+
+Note: Structure Map is still be explored by the IG authors for these kinds of use cases. 
 
 <!-- ## Data Storage Considerations
 Mapping can be accomplished in order to promote robust data models that allow for advanced data analytics and shareable data models. There are a number of intersections for SDC and data models such as OHDSI. For example SDC and OHDSI both have a heavy reliance on identifiers. --> 

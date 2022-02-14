@@ -28,7 +28,7 @@
       ]
     }
   ],
-  "description": null,
+  "description": "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations",
   "packageId": "hl7.fhir.uv.ihesdconfhir",
   "license": "CC0-1.0",
   "fhirVersion": [
