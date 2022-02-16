@@ -1,7 +1,7 @@
 Profile: ObservationSDCeCCquantity
 Parent: Observation
 Id: ihe-sdc-ecc-Observation-quantity
-Title: "IHE SDC/eCC on FHIR Observation"
+Title: "IHE SDC/eCC on FHIR Observation Quantity"
 Description: "A Observation Profile meant to capture quantity fill-in values from an IHE SDC Form. Any answer that has a numeric datatype in IHE SDC should be represented using this profile which requires the Observation.valueQuantity"
 * identifier 1..* MS 
 * identifier ^definition = "The identifier should match the SDC Question instance-GUID"
