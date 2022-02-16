@@ -12,7 +12,7 @@ Description: "This Observation Profile is mean to capture Single or Multiselect 
 * hasMember ^short = "child question/answer reference"
 * hasMember ^definition = "hasMember should be used to capture any child questions in related Observations"
 * derivedFrom MS 
-* derivedFROM ^short = "parent question/answer reference"
+* derivedFrom ^short = "parent question/answer reference"
 * derivedFrom ^definition = "derivedFrom should be used to define a parent Observation or the parent DocumentReference"
 * valueCodeableConcept 1..1 MS 
 * valueCodeableConcept ^definition = "The valueCodeableConcept should match the question ID from the SDC form. In this instance the question may be something like Integer"
