@@ -48,7 +48,7 @@ Other data types should be captured in value[x] as their closest IHE SDC for mat
 Definition-based extraction may be used to to write to specific FHIR Resources rather than a
 --> 
 ## Historical Data 
-It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC froms. If the question types and CKeys were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide. 
+It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC froms. If the question types and IHE SDC IDs were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide. 
 
 ## Structure Map 
 The Structure Map may be used to cover complex types of questions which have unique needs in terms of mapping to FHIR resources. For example if a group of questions needs to be represented in a single Observation a Structure Map could specify how to add those answers to Observation.component elements. This would enable more complex and accurate mapping to FHIR resources. 
