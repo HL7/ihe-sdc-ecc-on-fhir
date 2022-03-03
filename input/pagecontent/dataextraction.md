@@ -20,12 +20,7 @@ There are a number of questions in IHE SDC which have sub-question types directl
 * Greatest dimension in cm
 * Cannot be determined (explain)
 
-For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as <ListItemResponseFields> and require the Observation to the component element to capture the additional filled information. The following profiles reflect this data type: 
-<!-- make the following bullets links-->
-* [IHE SDC/eCC on FHIR Observation ListItemResponse Date](StructureDefinition-ihe-sdc-ecc-Observation-LIRdate.html)
-* IHE SDC/eCC on FHIR Observation ListItemResponse Integer
-* IHE SDC/eCC on FHIR Observation ListItemResponse Quantity 
-* IHE SDC/eCC on FHIR Observation ListItemResponse String 
+For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as <ListItemResponseFields> and require the Observation to the component element to capture the additional filled information. See example: [SDCeCCObservationCodeLIR](Observation-SDCeCCObservationCodeLIR.json.html)
 
 #### Sections
 Sections should be captured in Observations and used as groupers 
@@ -48,7 +43,7 @@ Other data types should be captured in value[x] as their closest IHE SDC for mat
 Definition-based extraction may be used to to write to specific FHIR Resources rather than a
 --> 
 ## Historical Data 
-It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC froms. If the question types and CKeys were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide. 
+It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC froms. If the question types and IHE SDC IDs were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide. 
 
 ## Structure Map 
 The Structure Map may be used to cover complex types of questions which have unique needs in terms of mapping to FHIR resources. For example if a group of questions needs to be represented in a single Observation a Structure Map could specify how to add those answers to Observation.component elements. This would enable more complex and accurate mapping to FHIR resources. 

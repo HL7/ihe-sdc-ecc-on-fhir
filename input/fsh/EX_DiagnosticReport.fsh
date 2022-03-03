@@ -1,8 +1,8 @@
 Alias: LNC = http://loinc.org
 Instance: eCCDiagnosticReport
-InstanceOf: DiagnosticReport
+InstanceOf: DiagnosticReportSDCeCC
 Title: "eCC Diagnostic Report"
-Description: "Example eCC Diagnostic report "
+Description: "Example eCC Diagnostic report"
 Usage: #example
 * id = "eCCDiagnosticReport0"
 * identifier.use = #usual 

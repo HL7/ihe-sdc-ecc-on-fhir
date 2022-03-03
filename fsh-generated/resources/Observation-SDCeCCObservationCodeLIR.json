@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "SDCeCCObservationCodeEx",
+  "id": "SDCeCCObservationCodeLIR",
   "meta": {
     "profile": [
-      "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-select"
+      "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
     ]
   },
   "identifier": [
@@ -26,9 +26,9 @@
   "code": {
     "coding": [
       {
-        "code": "56271",
+        "code": "2129",
         "system": "http://cap.org/eCC",
-        "display": "Tumor invades into other adjacent organ(s)"
+        "display": "Tumor size (Note A)"
       }
     ]
   },
@@ -44,10 +44,27 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "56752",
+        "code": "2123",
         "system": "http://cap.org/eCC",
-        "display": "Kidney"
+        "display": "Greatest Dimension in cm"
       }
     ]
-  }
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "2123",
+            "system": "http://cap.org/eCC",
+            "display": "Greatest Dimension in cm"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 2,
+        "unit": "cm"
+      }
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "SDCeCCObservationStringEx",
+  "id": "SDCeCCObservationCode",
   "meta": {
     "profile": [
       "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
@@ -26,9 +26,9 @@
   "code": {
     "coding": [
       {
-        "code": "76595",
+        "code": "56271",
         "system": "http://cap.org/eCC",
-        "display": "Comments"
+        "display": "Tumor invades into other adjacent organ(s)"
       }
     ]
   },
@@ -41,5 +41,13 @@
       "reference": "pathpract1"
     }
   ],
-  "valueString": "Some comment"
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "56752",
+        "system": "http://cap.org/eCC",
+        "display": "Kidney"
+      }
+    ]
+  }
 }
