@@ -14,9 +14,9 @@ Description: "This Observation Profile describes how to capture Question/Answer 
 * derivedFrom MS
 * derivedFrom ^short = "parent observation reference"
 * derivedFrom ^definition = "derivedFrom should be used to capture a parent Observation or the parent DocumentReference"
-* value MS 
-* value ^short = "the value for selected answer"
-* value ^definition = "The value should match the from the SDC form. Unique Observations should be created for each multi-select answer"
+* value[x] MS 
+* value[x] ^short = "the value for selected answer"
+* value[x] ^definition = "The value should match the from the SDC form. Unique Observations should be created for each multi-select answer"
 * component MS
 * component ^short = "additional entry"
 * component ^definition = "Any additional list item response fields which were filled in should be captured in the component as their appropriate value type"
