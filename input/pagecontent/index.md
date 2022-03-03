@@ -12,9 +12,6 @@ On March 30, 2017 the ONC transitioned both initiatives into community led proje
 <!--Can we put this in the guide? shows a concrete example of what this implementation guide does
 
 There is a parser implementation available for this guide available here: https://github.com/IHE-SDC-WG/IHE-SDC-FHIR-Parser
-
-Add a note about why this is a universal IG 
-Goes beyond just Pathology, although will mostly be Pathology, and IHE SDC is implmented outside of the US. Put Link to Cancer Pathology Data Sharing IG 
 --> 
 IHE SDC is deployed in a number of different use cases, beyond Pathology and in order to accomodate those additional use cases this IG is Universal Realm. It is expected that implementers may want to apply other standards such as US-Core to this IG in order to meet their needs. This IG is intended as guidance on how to map from the IHE SDC XML form model to FHIR. It should be noted that this guide does not make use of Questionnaire like FHIR SDC, but does follow the same data extraction pattern. 
 

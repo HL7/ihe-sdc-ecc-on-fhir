@@ -1,4 +1,5 @@
 input-cache/
+.vscode
 output/
 input/tests/results/*.txt
 temp/
