@@ -20,12 +20,7 @@ There are a number of questions in IHE SDC which have sub-question types directl
 * Greatest dimension in cm
 * Cannot be determined (explain)
 
-For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as <ListItemResponseFields> and require the Observation to the component element to capture the additional filled information. The following profiles reflect this data type: 
-<!-- make the following bullets links-->
-* [IHE SDC/eCC on FHIR Observation ListItemResponse Date](StructureDefinition-ihe-sdc-ecc-Observation-LIRdate.html)
-* IHE SDC/eCC on FHIR Observation ListItemResponse Integer
-* IHE SDC/eCC on FHIR Observation ListItemResponse Quantity 
-* IHE SDC/eCC on FHIR Observation ListItemResponse String 
+For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as <ListItemResponseFields> and require the Observation to the component element to capture the additional filled information. See example: [SDCeCCObservationCodeLIR](Observation-SDCeCCObservationCodeLIR.html)
 
 #### Sections
 Sections should be captured in Observations and used as groupers 

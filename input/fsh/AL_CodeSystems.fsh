@@ -1,5 +1,5 @@
 Alias:   CAP = http://cap.org/eCC
-//fake address for CAP terminology as it is proprietary 
+//address for CAP terminology
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
