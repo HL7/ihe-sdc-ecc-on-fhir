@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ihe-sdc-ecc-Observation-LIRstring",
+  "id": "ihe-sdc-ecc-Observation",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation-LIRstring",
+  "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation",
   "version": "0.1.0",
-  "name": "ObservationSDCeCCLIRstring",
-  "title": "IHE SDC/eCC on FHIR Observation ListItemResponse String",
+  "name": "ObservationSDCeCC",
+  "title": "IHE SDC/eCC on FHIR Observation",
   "status": "active",
-  "description": "This Observation Profile is mean to capture Single or Multiselect answers as a valueCodeableConcept with additional text fill in answers in an Observation.component.valueString",
+  "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. Any additional  fill in answers in an Observation.component.value. If the question is Multiselect multiple Observations with the same Question Code should be created. A section Should also be represented as a grouping Observation",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -60,81 +60,43 @@
       {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
-        "definition": "The identifier should match the SDC answer instance-GUID",
+        "short": "the SDC instanceGUID",
+        "definition": "The identifier should match the SDC answer instanceGUID. If an answer instanceGUID is not available a Question instanceGUID shall be used",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "definition": "The code should match the question ID from the SDC form"
+        "short": "SDC section/question ID",
+        "definition": "The code should match the question ID from the SDC form. In a given Observation group, there might be repeating codes for multiselect questions, though these Observations will have different values"
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
-        "definition": "The valueCodeableConcept should match the question ID from the SDC form. In this instance the question may be something like Other(Specify) or Comment",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
+        "short": "the value for selected answer",
+        "definition": "The value should match the from the SDC form. Unique Observations should be created for each multi-select answer",
         "mustSupport": true
       },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "short": "child observation reference",
         "definition": "hasMember should be used to capture any child questions in related Observations",
         "mustSupport": true
       },
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "definition": "derivedFrom should be used to define a parent Observation or the parent DocumentReference",
+        "short": "parent observation reference",
+        "definition": "derivedFrom should be used to capture a parent Observation or the parent DocumentReference",
         "mustSupport": true
       },
       {
-        "id": "Observation.component.value[x]",
-        "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "Observation.component.valueString",
-        "path": "Observation.component.valueString",
-        "definition": "Any additional list item response string fields which were filled in should be captured in the component as valueString",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "short": "additional entry",
+        "definition": "Any additional list item response fields which were filled in should be captured in the component as their appropriate value type",
         "mustSupport": true
       }
     ]

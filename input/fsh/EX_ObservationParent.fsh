@@ -1,5 +1,6 @@
 Instance: SDCeCCObservationParent
 InstanceOf: ObservationSDCeCC
+Description: "Example Parent Observation demonstrating a child hasMember reference"
 Usage: #example 
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "eccea3-121a-4bc3-94dc-7463cc908f2e"
