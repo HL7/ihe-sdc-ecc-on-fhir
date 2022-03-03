@@ -1,6 +1,7 @@
 Instance: SDCeCCObservationStringEx
 InstanceOf: ObservationSDCeCC
 Description: "Example Observation using text fill in from SDC"
+Usage: #example 
 * id = "SDCeCCObservationStringEx"
 * identifier.use = #usual 
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN "Accession ID"

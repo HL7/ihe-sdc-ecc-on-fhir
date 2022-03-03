@@ -1,6 +1,7 @@
 Instance: SDCeCCObservationCodeLIR
 InstanceOf: ObservationSDCeCC
 Description: "Example Observation using codes with an additional response from SDC"
+Usage: #example 
 * id = "SDCeCCObservationCodeLIR"
 * identifier.use = #usual 
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN "Accession ID"

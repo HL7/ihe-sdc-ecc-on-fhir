@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationParent
 InstanceOf: ObservationSDCeCC
-Usage: #inline
+Usage: #example 
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "eccea3-121a-4bc3-94dc-7463cc908f2e"
 * status = #final
