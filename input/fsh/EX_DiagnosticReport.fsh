@@ -17,9 +17,16 @@ Usage: #example
 * effectiveDateTime = "2021-01-14"
 * performer = Reference(pathpract1)
 * performer.display = "Luigi Maas"
+* result[0] = Reference(SDCeCCObservationChild)
+* result[1] = Reference(SDCeCCObservationParent)
+* result[2] = Reference(SDCeCCObservationCode)
+* result[3] = Reference(SDCeCCObservationCodeLIR)
 //Should these references be logical references? 
+/*
+old references from generated example 
 * result[0] = Reference(Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157)
 * result[1] = Reference(Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF.f96d3fea-62b3-47e9-8443-f199c2f946f0.ver1.49275.100004300)
 * result[2] = Reference(Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.43324)
 * result[3] = Reference(Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.56271)
+*/
 * presentedForm.url = "http://test.org/pathology/eCCDiagnosticReport0"
