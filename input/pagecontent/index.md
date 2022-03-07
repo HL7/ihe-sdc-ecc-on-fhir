@@ -74,3 +74,15 @@ A DocumentReference is the preferred way to transport an IHE SDC form as an atta
 
 ## Must Support
 The elements labelled Must Support in this guide should be sent if available. If they are unavailable, refer to cardinality of the element. For implementers using these resources if the data is unavailable they do not need to include the element. 
+
+## Acknowledgements
+
+This library of FHIR resources was developed and produced through the efforts of Health Level Seven (HL7). The editors appreciate the support of all volunteers and staff associated with the creation of this document and the sponsorship of the following Work Groups: Orders & Observations, and FHIR Infrastructure. This guide would not have been possible without the support of the following organizations: 
+
++ Centers for Disease Control and Prevention (CDC) 
++ North American Association of Central Cancer Registries (NAACCR) 
++ College of American Pathologists (CAP) 
+
+This material contains content from [SNOMED CT®](https://www.snomed.org/). SNOMED CT is a registered trademark of the International Health Terminology Standard Development Organization (IHTSDO). 
+
+This material contains content from the CAP. The [Electronic Cancer Checklists](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecc) are copyrighted by the CAP. All rights reserved. 

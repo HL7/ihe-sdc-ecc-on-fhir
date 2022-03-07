@@ -2,6 +2,7 @@ Instance: SDCeCCObservationChild
 InstanceOf: ObservationSDCeCC
 Description: "Example Child Observation demonstrating a parent derivedFrom reference"
 Usage: #inline
+* id = "SDCeCCObservationChild"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "fikea3-188a-4ko3-00dc-8282cc908f3e"
 * status = #final
