@@ -58,8 +58,8 @@
       },
       "format": {
         "code": "urn:ihe:pcc:crc:2008",
-        "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codsystem",
-        "display": "Cancer Registry Content (CRC)"
+        "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+        "display": "PCC CRC"
       }
     }
   ]
