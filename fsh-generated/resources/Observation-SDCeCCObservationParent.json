@@ -8,7 +8,7 @@
   },
   "identifier": [
     {
-      "system": "https://cap.org/eCC",
+      "system": "http://example.org/Observation",
       "value": "eccea3-121a-4bc3-94dc-7463cc908f2e"
     }
   ],
@@ -22,8 +22,16 @@
     ]
   },
   "subject": {
-    "reference": "urn:uuid:fe77a56c-434c-443d-a59a-cd230a2e0e51"
+    "reference": "http://example.org/patient",
+    "display": "Example Patient"
   },
+  "effectiveDateTime": "2021-05-11",
+  "performer": [
+    {
+      "reference": "http://example.org/practitioner",
+      "display": "Example Practitioner"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -36,7 +44,7 @@
   "hasMember": [
     {
       "identifier": {
-        "system": "https://cap.org/eCC",
+        "system": "http://example.org/Observation",
         "value": "fikea3-188a-4ko3-00dc-8282cc908f3e"
       }
     }

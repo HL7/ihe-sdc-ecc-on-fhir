@@ -29,6 +29,9 @@ contact:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
   Data Extraction: dataextraction.html
   Terminology: terminology.html
+  Artifacts: artifacts.html
+  Downloads: downloads.html
+  Support: support.html
+
