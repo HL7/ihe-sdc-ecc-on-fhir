@@ -18,7 +18,7 @@
           }
         ]
       },
-      "system": "http://hospital.example.org",
+      "system": "http://example.org/Observation",
       "value": "SDCeCCObservationCodeEx0"
     }
   ],
@@ -33,12 +33,14 @@
     ]
   },
   "subject": {
-    "reference": "bibata-amadou"
+    "reference": "http://example.org/patient",
+    "display": "Example Patient"
   },
   "effectiveDateTime": "2021-05-11",
   "performer": [
     {
-      "reference": "pathpract1"
+      "reference": "http://example.org/practitioner",
+      "display": "Example Practitioner"
     }
   ],
   "valueCodeableConcept": {

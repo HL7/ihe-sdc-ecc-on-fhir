@@ -18,7 +18,7 @@
           }
         ]
       },
-      "system": "http://hospital.example.org",
+      "system": "http://example.org/Observation",
       "value": "eCCDiagnosticReport0"
     }
   ],
@@ -44,14 +44,14 @@
     ]
   },
   "subject": {
-    "reference": "q201",
-    "display": "Bibata Amadou"
+    "reference": "http://example.org/patient",
+    "display": "Example Patient"
   },
-  "effectiveDateTime": "2021-01-14",
+  "effectiveDateTime": "2021-05-11",
   "performer": [
     {
-      "reference": "pathpract1",
-      "display": "Luigi Maas"
+      "reference": "http://example.org/practitioner",
+      "display": "Example Practitioner"
     }
   ],
   "result": [
@@ -62,7 +62,7 @@
       "reference": "Observation/SDCeCCObservationParent"
     },
     {
-      "reference": "SDCeCCObservationCode"
+      "reference": "Observation/SDCeCCObservationCode"
     },
     {
       "reference": "Observation/SDCeCCObservationCodeLIR"

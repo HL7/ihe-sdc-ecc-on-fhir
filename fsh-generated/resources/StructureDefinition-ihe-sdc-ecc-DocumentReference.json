@@ -65,12 +65,16 @@
       {
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
+        "short": "the form's SDC ID if blank, or @instanceVersionGUID if filled",
+        "definition": "the form's SDC ID should be replaced by form's instanceVersionGUID if the form has been filled",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
+        "short": "Any additional form identifying information",
+        "definition": "Additional identifying information about the form such as its fullURI",
         "mustSupport": true
       },
       {

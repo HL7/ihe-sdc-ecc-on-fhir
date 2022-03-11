@@ -5,11 +5,13 @@ Usage: #example
 * id = "SDCeCCObservationStringEx"
 * identifier.use = #usual 
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN "Accession ID"
-* identifier.system = "http://hospital.example.org"
+* identifier.system = "http://example.org/Observation"
 * identifier.value = "SDCeCCObservationCodeEx0"
 * status = #final "final"
 * code = CAP#76595 "Comments"
-* subject = Reference(bibata-amadou)
+* subject = Reference(http://example.org/patient)
+* subject.display = "Example Patient"
 * effectiveDateTime = "2021-05-11"
-* performer = Reference(pathpract1)
+* performer = Reference(http://example.org/practitioner)
+* performer.display = "Example Practitioner"
 * valueString = "Some comment"

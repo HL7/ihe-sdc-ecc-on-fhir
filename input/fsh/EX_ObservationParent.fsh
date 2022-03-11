@@ -3,11 +3,15 @@ InstanceOf: ObservationSDCeCC
 Description: "Example Parent Observation demonstrating a child hasMember reference"
 Usage: #example 
 * id = "SDCeCCObservationParent"
-* identifier.system = "https://cap.org/eCC"
+* identifier.system = "http://example.org/Observation"
 * identifier.value = "eccea3-121a-4bc3-94dc-7463cc908f2e"
 * status = #final
 * code = CAP#30524
-* subject = Reference(urn:uuid:fe77a56c-434c-443d-a59a-cd230a2e0e51)
+* subject = Reference(http://example.org/patient)
+* subject.display = "Example Patient"
+* effectiveDateTime = "2021-05-11"
+* performer = Reference(http://example.org/practitioner)
+* performer.display = "Example Practitioner"
 * valueCodeableConcept = CAP#31001 "Negative (less than 1%)"
-* hasMember.identifier.system = "https://cap.org/eCC"
+* hasMember.identifier.system = "http://example.org/Observation"
 * hasMember.identifier.value = "fikea3-188a-4ko3-00dc-8282cc908f3e"
