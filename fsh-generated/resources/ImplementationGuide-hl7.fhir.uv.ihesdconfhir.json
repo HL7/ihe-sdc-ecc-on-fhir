@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.uv.ihesdconfhir",
   "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot",
   "name": "IHESDCeCCOnFHIR",
   "title": "IHE SDC/eCC on FHIR",
   "status": "draft",
@@ -70,6 +70,14 @@
         "name": "IHE SDC/eCC on FHIR Observation",
         "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. Any additional  fill in answers in an Observation.component.value. If the question is Multiselect multiple Observations with the same Question Code should be created. A section Should also be represented as a grouping Observation",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/SDCeCCObservationChild"
+        },
+        "name": "SDCeCCObservationChild",
+        "description": "Example Child Observation demonstrating a parent derivedFrom reference",
+        "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {

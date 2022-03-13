@@ -9,7 +9,7 @@ title: "IHE SDC/eCC on FHIR"
 description: "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations"
 license: CC0-1.0
 status: draft
-version: 0.1.0
+version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
