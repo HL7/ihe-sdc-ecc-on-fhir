@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "SDCeCCObservationChild",
+  "meta": {
+    "profile": [
+      "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/Observation",
+      "value": "fikea3-188a-4ko3-00dc-8282cc908f3e"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "25899",
+        "system": "http://cap.org/eCC"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "http://example.org/patient",
+    "display": "Example Patient"
+  },
+  "effectiveDateTime": "2021-05-11",
+  "performer": [
+    {
+      "reference": "http://example.org/practitioner",
+      "display": "Example Practitioner"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "25900",
+        "system": "http://cap.org/eCC",
+        "display": "Internal control cells present and stain as expected"
+      }
+    ]
+  },
+  "derivedFrom": [
+    {
+      "identifier": {
+        "system": "http://example.org/Observation",
+        "value": "eccea3-121a-4bc3-94dc-7463cc908f2e"
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 Instance: SDCeCCObservationChild
 InstanceOf: ObservationSDCeCC
 Description: "Example Child Observation demonstrating a parent derivedFrom reference"
-Usage: #inline
+Usage: #example
 * id = "SDCeCCObservationChild"
 * identifier.system = "http://example.org/Observation"
 * identifier.value = "fikea3-188a-4ko3-00dc-8282cc908f3e"

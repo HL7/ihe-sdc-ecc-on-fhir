@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot",
   "name": "DiagnosticReportSDCeCC",
   "title": "IHE SDC/eCC on FHIR DiagnosticReport",
   "status": "active",

@@ -21,7 +21,6 @@ Usage: #example
 * result[1] = Reference(SDCeCCObservationParent)
 * result[2] = Reference(SDCeCCObservationCode)
 * result[3] = Reference(SDCeCCObservationCodeLIR)
-//Should these references be logical references? 
 /*
 old references from generated example 
 * result[0] = Reference(Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF1.FormInstanceVersionURI.2157)
