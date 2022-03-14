@@ -1,6 +1,6 @@
 <!--## IHE SDC/eCC on FHIR Home Page-->
-Note: If you have come here looking for FHIR Structured Data Capture using Questionnaire go here: [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
-This implementation guide describes how to use [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) with FHIR. 
+*Note: If you have come here looking for FHIR Structured Data Capture using Questionnaire go here: [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
+This implementation guide describes how to use [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) with FHIR.* 
 ### Introduction
 
 [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
