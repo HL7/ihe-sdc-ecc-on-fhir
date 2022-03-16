@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.uv.ihesdconfhir",
-  "url": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
+  "url": "http://hl7.org/fhir/uv/ihesdconfhir/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
   "version": "1.0.0-ballot",
   "name": "IHESDCeCCOnFHIR",
   "title": "IHE SDC/eCC on FHIR",
@@ -82,7 +82,7 @@
         },
         "name": "SDC eCC Observation Child Example",
         "description": "Example Child Observation demonstrating a parent derivedFrom reference",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {
@@ -90,7 +90,7 @@
         },
         "name": "SDC eCC Observation Code Example",
         "description": "Example Observation using codes from SDC",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {
@@ -98,7 +98,7 @@
         },
         "name": "SDC eCC Observation List Item Response Example",
         "description": "Example Observation using codes with an additional response from SDC, which asked the user to specify the Greatest Dimension in cm.",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {
@@ -106,7 +106,7 @@
         },
         "name": "SDC eCC Observation Parent Example",
         "description": "Example Parent Observation demonstrating a child hasMember reference",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {
@@ -114,7 +114,7 @@
         },
         "name": "SDC eCC Observation Text Example",
         "description": "Example Observation using text fill in from SDC",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
       {
         "reference": {
@@ -122,7 +122,7 @@
         },
         "name": "eCC Diagnostic Report",
         "description": "Example eCC Diagnostic report",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport"
       },
       {
         "reference": {
@@ -130,7 +130,7 @@
         },
         "name": "SDC eCC DocumentReference",
         "description": "Example DocumentReference with eCC attached as Base64 encoded xml",
-        "exampleCanonical": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-DocumentReference"
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-DocumentReference"
       }
     ],
     "page": {
@@ -176,7 +176,7 @@
       },
       {
         "code": "path-history",
-        "value": "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/history.html"
+        "value": "http://hl7.org/fhir/uv/ihesdconfhir/history.html"
       }
     ]
   }
