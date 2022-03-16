@@ -3,7 +3,7 @@
   "id": "SDCeCCObservationParent",
   "meta": {
     "profile": [
-      "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
+      "http://hl7.org/fhir/uv/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
     ]
   },
   "identifier": [
