@@ -16,7 +16,7 @@ releaseLabel: ci-build
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 International - Orders and Observations 
-  url: https://www.hl7.org/special/committees/orders/index.cfm
+  url: http://www.hl7.org/special/committees/orders/index.cfm
 #contact: 
   #name: Alex Goel
   #telecom: 
