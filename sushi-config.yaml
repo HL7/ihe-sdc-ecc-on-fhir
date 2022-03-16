@@ -17,12 +17,12 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 International - Orders and Observations 
   url: https://www.hl7.org/special/committees/orders/index.cfm
-contact: 
-  name: Alex Goel
-  telecom: 
-    system: email 
-    value: agoel@cap.org 
-    use: work 
+#contact: 
+  #name: Alex Goel
+  #telecom: 
+    #system: email 
+    #value: agoel@cap.org 
+    #use: work 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
