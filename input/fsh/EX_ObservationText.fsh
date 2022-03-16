@@ -1,5 +1,6 @@
 Instance: SDCeCCObservationStringEx
 InstanceOf: ObservationSDCeCC
+Title: "SDC eCC Observation Text Example"
 Description: "Example Observation using text fill in from SDC"
 Usage: #example 
 * id = "SDCeCCObservationStringEx"
