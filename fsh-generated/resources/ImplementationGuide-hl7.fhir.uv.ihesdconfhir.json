@@ -13,17 +13,11 @@
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.hl7.org/special/committees/orders/index.cfm"
-        }
-      ]
-    },
-    {
-      "name": "Alex Goel",
-      "telecom": [
+          "value": "http://hl7.org/Special/committees/orders/index.cfm"
+        },
         {
           "system": "email",
-          "value": "agoel@cap.org",
-          "use": "work"
+          "value": "ord@lists.HL7.org"
         }
       ]
     }
@@ -75,7 +69,7 @@
         "reference": {
           "reference": "Observation/SDCeCCObservationChild"
         },
-        "name": "SDCeCCObservationChild",
+        "name": "SDC eCC Observation Child Example",
         "description": "Example Child Observation demonstrating a parent derivedFrom reference",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
@@ -83,7 +77,7 @@
         "reference": {
           "reference": "Observation/SDCeCCObservationCode"
         },
-        "name": "SDCeCCObservationCode",
+        "name": "SDC eCC Observation Code Example",
         "description": "Example Observation using codes from SDC",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
@@ -91,7 +85,7 @@
         "reference": {
           "reference": "Observation/SDCeCCObservationCodeLIR"
         },
-        "name": "SDCeCCObservationCodeLIR",
+        "name": "SDC eCC Observation List Item Response Example",
         "description": "Example Observation using codes with an additional response from SDC, which asked the user to specify the Greatest Dimension in cm.",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
@@ -99,7 +93,7 @@
         "reference": {
           "reference": "Observation/SDCeCCObservationParent"
         },
-        "name": "SDCeCCObservationParent",
+        "name": "SDC eCC Observation Parent Example",
         "description": "Example Parent Observation demonstrating a child hasMember reference",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
@@ -107,7 +101,7 @@
         "reference": {
           "reference": "Observation/SDCeCCObservationStringEx"
         },
-        "name": "SDCeCCObservationStringEx",
+        "name": "SDC eCC Observation Text Example",
         "description": "Example Observation using text fill in from SDC",
         "exampleCanonical": "http://bhl7.org/fhir/ihe-sdc-on-fhir/StructureDefinition/ihe-sdc-ecc-Observation"
       },
