@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.ihesdconfhir
-canonical: http://bhl7.org/fhir/ihe-sdc-on-fhir
+canonical: http://hl7.org/fhir/uv/ihesdconfhir
 name: IHE-SDC-eCC-On-FHIR
 title: "IHE SDC/eCC on FHIR"
 description: "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations"
@@ -18,12 +18,13 @@ publisher:
   name: HL7 International - Orders and Observations 
   url: http://hl7.org/Special/committees/orders/index.cfm
   email: ord@lists.HL7.org 
-#contact: 
-  #name: Alex Goel
-  #telecom: 
-    #system: email 
-    #value: agoel@cap.org 
-    #use: work 
+contact: 
+  name: Alex Goel
+  telecom: 
+    system: email 
+    value: agoel@cap.org
+    url: http://hl7.org/Special/committees/orders/index.cfm
+    use: work 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
