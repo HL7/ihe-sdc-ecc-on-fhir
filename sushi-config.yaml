@@ -19,7 +19,7 @@ publisher:
   url: http://hl7.org/Special/committees/orders
   email: ord@lists.HL7.org 
 contact: 
-  name: Alex Goel
+  name: Alexander Goel
   telecom: 
     system: email 
     value: agoel@cap.org
