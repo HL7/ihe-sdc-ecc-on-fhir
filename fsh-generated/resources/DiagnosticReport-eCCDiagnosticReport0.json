@@ -3,7 +3,7 @@
   "id": "eCCDiagnosticReport0",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-DiagnosticReport"
+      "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-DiagnosticReport"
     ]
   },
   "identifier": [

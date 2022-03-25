@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.ihesdconfhir
-canonical: http://hl7.org/fhir/uv/ihesdconfhir
+canonical: http://hl7.org/fhir/uv/ihesdcecc
 name: IHE-SDC-eCC-On-FHIR
 title: "IHE SDC/eCC on FHIR"
 description: "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations"
