@@ -11,7 +11,7 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-DocumentReference",
+  "url": "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-DocumentReference",
   "version": "1.0.0-ballot",
   "name": "DocumentReferenceSDCeCC",
   "title": "IHE SDC/eCC on FHIR DocumentReference",

@@ -3,7 +3,7 @@
   "id": "eCCDocRef0",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/ihesdconfhir/StructureDefinition/ihe-sdc-ecc-DocumentReference"
+      "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-DocumentReference"
     ]
   },
   "masterIdentifier": {
