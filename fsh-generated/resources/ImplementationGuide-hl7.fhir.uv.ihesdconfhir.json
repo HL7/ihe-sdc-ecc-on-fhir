@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "hl7.fhir.uv.ihesdconfhir",
-  "url": "http://hl7.org/fhir/uv/ihesdcecc/ImplementationGuide/hl7.fhir.uv.ihesdconfhir",
+  "id": "hl7.fhir.uv.ihesdcecc",
+  "url": "http://hl7.org/fhir/uv/ihesdcecc/ImplementationGuide/hl7.fhir.uv.ihesdcecc",
   "version": "1.0.0-ballot",
   "name": "IHESDCeCCOnFHIR",
   "title": "IHE SDC/eCC on FHIR",
@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "packageId": "hl7.fhir.uv.ihesdconfhir",
+  "packageId": "hl7.fhir.uv.ihesdcecc",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
