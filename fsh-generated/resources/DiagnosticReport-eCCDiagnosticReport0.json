@@ -66,6 +66,9 @@
     },
     {
       "reference": "Observation/SDCeCCObservationCodeLIR"
+    },
+    {
+      "reference": "Observation/SDCeCCObservationSection"
     }
   ],
   "presentedForm": [

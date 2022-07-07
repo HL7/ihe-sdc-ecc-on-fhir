@@ -110,6 +110,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/SDCeCCObservationSection"
+        },
+        "name": "SDC eCC Observation Section Example",
+        "description": "Example Section Observation demonstrating how to group Observations using the Observation Grouper",
+        "exampleCanonical": "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-Observation"
+      },
+      {
+        "reference": {
           "reference": "Observation/SDCeCCObservationStringEx"
         },
         "name": "SDC eCC Observation Text Example",

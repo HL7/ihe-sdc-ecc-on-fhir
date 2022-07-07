@@ -7,7 +7,7 @@ Usage: #example
 * identifier.system = "http://example.org/Observation"
 * identifier.value = "eccea3-121a-4bc3-94dc-7463cc908f2e"
 * status = #final
-* code = CAP#30524
+* code = CAP#31161 "Progesterone Receptor (PgR) Status (Note A)"
 * subject = Reference(http://example.org/patient)
 * subject.display = "Example Patient"
 * effectiveDateTime = "2021-05-11"
