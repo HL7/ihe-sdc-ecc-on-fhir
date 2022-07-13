@@ -6,44 +6,31 @@ IHE Structured Data Capture (SDC) on FHIR uses a form driven workflow to capture
 
 Observations can be used to capture Question and Answer Sets from SDC. Each Observation should capture the Question ID from SDC in the code element, and the answer in the value element. There are several question types that are described below on best practices for capture. The following sections will describe how to generally map some common data elements from IHE SDC to FHIR Observations, then will describe special considerations for by specific data type.
 
-Since IHE SDC is XML only the different elements and attributes will be identified from that specification below. Elements will be identified as starting with a capital letter, while attributes will begin with an @ (e.g. @title). Attributes belong to one or more elements, so if a specific attribute must be used it's parent element will be called out. IHE SDC elements and attributes will be described in [XPath](https://www.w3.org/TR/1999/REC-xpath-19991116/), such as `Element/Element/@attribute`. FHIR elements will be described in the standard FHIR Notation of `ResourceName.dataElement`. For example we map the IHE SDC attribute `Question/@instanceGUID` to `Observation.identifier`.
+Questions in IHE SDC are the element which are displayed to the user for them to fill in. There are a variety of question types including ListItems, Booleans, Strings, integers, decimals, etc. This page will detail how to map all of those question types to FHIR Observations.
+
+Since IHE SDC is XML only the different elements and attributes will be identified from that specification below. Elements will be identified as starting with a capital letter (e.g. `Question`), while attributes will begin with an @ (e.g. `@title`). Attributes belong to one or more elements, so if a specific attribute must be used it's parent element will be called out. IHE SDC elements and attributes will be described in [XPath](https://www.w3.org/TR/1999/REC-xpath-19991116/), such as `Element/Element/@attribute`. FHIR elements will be described in the standard FHIR Notation of `ResourceName.dataElement`. For example, we map the IHE SDC attribute `Question/@instanceGUID` to `Observation.identifier`.
 
 The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile is designed to be used with all the following data types in the subsections below.
 
 #### Observation Identification
 
-Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should refernece a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
+The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported.Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should refernece a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
 
 Said DiagnosticReport should conform to the The [IHE SDC/eCC on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) profile.
 
-#### Parent and Child Observations
+#### Observation.code
 
-As Observations represent the Question and Answer pairs from IHE SDC, they may have parent or child questions, which must also be presented as Observations. To preserve the hierachy of Question and Answer pairs the `Observation.Parent` element should be used to capture the `Observation.identifier` of the parent question and `Observation.hasMember` should be used to capture the `Observation.identifier` of the child question. The Observation specification provides guidance on how to handle [Observation.hasMember of and Observation.derivedFrom](https://www.hl7.org/fhir/observation.html#gr-other).
+For all Questions in IHE SDC the @ID and rptTxt or @title should be captured in the `Observation.code` element.
 
-An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can found in the [Artifacts](artifacts.html) page.
+The text to include in the `Observation.code` should come from one of the following IHE SDC elements or attributes:
 
-#### Sections
-
-[Observations groupers](https://www.hl7.org/fhir/observation.html#obsgrouping) should be used to represent sections.
-
-[SDC eCC Observation Section Example](Observation-SDCeCCObservationSection.html)
-
-#### ListItems
-
-SDC has two kinds of List items:
-
-* Single-Select
-* Multi-Select
-
-For both of these List item types the IHE SDC `Question` should map to the `Observation.code` and the `ListItem` should map to the `Observation.valueCodeableConcept`.
-
-The text to include in each of these Observation elements should come from one of three IHE SDC elements or attributes:
-
-* The IHE SDC sub-element of `Property/@propname="rptTxt"`
+* The IHE SDC element of `Property/@propname="rptTxt"`
 * The IHE SDC attribute of `@title`
 <!--*  The IHE SDC attribute of `@altTxt`-->
 
-rptTxt or @title may be found as part of an IHE SDC Question or ListItem. rptTxt will not be present on every IHE SDC Question or ListItem, but should always be used in place of @title if available.
+`rptTxt` or `@title` may be found as part of an IHE SDC Question or ListItem. rptTxt will not be present on every IHE SDC Question or ListItem, but should always be used in place of @title if available.
+
+The `Observation.code` element should be used to represent the `@ID` and `@title` of IHE SDC Question, regardless of question type.
 
 ##### Report Text (rptTxt) Property
 
@@ -55,16 +42,43 @@ For Single and Multi-select questions the implementer must use the report text (
 
 XPath: `Question/@title`
 
-If Report Text has the following value: val="{no text}" then the report title of the answer shall be used as the ValueCodeableConcept.
+If Report Text has is not present then the report `@title` of the answer shall be used as the ValueCodeableConcept.
 
-The XPath for No text will be: Question/Property/@propName="reportText"/@val="{no text}"
+#### Parent and Child Observations
+
+As Observations represent the Question and Answer pairs from IHE SDC, they may have parent or child questions, which must also be presented in Observations. To preserve the hierachy of Question and Answer pairs the `Observation.derivedFrom` element should be used to capture the `Observation.identifier` of the parent question and `Observation.hasMember` should be used to capture the `Observation.identifier` of the child question. The Observation specification provides guidance on how to use [Observation.hasMember and Observation.derivedFrom](https://www.hl7.org/fhir/observation.html#gr-other). A parent question may have multiple children within its `Observation.hasMember` field. 
+
+<!--Will there ever be a child with multiple parents? Should be impossible-->
+
+An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can found in the [Artifacts](artifacts.html) page.
+
+##### Sections
+
+[Observations groupers](https://www.hl7.org/fhir/observation.html#obsgrouping) should be used to represent sections as a parent Observation. When representing a section in an Observation the implementer is expected to leave the `Observation.value[x]` element blank. The `Observation.code` element should represent the Section's `@ID` and `@title` in IHE SDC.
+
+All sub-questions of the Section should be captured within the `Observation.hasMember` element.
+
+[SDC eCC Observation Section Example](Observation-SDCeCCObservationSection.html)
+
+#### ListItems
+
+IHE SDC has two kinds of List items:
+
+* Single-Select
+* Multi-Select
+
+For both of these List item types the IHE SDC `Question` should map to the `Observation.code`, as noted above, and the `ListItem` should map to the `Observation.valueCodeableConcept`.
+
+Like Questions, all ListItem answers will have an @ID element which should be captured in the `Observation.valueCodeableConcept` element along with the rptTxt property or @title attribute.
+
 <!--
 ##### Alt Text (altText)
 
 XPath: `Question/@altText`
 
 altText should only be used if the report text property and title attribute are not present. altText should be mapped for FHIR Observation.ValueCodeableConcept.
---> 
+-->
+
 #### Single-Select
 
 Single Select questions in IHE SDC should be captured as `Observation.valueCodeableConcept` with the IHE SDC `ListItem @ID` for as the coding, and the `ListItem` @altText, @rptTxt, or @title as text.
@@ -86,13 +100,17 @@ There are a number of questions in IHE SDC which have sub-question types directl
 
 For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as "\<ListItemResponseFields\>" and require the Observation to the component element to capture the additional filled information. See example: [SDCeCCObservationCodeLIR](Observation-SDCeCCObservationCodeLIR.html)
 
-#### Displayed Items
+#### DisplayItems
+
+DisplayItems are text which are shown to the user filling out the form. These elements do not need to be repsented within FHIR.
 
 #### Untitled Questions
 
+There are some questions which may not have an `@title` attribute or a rptText element present in their question element. These untitled questions are typically sub-questions to be answered in specific contexts. If an untitled question is present then the parent element in the IHE SDC form should be taken as the `Observation.code` in the Observation. Doing so will prevent any blank display values on the `Observation.code` element.
+
 #### Other Data Types
 
-Other data types should be captured in `Observation.value[x]` as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc. There is a profile in this iGuide for each of these data types.  
+Other data types should be captured in `Observation.value[x]` as their closest IHE SDC for match, whether that be DateTime, Boolean, Integer, etc.
 
 | IHE SDC DataType            | FHIR `Observation.value[x]` type |
 | --------------------------- | --------------------------- |

@@ -1,7 +1,7 @@
 ## Terminology
 These codes and titles from the CKeys are mapped to standardized terminologies (e.g. SNOMED-CT) using a ConceptMap Resource. Data extraction and mapping can then be aided through the use of these codes.
 
-Codes can make the data more usable for anyone using a more common system such as SNOMED-CT.\
+Codes can make the data more usable for anyone using a more common system such as SNOMED-CT.
 
 Each mapping of a CAP Ckey to a SNOMED code could be mapped in a ConceptMap resource. The ConceptMap resource could be used to insert a SNOMED Code into a FHIR Observation for the applicable term.
 
