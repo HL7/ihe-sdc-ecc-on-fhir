@@ -126,6 +126,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/conceptMapIGex"
+        },
+        "name": "Example ConceptMap resource showing mapping of SNOMED to CAP CKeys",
+        "description": "Example ConceptMap showing how SNOMED Codes may be mapped to CAP eCCs. Note: Draft and example only not for production use, only testing purposes",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/eCCDiagnosticReport0"
         },
         "name": "eCC Diagnostic Report",
