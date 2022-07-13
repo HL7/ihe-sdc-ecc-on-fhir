@@ -1,4 +1,5 @@
 ## Terminology
+
 These codes and titles from the CKeys are mapped to standardized terminologies (e.g. SNOMED-CT) using a ConceptMap Resource. Data extraction and mapping can then be aided through the use of these codes.
 
 Codes can make the data more usable for anyone using a more common system such as SNOMED-CT.
