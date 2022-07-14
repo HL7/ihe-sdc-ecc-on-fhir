@@ -1,10 +1,10 @@
-Instance: conceptMapIGex
+Instance: conceptMapCAPex
 InstanceOf: ConceptMap
 Title: "Example ConceptMap resource showing mapping of SNOMED to CAP CKeys"
 Usage: #example
 Description: "Example ConceptMap showing how SNOMED Codes may be mapped to CAP eCCs. Note: Draft and example only not for production use, only testing purposes"
 * status = #draft
-* name = "EX-CAP-ConceptMap"
+* name = "ConceptMapCAPex"
 * title = "Example CAP Concept Map of SNOMED to CAP Ckeys"
 * experimental = true
 * date = "2022-04-20"

@@ -6,6 +6,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="ConceptMap/conceptMapCAPex" key="ConceptMap-conceptMapCAPex" name="Example ConceptMap resource showing mapping of SNOMED to CAP CKeys"/>
 <artifact id="StructureDefinition/ihe-sdc-ecc-DiagnosticReport" key="StructureDefinition-ihe-sdc-ecc-DiagnosticReport" name="IHE SDC/eCC on FHIR DiagnosticReport"/>
 <artifact id="StructureDefinition/ihe-sdc-ecc-DocumentReference" key="StructureDefinition-ihe-sdc-ecc-ihe-sdc-ecc-DocumentReference" name="IHE SDC/eCC on FHIR DocumentReference"/>
 <artifact id="StructureDefinition/ihe-sdc-ecc-Observation" key="StructureDefinition-ihe-sdc-ecc-Observation" name="IHE SDC/eCC on FHIR Observation"/>
@@ -14,6 +15,7 @@
 <artifact id="Observation/SDCeCCObservationCode" key="Observation-SDCeCCObservationCode" name="SDC eCC Observation Code Example"/>
 <artifact id="Observation/SDCeCCObservationCodeLIR" key="Observation-SDCeCCObservationCodeLIR" name="SDC eCC Observation List Item Response Example"/>
 <artifact id="Observation/SDCeCCObservationParent" key="Observation-SDCeCCObservationParent" name="SDC eCC Observation Parent Example"/>
+<artifact id="Observation/SDCeCCObservationSection" key="Observation-SDCeCCObservationSection" name="SDC eCC Observation Section Example"/>
 <artifact id="Observation/SDCeCCObservationStringEx" key="Observation-SDCeCCObservationStringEx" name="SDC eCC Observation Text Example"/>
 <artifact id="DiagnosticReport/eCCDiagnosticReport0" key="DiagnosticReport-eCCDiagnosticReport0" name="eCC Diagnostic Report"/>
 <page key="NA" name="(NA)"/>
