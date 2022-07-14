@@ -161,7 +161,12 @@
         },
         {
           "nameUrl": "dataextraction.html",
-          "title": "Dataextraction",
+          "title": "Data Extraction",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
           "generation": "markdown"
         },
         {
@@ -172,11 +177,6 @@
         {
           "nameUrl": "support.html",
           "title": "Support",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "terminology.html",
-          "title": "Terminology",
           "generation": "markdown"
         }
       ]

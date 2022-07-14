@@ -25,6 +25,18 @@ contact:
     value: agoel@cap.org
     url: http://hl7.org/Special/committees/orders/index.cfm
     use: work 
+pages: 
+  index.md: 
+    title: Home
+  dataextraction.md:
+    title: Data Extraction
+  terminology.md: 
+    title: Terminology
+  downloads.md: 
+    title: Downloads
+  support.md: 
+    title: Support
+
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
