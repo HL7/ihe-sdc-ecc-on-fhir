@@ -2,7 +2,7 @@ Profile: ObservationSDCeCC
 Parent: Observation
 Id: ihe-sdc-ecc-Observation
 Title: "IHE SDC/eCC on FHIR Observation"
-Description: "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. Any additional  fill in answers in an Observation.component.value. If the question is Multiselect multiple Observations with the same Question Code should be created. A section Should also be represented as a grouping Observation"
+Description: "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. Any additional  fill in answers in an Observation.component.value. If the question is Multiselect multiple Observations with the same Question Code should be created. A section should also be represented as a grouping Observation"
 * identifier 1..* MS 
 * identifier ^short = "the SDC instanceGUID"
 * identifier ^definition = "The identifier should match the SDC answer instanceGUID. If an answer instanceGUID is not available a Question instanceGUID shall be used"

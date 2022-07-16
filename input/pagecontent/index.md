@@ -1,4 +1,8 @@
-<!--## IHE SDC/eCC on FHIR Home Page-->
+<!--## IHE SDC/eCC on FHIR Home Page
+
+Add reference to Cancer Pathology Guide, phrase as US realm example when available still in ballot
+
+-->
 *Note: If you have come here looking for FHIR Structured Data Capture using Questionnaire go here: [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
 This implementation guide describes how to use [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) with FHIR.*
 
@@ -6,7 +10,7 @@ This implementation guide describes how to use [Integrating the Healthcare Enter
 
 [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
 
-The SDC initiative was established by the ONC in 2013 to develop two implementation guides:
+The SDC initiative was established by The Office of the National Coordinator for Health Information Technology (ONC) in 2013 to develop two implementation guides:
 
 + [IHE SDC Technical Framework](https://wiki.ihe.net/index.php/Structured_Data_Capture)
 + [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
@@ -76,11 +80,11 @@ This implementation guide establishes a pattern for how to transport IHE SDC for
 
 ### Audience
 
-This implementation guide is intended for those Form designers, systems developers and integrators, and clinical informaticists. The audiences for this implementation guide should consider how IHE SDC forms and data may be used within FHIR.
+This implementation guide is intended for those form designers, systems developers and integrators, and clinical informaticists. The audiences for this implementation guide should consider how IHE SDC forms and data may be used within FHIR.
 
 ### SDC Form Structure
 
-IHE SDC ustilizes Identifiers on all Question and Answer Sets (QAS). These IDs within the QAS better allow for mapping between IHE SDC forms, standard or local terminology, billing codes, etc. They enable implementers to better capture and utilize their structured data within databases. 
+IHE SDC utilizes Identifiers on all Question and Answer Sets (QAS). These IDs within the QAS better allow for mapping between IHE SDC forms, standard or local terminology, billing codes, etc. They enable implementers to better capture and utilize their structured data within databases.
 
 IHE SDC forms also have a robust metadata section that allows for the capture of important copyright information on the form, its disease site and other important information such as versioning. More detail on this can be found in the [IHE SDC Technical Framework Supplement](https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_SDC.pdf)
 

@@ -2,17 +2,17 @@ IHE Structured Data Capture (SDC) on FHIR uses a form driven workflow to capture
 
 ### Observation-Based Extraction
 
-Observations can be used to capture Question and Answer Sets from SDC. Each Observation should capture the Question ID from SDC in the code element, and the answer in the value element. There are several question types that are described below on best practices for capture. The following sections will describe how to generally map some common data elements from IHE SDC to FHIR Observations, then will describe special considerations for by specific data type.
+Observations can be used to capture Question and Answer Sets from SDC. Each Observation should capture the Question ID from SDC in the code element, and the answer in the value element. There are several question types that are described below on best practices for capture. The following sections will describe how to generally map some common data elements from IHE SDC to FHIR Observations, then will describe special considerations for specific data types.
 
 Questions in IHE SDC are the element which are displayed to the user for them to fill in. There are a variety of question types including ListItems, Booleans, Strings, integers, decimals, etc. This page will detail how to map all of those question types to FHIR Observations.
 
-Since IHE SDC is XML only the different elements and attributes will be identified from that specification below. Elements will be identified as starting with a capital letter (e.g. `Question`), while attributes will begin with an @ (e.g. `@title`). Attributes belong to one or more elements, so if a specific attribute must be used it's parent element will be called out. IHE SDC elements and attributes will be described in [XPath](https://www.w3.org/TR/1999/REC-xpath-19991116/), such as `Element/Element/@attribute`. W3C offers a [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp). FHIR elements will be described in the standard FHIR Notation of `ResourceName.dataElement`. For example, we map the IHE SDC attribute `Question/@instanceGUID` to `Observation.identifier`.
+Since IHE SDC is XML only the different elements and attributes will be identified from that specification below. Elements will be identified as starting with a capital letter (e.g. `Question`), while attributes will begin with an @ (e.g. `@title`). Attributes belong to one or more elements, so if a specific attribute must be used its parent element will be called out. IHE SDC elements and attributes will be described in [XPath](https://www.w3.org/TR/1999/REC-xpath-19991116/), such as `Element/Element/@attribute`. W3C offers a [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp). FHIR elements will be described in the standard FHIR Notation of `ResourceName.dataElement`. For example, we map the IHE SDC attribute `Question/@instanceGUID` to `Observation.identifier`.
 
 The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile is designed to be used with all the following data types in the subsections below.
 
 #### Observation Identification
 
-The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported.Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should refernece a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
+The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported. Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should refernece a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
 
 Said DiagnosticReport should conform to the The [IHE SDC/eCC on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) profile.
 
@@ -56,7 +56,7 @@ As Observations represent the Question and Answer pairs from IHE SDC, they may h
 
 <!--Will there ever be a child with multiple parents? Should be impossible-->
 
-An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can found in the [Artifacts](artifacts.html) page.
+An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can be found in the [Artifacts](artifacts.html) page.
 
 #### Sections
 
@@ -85,7 +85,7 @@ Single Select questions in IHE SDC should be captured as `Observation.valueCodea
 
 ##### Multi-Select
 
-Similar to Single Select questions in SDC should be captured as `Observation.valueCodeableConcept` with the SDC ID for as the coding as separate Observations. Therefore each answer should be uniquely represented in a separate Observation and could be linked together by referencing the same DocumentReference in the `Observation.derivedFrom` element or in a FHIR DiagnosticReport.
+Similar to Single Select Questions in SDC should be captured as `Observation.valueCodeableConcept` with the SDC ID as the coding as separate Observations. Therefore each answer should be uniquely represented in a separate Observation and could be linked together by referencing the same DocumentReference in the `Observation.derivedFrom` element or in a FHIR DiagnosticReport.
 
 #### List Item Responses (LIR)
 
@@ -102,7 +102,7 @@ Observations for text based questions should be captured as `Observation.valueSt
 
 #### DisplayItems
 
-DisplayItems are text which are shown to the user filling out the form. These elements do not need to be repsented within FHIR.
+DisplayItems are text which are shown to the user filling out the form. These elements do not need to be represented within FHIR.
 
 #### Untitled Questions
 
@@ -140,7 +140,7 @@ The Structure Map may be used to cover complex types of questions which have uni
 
 Additionally Structure Map could be used to write to different FHIR resources other than Observation, where a resource such as Condition or Procedure may be more appropriate.
 
-Note: Structure Map is still be explored by the IG authors for these kinds of use cases.
+Note: Structure Map is still being explored by the IG authors for these kinds of use cases.
 
 ### Historical Data
 
