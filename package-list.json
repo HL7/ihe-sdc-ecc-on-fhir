@@ -15,7 +15,7 @@
         "status": "ballot",
         "sequence": "STU1",
         "fhirversion": "4.0.1",
-        "path": "http://hl7.org/fhir/uv/ihesdcecc/2022May",
+        "path": "http://hl7.org/fhir/uv/ihesdcecc/2022Sep",
         "date": "2022-05-01",
         "current": false
       }
