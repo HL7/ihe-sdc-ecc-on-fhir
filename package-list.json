@@ -20,7 +20,7 @@
         "current": false
       }
     ],
-    "package-id": "hl7.fhir.uv.ihesdconfhir",
+    "package-id": "hl7.fhir.uv.ihesdcecc",
     "title": "IHE SDC/eCC on FHIR",
     "canonical": "http://hl7.org/fhir/uv/ihesdcecc",
     "category": "Orders and Observaitons"
