@@ -3,7 +3,7 @@
   "id": "SDCeCCObservationStringEx",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-Observation"
+      "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation"
     ]
   },
   "identifier": [

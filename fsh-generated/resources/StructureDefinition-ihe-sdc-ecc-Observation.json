@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org/fhir/uv/ihesdcecc/StructureDefinition/ihe-sdc-ecc-Observation",
+  "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation",
   "version": "1.0.0-ballot",
   "name": "ObservationSDCeCC",
   "title": "IHE SDC/eCC on FHIR Observation",
