@@ -15,13 +15,13 @@
         "status": "ballot",
         "sequence": "STU1",
         "fhirversion": "4.0.1",
-        "path": "http://hl7.org/fhir/uv/ihesdcecc/2022May",
+        "path": "http://hl7.org/fhir/uv/ihe-sdc-ecc/2022Sep",
         "date": "2022-05-01",
         "current": false
       }
     ],
-    "package-id": "hl7.fhir.uv.ihesdconfhir",
+    "package-id": "hl7.fhir.uv.ihe-sdc-ecc",
     "title": "IHE SDC/eCC on FHIR",
-    "canonical": "http://hl7.org/fhir/uv/ihesdcecc",
+    "canonical": "http://hl7.org/fhir/uv/ihe-sdc-ecc",
     "category": "Orders and Observaitons"
   }

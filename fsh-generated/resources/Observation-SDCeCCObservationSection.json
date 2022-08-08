@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "SDCeCCObservationParent",
+  "id": "SDCeCCObservationSection",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation"
@@ -9,16 +9,16 @@
   "identifier": [
     {
       "system": "http://example.org/Observation",
-      "value": "eccea3-121a-4bc3-94dc-7463cc908f2e"
+      "value": "mmk6z8-121a-4bc3-94dc-7463cc9oi88"
     }
   ],
   "status": "final",
   "code": {
     "coding": [
       {
-        "code": "31161",
+        "code": "17537",
         "system": "http://cap.org/eCC",
-        "display": "Progesterone Receptor (PgR) Status (Note A)"
+        "display": "CLINICAL"
       }
     ]
   },
@@ -33,16 +33,13 @@
       "display": "Example Practitioner"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "31001",
-        "system": "http://cap.org/eCC",
-        "display": "Negative (less than 1%)"
-      }
-    ]
-  },
   "hasMember": [
+    {
+      "identifier": {
+        "system": "http://example.org/Observation",
+        "value": "eccea3-121a-4bc3-94dc-7463cc908f2e"
+      }
+    },
     {
       "identifier": {
         "system": "http://example.org/Observation",

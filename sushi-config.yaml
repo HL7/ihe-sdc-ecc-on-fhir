@@ -2,8 +2,8 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.ihesdcecc
-canonical: http://hl7.org/fhir/uv/ihesdcecc
+id: hl7.fhir.uv.ihe-sdc-ecc
+canonical: http://hl7.org/fhir/uv/ihe-sdc-ecc
 name: IHE-SDC-eCC-On-FHIR
 title: "IHE SDC/eCC on FHIR"
 description: "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations"
@@ -25,6 +25,18 @@ contact:
     value: agoel@cap.org
     url: http://hl7.org/Special/committees/orders/index.cfm
     use: work 
+pages: 
+  index.md: 
+    title: Home
+  dataextraction.md:
+    title: Data Extraction
+  terminology.md: 
+    title: Terminology
+  downloads.md: 
+    title: Downloads
+  support.md: 
+    title: Support
+
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
