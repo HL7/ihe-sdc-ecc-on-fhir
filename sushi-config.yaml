@@ -24,7 +24,7 @@ contact:
     system: email 
     value: agoel@cap.org
     url: http://hl7.org/Special/committees/orders/index.cfm
-    use: work 
+    use: work
 pages: 
   index.md: 
     title: Home
