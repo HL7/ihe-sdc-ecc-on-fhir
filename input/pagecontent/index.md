@@ -4,7 +4,7 @@ Add reference to Cancer Pathology Guide, phrase as US realm example when availab
 
 -->
 *Note: If you have come here looking for FHIR Structured Data Capture using Questionnaire go here: [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
-This implementation guide describes how to use [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) with FHIR.*
+This implementation guide describes how to use [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) with FHIR. This guide was produced as a collaborative effort between the IHE Quality, Research, and Public Health (QRPH) and HL7.*
 
 ### Introduction
 
