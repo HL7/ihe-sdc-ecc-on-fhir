@@ -7,7 +7,7 @@ Description: "A DocumentReference Profile meant to share an IHE SDC Form whether
 * masterIdentifier ^short = "the form's SDC ID if blank, or @instanceVersionGUID if filled"
 * masterIdentifier ^definition = "the form's SDC ID should be replaced by form's instanceVersionGUID if the form has been filled"
 * identifier MS
-* identifier ^short = " form identifying information"
+* identifier ^short = "form identifying information"
 * identifier ^definition = "Additional identifying information about the form such as its fullURI"
 * category 1..* MS 
 * subject MS 
