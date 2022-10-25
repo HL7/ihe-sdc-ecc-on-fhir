@@ -8,14 +8,14 @@ This implementation guide describes how to use [Integrating the Healthcare Enter
 
 ### Introduction
 
-[Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
+This implementation guide will enable implementers to transmit [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC) data using FHIR resources, which are based on  [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture). IHE SDC/eCC on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
 
 The SDC initiative was established by The Office of the National Coordinator for Health Information Technology (ONC) in 2013 to develop two implementation guides:
 
 + [IHE SDC Technical Framework](https://wiki.ihe.net/index.php/Structured_Data_Capture)
 + [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
 
-On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC). This implementation guide will enable implementers to transmit eCC data in FHIR resources.
+On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of eCCs. This implementation guide will enable implementers to transmit eCC data in FHIR resources.
 
 <!--Can we put this in the guide? shows a concrete example of what this implementation guide does
 
@@ -64,7 +64,7 @@ In this use case the conversion of SDC forms to FHIR resources has the potential
 
 #### Quality measurement and evaluation
 
-In this use case the conversion of SDC forms to FHIR resources could enable institutions to more easily collect data as it relates to pathology or radiology reporting through a common and standardized format. This would enable improved analysis of data which could then be used for quality measurement and evaluation activities at the facility or physician level. Based on the data collected institutions could introduce quality improvement initiatives or additional training opportunities for providers.
+In this use case the conversion of SDC forms to FHIR resources could enable institutions to more easily collect data as it relates to pathology or radiology reporting through a common and standardized format. This would enable improved analysis of data which could then be used for quality measurement and evaluation activities at the facility or physician level. Based on the data collected institutions could introduce quality improvement initiatives or additional training opportunities for providers. Quality Measurement is not in scope for this implementation guide; implementers are expected to use this IG to facilitate data capture for Quality Measurement.
 
 #### Clinical guideline concordance evaluation
 
@@ -92,7 +92,7 @@ The [Data Extraction](dataextraction.html) section of this IG describes how to c
 
 ### Transport of the IHE SDC Forms within FHIR
 
-A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form shall be Base64 encoded and included for transport much like a CDA document or PDF might be. The [IHE SDC/eCC on FHIR DocumentReference](StructureDefinition-ihe-sdc-ecc-DocumentReference.html) profile describes the constraints of sending an IHE SDC form using FHIR protocols.
+A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form **SHALL** be Base64 encoded and included for transport much like a CDA document or PDF might be. The [IHE SDC/eCC on FHIR DocumentReference](StructureDefinition-ihe-sdc-ecc-DocumentReference.html) profile describes the constraints of sending an IHE SDC form using FHIR protocols.
 
 #### Support of DocumentReference
 

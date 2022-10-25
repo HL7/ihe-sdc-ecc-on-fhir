@@ -1,8 +1,8 @@
 These codes and titles from the CKeys are mapped to standardized terminologies (e.g. SNOMED-CT) using a ConceptMap Resource. Data extraction and mapping can then be aided through the use of these codes.
 
-More commonly standardized and broadly used code systems such as SNOMED-CT can make the data more usable for any systems that may not have familiarity with the existing code system in the forms.
+More commonly standardized and broadly used terminology systems such as SNOMED-CT can make the data more usable for any systems that may not have familiarity with the existing code system in the forms.
 
-Each mapping of a CAP Ckey to a SNOMED code is mapped in a ConceptMap resource. The ConceptMap resource could be used to insert a SNOMED Code into a FHIR Observation for the applicable term. This methodology could greatly increase the semantic between different systems. This IG has an [Example ConceptMap of CAP CKeys to SNOMED](ConceptMap-conceptMapCAPex.html).
+Each mapping of a CAP Ckey to a SNOMED code is mapped in a ConceptMap resource. The ConceptMap resource could be used to insert a SNOMED Code into a FHIR Observation for the applicable term. This methodology could greatly increase the semantic interoperability between different systems. This IG has an [Example ConceptMap of CAP CKeys to SNOMED](ConceptMap-conceptMapCAPex.html).
 
 Codes could be mapped to the Observation by either the Sender or the Receiver. There are pros and cons to both approaches.
 

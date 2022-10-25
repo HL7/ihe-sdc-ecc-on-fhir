@@ -12,7 +12,7 @@ The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observatio
 
 #### Observation Identification
 
-The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported. Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should refernece a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
+The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported. Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should reference a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
 
 Said DiagnosticReport should conform to the The [IHE SDC/eCC on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) profile.
 
@@ -32,23 +32,25 @@ The `Observation.code` element should be used to represent the `@ID` and `@title
 
 For guidance on how to add standard terminology to these `Observation.code` elements, see the [Terminology](terminology.html) section of this IG.
 
-##### Report Text (rptTxt) Property
+##### Report Text (reportText) Property
 
 XPath: `Question/Property/@propName="reportText"/@val`
 
 For Single and Multi-select questions the implementer must use the report text (rptText) attribute instead of the title attribute which is the default. rptText should be mapped for FHIR Observation.ValueCodeableConcept.
 
+There may be some reportText properties which have a `@val={no text}`. In these cases the @title attribute should still be used.
+
 ##### Title (@title)
 
 XPath: `Question/@title`
 
-If Report Text has is not present then the report `@title` of the answer shall be used as the ValueCodeableConcept.
+If Report Text has is not present then the report `@title` of the answer _SHALL_ be used as the ValueCodeableConcept.
 
 <!--##### Alt Text (altText)
 
 XPath: `Question/Property/@propName="altText"/@val`
 
-altText should only be used if the report text property and `@title` attribute are not present.--> 
+altText should only be used if the report text property and `@title` attribute are not present.-->
 
 #### Parent and Child Observations
 
@@ -57,6 +59,8 @@ As Observations represent the Question and Answer pairs from IHE SDC, they may h
 <!--Will there ever be a child with multiple parents? Should be impossible-->
 
 An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can be found in the [Artifacts](artifacts.html) page.
+
+For all Sections and Questions, they only reference child and/or parent Questions/Sections. Never a Grandparent, Grandchild, etc.
 
 #### Sections
 
@@ -81,11 +85,11 @@ The same guidance in the [Terminology](terminology.html) section of this IG for 
 
 ##### Single-Select
 
-Single Select questions in IHE SDC should be captured as `Observation.valueCodeableConcept` with the IHE SDC `ListItem @ID` for as the coding, and the `ListItem` @altText, @rptTxt, or @title as text.
+Single Select question/answer pairs in IHE SDC should be captured as `Observation.valueCodeableConcept` with the IHE SDC `ListItem @ID` for as the coding, and the `ListItem` @altText, @rptTxt, or @title as text.
 
 ##### Multi-Select
 
-Similar to Single Select Questions in SDC should be captured as `Observation.valueCodeableConcept` with the SDC ID as the coding as separate Observations. Therefore each answer should be uniquely represented in a separate Observation and could be linked together by referencing the same DocumentReference in the `Observation.derivedFrom` element or in a FHIR DiagnosticReport.
+Similar to Single Select question/answer pairs in SDC should be captured as `Observation.valueCodeableConcept` with the SDC ID as the coding as separate Observations. Therefore each answer should be uniquely represented in a separate Observation and could be linked together by referencing the same DocumentReference in the `Observation.derivedFrom` element or in a FHIR DiagnosticReport.
 
 #### List Item Responses (LIR)
 
@@ -144,7 +148,7 @@ Note: Structure Map is still being explored by the IG authors for these kinds of
 
 ### Historical Data
 
-It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC froms. If the question types and IHE SDC IDs were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide.
+It is possible that the patterns detailed in this guide could be used to extract data from historically collected IHE SDC forms. If the question types and IHE SDC IDs were maintained it could be feasible to write that data into FHIR messages following profiles outlined in this guide.
 
 <!-- #### Data Storage Considerations
 Mapping can be accomplished in order to promote robust data models that allow for advanced data analytics and shareable data models. There are a number of intersections for SDC and data models such as OHDSI. For example SDC and OHDSI both have a heavy reliance on identifiers. -->
