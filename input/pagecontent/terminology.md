@@ -1,4 +1,4 @@
-These codes and titles from the SDC IDs (which are formatted as CAP decimal CompositeKey (CKey) in electronic Cancer Protocols) are mapped to standardized terminologies (e.g. SNOMED CT) using a ConceptMap Resource. Data extraction and mapping can then be aided through the use of these codes.
+SDC IDs (which are formatted as CAP decimal CompositeKey (CKey) in electronic Cancer Protocols) are mapped to standardized terminologies (e.g. SNOMED CT) using a ConceptMap Resource. Data extraction and mapping can then be aided through the use of these codes.
 
 More commonly standardized and broadly used terminology systems such as SNOMED CT can make the data more usable for any systems that may not have familiarity with the existing code system in the forms.
 
