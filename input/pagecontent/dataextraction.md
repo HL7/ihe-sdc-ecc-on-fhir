@@ -113,6 +113,12 @@ DisplayItems are text which are shown to the user filling out the form. These el
 There are some questions which may not have an `@title` attribute or a rptText element present in their question element. These untitled questions are typically sub-questions to be answered in specific contexts. If an untitled question is present then the untitled question `@ID` should be included as the `Observation.code` element, with a blank display value.
 
 <!--
+#### Repeating Sections and Questions
+
+There are sections which may repeat in an SDC form. These sections will be identified with an `@ID` attribute in the SDC form appended with an `_1`. These elements should be captured in a 
+
+-->
+<!--
 Removed the following old text because using the parent question or alt text could be dangerous
 
 Old text:
