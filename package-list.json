@@ -23,5 +23,5 @@
     "package-id": "hl7.fhir.uv.ihe-sdc-ecc",
     "title": "IHE SDC/eCC on FHIR",
     "canonical": "http://hl7.org/fhir/uv/ihe-sdc-ecc",
-    "category": "Orders and Observaitons"
+    "category": "Orders and Observations"
   }
