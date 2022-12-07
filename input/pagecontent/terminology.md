@@ -10,6 +10,8 @@ Any use case where the receiver may not have the ConceptMap available, it will b
 
 In other use cases, such as the sender submitting the data to a receiving cancer registry it may make more sense for the receiver to use the ConceptMap to map the more commonly standardized terms upon receipt of the data. This approach may decrease message size and the processing burden by the sender.
 
+The section above describes how to map standard codes to the generated Observations, however the same methodology of using a ConceptMap could be used to map local codes to the Observations.
+
 <!-- add example from ConceptMap and expand the point above
 Could put the code in the sent Observation or provide the ConceptMap for the receiver to use the code
 If the receiver is provided the ConceptMap it might be easier since they'll be able to add the SNOMED Codes to their exisiting data model - do pros and cons
