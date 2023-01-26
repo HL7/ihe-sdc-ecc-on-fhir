@@ -8,3 +8,4 @@ template/
 .DS_Store
 .DS_Store
 /fsh-generated
+package-list.json
