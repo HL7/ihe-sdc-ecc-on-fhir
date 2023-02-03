@@ -113,3 +113,15 @@ This library of FHIR resources was developed and produced through the efforts of
 This material contains content from [SNOMED CT®](https://www.snomed.org/). SNOMED CT is a registered trademark of the International Health Terminology Standard Development Organization (IHTSDO).
 
 This material contains content from the CAP. The [Electronic Cancer Checklists](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecc) are copyrighted by the CAP. All rights reserved.
+
+### Dependencies
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+{% include globals-table.xhtml %}
+
+### IP Statements
+{% include ip-statements.xhtml %}
