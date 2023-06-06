@@ -1,7 +1,7 @@
 Profile: DiagnosticReportSDCeCC
 Parent: DiagnosticReport
 Id: ihe-sdc-ecc-DiagnosticReport
-Title: "IHE SDC/eCC on FHIR DiagnosticReport"
+Title: "IHE SDC/eCP on FHIR DiagnosticReport"
 Description: "A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form"
 * status 1..1 MS 
 * category MS 

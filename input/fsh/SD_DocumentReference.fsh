@@ -1,7 +1,7 @@
 Profile: DocumentReferenceSDCeCC
 Parent: DocumentReference
 Id: ihe-sdc-ecc-DocumentReference
-Title: "IHE SDC/eCC on FHIR DocumentReference"
+Title: "IHE SDC/eCP on FHIR DocumentReference"
 Description: "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank"
 * masterIdentifier 1..1 MS
 * masterIdentifier ^short = "the form's SDC ID if blank, or @instanceVersionGUID if filled"

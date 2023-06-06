@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationCodeLIR
 InstanceOf: ObservationSDCeCC
-Title: "SDC eCC Observation List Item Response Example"
+Title: "SDC eCP Observation List Item Response Example"
 Description: "Example Observation using codes with an additional response from SDC, which asked the user to specify the Greatest Dimension in cm."
 Usage: #example 
 * id = "SDCeCCObservationCodeLIR"

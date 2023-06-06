@@ -1,4 +1,4 @@
-<!--## IHE SDC/eCC on FHIR Home Page
+<!--## IHE SDC/eCP on FHIR Home Page
 
 Add reference to Cancer Pathology Guide, phrase as US realm example when available still in ballot
 
@@ -8,14 +8,22 @@ This implementation guide describes how to use [Integrating the Healthcare Enter
 
 ### Introduction
 
+<<<<<<< Updated upstream
 [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations. The primary use case for this is transmitting data captured in College of American Pathologists [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC), which are distributed as IHE SDC templates.
+=======
+This implementation guide will enable implementers to transmit [electronic Cancer Protocols (eCPs)](https://www.cap.org/protocols-and-guidelines/electronic-cancer-protocols) (formerly known as the electronic Cancer Checklists (eCCs)) data using FHIR resources, which are based on  [Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC)](https://wiki.ihe.net/index.php/Structured_Data_Capture). IHE SDC/eCP on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations.
+>>>>>>> Stashed changes
 
 The SDC initiative was established by The Office of the National Coordinator for Health Information Technology (ONC) in 2013 to develop two implementation guides:
 
 + [IHE SDC Technical Framework](https://wiki.ihe.net/index.php/Structured_Data_Capture)
 + [HL7 FHIR SDC Implementation Guide](https://hl7.org/fhir/uv/sdc/)
 
+<<<<<<< Updated upstream
 On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of [electronic Cancer Checklists (eCCs)](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecC). This implementation guide will enable implementers to transmit eCC data in FHIR resources.
+=======
+On March 30, 2017 the ONC transitioned both initiatives into community led projects. Both initiatives focus on improving data capture within healthcare. The CAP selected IHE SDC for their collection of eCPs. This implementation guide will enable implementers to transmit eCP data in FHIR resources.
+>>>>>>> Stashed changes
 
 <!--Can we put this in the guide? shows a concrete example of what this implementation guide does
 
@@ -23,7 +31,7 @@ There is a parser implementation available for this guide available here: https:
 -->
 IHE SDC is deployed in a number of different use cases, beyond Pathology and in order to accomodate those additional use cases this IG is Universal Realm. It is expected that implementers may want to apply other standards such as US-Core to this IG in order to meet their needs. This IG is intended as guidance on how to map from the IHE SDC XML form model to FHIR. It should be noted that this guide does not make use of Questionnaire like FHIR SDC, but does follow the same data extraction pattern.
 
-The encoded eCC/SDC xml may be included in the message as an encoded attachment data element or alternatively linked as a URL.
+The encoded eCP/SDC xml may be included in the message as an encoded attachment data element or alternatively linked as a URL.
 
 <!--Say that this guide is designed to convert IHE SDC forms to FHIR for transportation, but the main reports and fillable forms should always be generated from the IHE SDC and that should always be considered the source of truth-->
 
@@ -41,7 +49,7 @@ This guide supports:
 
 Leveraging IHE SDC and FHIR allows for data to be shared more easily and enables improved data management and analysis as well as pre-population of data in new forms. The coding of structured data automates the interpretation and utilization of the data thereby allowing for the automation of processes, and increasing efficiency and accuracy. The representation of data as a FHIR resource can remove barriers that exist between different datasets while improving interoperability and making data more useful to providers, hospitals, and cancer registries.
 
-### The College of American Pathologists eCCs
+### The College of American Pathologists eCPs
 
 The College of American Pathologists (CAP) Cancer Reporting Protocols offer a guideline for the collection of key data elements for reporting of malignant tumours. The protocols can be used in a number of different tumour types and procedures such as biopsies and resections. Protocols are made up of two parts: the case summary and the explanatory notes.
 
@@ -51,7 +59,7 @@ The explanatory notes within the cancer protocols aim to provide guidance and su
 
 ### Common use cases
 
-Use cases for IHE SDC/eCC  on FHIR include:
+Use cases for IHE SDC/eCP  on FHIR include:
 
 + Public health reporting (e.g. Cancer Registry reporting)
 + Quality measurement and evaluation
@@ -92,11 +100,15 @@ The [Data Extraction](dataextraction.html) section of this IG describes how to c
 
 ### Transport of the IHE SDC Forms within FHIR
 
+<<<<<<< Updated upstream
 A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form shall be Base64 encoded and included for transport much like a CDA document or PDF might be. The [IHE SDC/eCC on FHIR DocumentReference](StructureDefinition-ihe-sdc-ecc-DocumentReference.html) profile describes the constraints of sending an IHE SDC form using FHIR protocols.
+=======
+A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form **SHALL** be Base64 encoded and included for transport much like a CDA document or PDF might be. The [IHE SDC/eCP on FHIR DocumentReference](StructureDefinition-ihe-sdc-ecc-DocumentReference.html) profile describes the constraints of sending an IHE SDC form using FHIR protocols.
+>>>>>>> Stashed changes
 
 #### Support of DocumentReference
 
-It should be noted that DocumentReference is ideal for transmitting blank forms, but may also be used for filled forms in systems which do not support DiagnosticReport. Therefore an implementer may use a DocumentReference to capture the IHE SDC form and share it within FHIR with its filled data. Otherwise, the preference is for implementers to capture the data as described on the [Data Extraction](dataextraction.html) page using the [IHE SDC/eCC on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) and the [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html).
+It should be noted that DocumentReference is ideal for transmitting blank forms, but may also be used for filled forms in systems which do not support DiagnosticReport. Therefore an implementer may use a DocumentReference to capture the IHE SDC form and share it within FHIR with its filled data. Otherwise, the preference is for implementers to capture the data as described on the [Data Extraction](dataextraction.html) page using the [IHE SDC/eCP on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) and the [IHE SDC/eCP on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html).
 
 ### Must Support
 
@@ -112,4 +124,20 @@ This library of FHIR resources was developed and produced through the efforts of
 
 This material contains content from [SNOMED CT®](https://www.snomed.org/). SNOMED CT is a registered trademark of the International Health Terminology Standard Development Organization (IHTSDO).
 
+<<<<<<< Updated upstream
 This material contains content from the CAP. The [Electronic Cancer Checklists](https://www.cap.org/laboratory-improvement/proficiency-testing/cap-ecc) are copyrighted by the CAP. All rights reserved.
+=======
+This material contains content from the CAP. The [Electronic Cancer Protocols](https://www.cap.org/protocols-and-guidelines/electronic-cancer-protocols) are copyrighted by the CAP. All rights reserved.
+
+### Dependencies
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+{% include globals-table.xhtml %}
+
+### IP Statements
+{% include ip-statements.xhtml %}
+>>>>>>> Stashed changes

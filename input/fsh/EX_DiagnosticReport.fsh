@@ -1,7 +1,7 @@
 Instance: eCCDiagnosticReport
 InstanceOf: DiagnosticReportSDCeCC
-Title: "eCC Diagnostic Report"
-Description: "Example eCC Diagnostic report"
+Title: "eCP Diagnostic Report"
+Description: "Example eCP Diagnostic report"
 Usage: #example
 * id = "eCCDiagnosticReport0"
 * identifier.use = #usual 

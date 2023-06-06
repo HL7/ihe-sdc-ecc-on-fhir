@@ -5,7 +5,7 @@
 id: hl7.fhir.uv.ihe-sdc-ecc
 canonical: http://hl7.org/fhir/uv/ihe-sdc-ecc
 name: IHE-SDC-eCC-On-FHIR
-title: "IHE SDC/eCC on FHIR"
+title: "IHE SDC/eCP on FHIR"
 description: "Integrating the Healthcare Enterprise (IHE) Structured Data Capture (SDC) on FHIR uses a form-driven workflow to capture and transmit encoded data by creating FHIR Observations"
 license: CC0-1.0
 status: draft
