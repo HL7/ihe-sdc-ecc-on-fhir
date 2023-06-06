@@ -12,11 +12,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0-STU1",
   "name": "ObservationSDCeCC",
   "title": "IHE SDC/eCC on FHIR Observation",
   "status": "active",
-  "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. Any additional  fill in answers in an Observation.component.value. If the question is Multiselect multiple Observations with the same Question Code should be created. A section should also be represented as a grouping Observation",
+  "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. If the question is Multiselect multiple Observations with the same Question Code should be created. A section should also be represented as a grouping Observation. If the question has a follow up text or number entry field e.g. Other (Specify) the information from the textbox should be stored in the Observation.component.value, and the Observation.component.code should repeat the Observation.value as the sub-question.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -72,6 +72,11 @@
         "definition": "The code should match the question ID from the SDC form. In a given Observation group, there might be repeating codes for multiselect questions, though these Observations will have different values"
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "the value for selected answer",
@@ -83,6 +88,14 @@
         "path": "Observation.hasMember",
         "short": "child observation reference",
         "definition": "hasMember should be used to capture any child questions in related Observations",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -90,6 +103,14 @@
         "path": "Observation.derivedFrom",
         "short": "parent observation reference",
         "definition": "derivedFrom should be used to capture a parent Observation or the parent DocumentReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationCode
 InstanceOf: ObservationSDCeCC
-Title: "SDC eCC Observation Code Example"
+Title: "SDC eCP Observation Code Example"
 Description: "Example Observation using codes from SDC"
 Usage: #example 
 * id = "SDCeCCObservationCode"

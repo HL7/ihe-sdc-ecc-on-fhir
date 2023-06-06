@@ -8,13 +8,13 @@ Questions in IHE SDC are the element which are displayed to the user for them to
 
 Since IHE SDC is XML only the different elements and attributes will be identified from that specification below. Elements will be identified as starting with a capital letter (e.g. `Question`), while attributes will begin with an @ (e.g. `@title`). Attributes belong to one or more elements, so if a specific attribute must be used its parent element will be called out. IHE SDC elements and attributes will be described in [XPath](https://www.w3.org/TR/1999/REC-xpath-19991116/), such as `Element/Element/@attribute`. W3C offers a [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp). FHIR elements will be described in the standard FHIR Notation of `ResourceName.dataElement`. For example, we map the IHE SDC attribute `Question/@instanceGUID` to `Observation.identifier`.
 
-The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile is designed to be used with all the following data types in the subsections below.
+The [IHE SDC/eCP on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile is designed to be used with all the following data types in the subsections below.
 
 #### Observation Identification
 
-The [IHE SDC/eCC on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported. Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should reference a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
+The [IHE SDC/eCP on FHIR Observation](StructureDefinition-ihe-sdc-ecc-Observation.html) profile requires Observation.identifier to be used and supported. Observations should be identified using the IHE SDC `Question/@instanceGUID` to the `Observation.identifier`. The @instanceGUID will uniquely identify this Observation. Observations should reference a patient, the practitioner, a date, and be attached to a DiagnosticReport to ensure provenance of the resource.
 
-Said DiagnosticReport should conform to the The [IHE SDC/eCC on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) profile.
+Said DiagnosticReport should conform to the The [IHE SDC/eCP on FHIR DiagnosticReport](StructureDefinition-ihe-sdc-ecc-DiagnosticReport.html) profile.
 
 #### Observation.code
 
@@ -58,7 +58,7 @@ As Observations represent the Question and Answer pairs from IHE SDC, they may h
 
 <!--Will there ever be a child with multiple parents? Should be impossible-->
 
-An [SDC eCC Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCC Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can be found in the [Artifacts](artifacts.html) page.
+An [SDC eCP Observation Parent Example](Observation-SDCeCCObservationParent.html) and [SDC eCP Observation Child Example](Observation-SDCeCCObservationChild.html) showing how these Observations can be grouped together can be found in the [Artifacts](artifacts.html) page.
 
 For all Sections and Questions, they only reference child and/or parent Questions/Sections. Never a Grandparent, Grandchild, etc.
 
@@ -68,7 +68,7 @@ For all Sections and Questions, they only reference child and/or parent Question
 
 All sub-questions of the Section should be captured within the `Observation.hasMember` element.
 
-[SDC eCC Observation Section Example](Observation-SDCeCCObservationSection.html)
+[SDC eCP Observation Section Example](Observation-SDCeCCObservationSection.html)
 
 #### ListItems
 
@@ -98,7 +98,7 @@ There are a number of questions in IHE SDC which have sub-question types directl
 * Greatest dimension in cm
 * Cannot be determined (explain)
 
-For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as `ListItemResponseFields` and require the Observation to the component element to capture the additional filled information. See example: [SDCeCCObservationCodeLIR](Observation-SDCeCCObservationCodeLIR.html)
+For "Greatest dimension in cm" there may be a numerical fill in box attached the question, and likewise for the "Cannot be determined (explain)" there may be a string List Item Response box attached. These are handled as special elements from other questions in the IHE SDC specification known as `ListItemResponseFields` and require the Observation to the component element to capture the additional filled information. See example: [SDCeCPObservationCodeLIR](Observation-SDCeCCObservationCodeLIR.html)
 
 #### Text Answers
 

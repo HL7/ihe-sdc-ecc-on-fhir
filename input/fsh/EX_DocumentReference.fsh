@@ -1,8 +1,8 @@
 Alias:   LNC = http://loinc.org
 Instance: SDC-eCC-DocRef
 InstanceOf: DocumentReferenceSDCeCC
-Title: "SDC eCC DocumentReference"
-Description: "Example DocumentReference with eCC attached as Base64 encoded xml"
+Title: "SDC eCP DocumentReference"
+Description: "Example DocumentReference with eCP attached as Base64 encoded xml"
 Usage: #example 
 * id = "eCCDocRef0"
 * masterIdentifier.use = #usual 

@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationSection
 InstanceOf: ObservationSDCeCC
-Title: "SDC eCC Observation Section Example"
+Title: "SDC eCP Observation Section Example"
 Description: "Example Section Observation demonstrating how to group Observations using the Observation Grouper"
 Usage: #example 
 * id = "SDCeCCObservationSection"

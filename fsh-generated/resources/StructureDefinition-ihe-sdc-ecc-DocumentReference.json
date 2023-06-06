@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-DocumentReference",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0-STU1",
   "name": "DocumentReferenceSDCeCC",
   "title": "IHE SDC/eCC on FHIR DocumentReference",
   "status": "active",
@@ -73,7 +73,7 @@
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "short": "Any additional form identifying information",
+        "short": "form identifying information",
         "definition": "Additional identifying information about the form such as its fullURI",
         "mustSupport": true
       },

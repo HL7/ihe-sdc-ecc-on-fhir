@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationChild
 InstanceOf: ObservationSDCeCC
-Title: "SDC eCC Observation Child Example"
+Title: "SDC eCP Observation Child Example"
 Description: "Example Child Observation demonstrating a parent derivedFrom reference"
 Usage: #example
 

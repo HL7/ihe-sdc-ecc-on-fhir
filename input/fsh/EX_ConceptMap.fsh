@@ -2,17 +2,17 @@ Instance: conceptMapCAPex
 InstanceOf: ConceptMap
 Title: "Example ConceptMap resource showing mapping of SNOMED to CAP CKeys"
 Usage: #example
-Description: "Example ConceptMap showing how SNOMED Codes may be mapped to CAP eCCs. Note: Draft and example only not for production use, only testing purposes"
+Description: "Example ConceptMap showing how SNOMED Codes may be mapped to CAP eCPs. Note: Draft and example only not for production use, only testing purposes"
 * status = #draft
 * name = "ConceptMapCAPex"
-* title = "Example CAP Concept Map of SNOMED to CAP Ckeys"
+* title = "Example CAP Concept Map of SNOMED to CAP eCP content identifiers"
 * experimental = true
 * date = "2022-04-20"
 * publisher = "College of American Pathologists"
 * contact.telecom.system = #email
 * contact.telecom.value = "agoel@cap.org"
-* description = "mapping of SNOMED to CAP CKeys"
-* purpose = "mapping of SNOMED to CAP CKeys"
+* description = "mapping of SNOMED to CAP IDs"
+* purpose = "mapping of SNOMED to CAP IDs"
 * copyright = "College of American Pathologists 2022"
 * group.source = "http://cap.org/eCC"
 * group.target = "http://snomed.info/sct"

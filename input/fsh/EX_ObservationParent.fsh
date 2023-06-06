@@ -1,6 +1,6 @@
 Instance: SDCeCCObservationParent
 InstanceOf: ObservationSDCeCC
-Title: "SDC eCC Observation Parent Example"
+Title: "SDC eCP Observation Parent Example"
 Description: "Example Parent Observation demonstrating a child hasMember reference"
 Usage: #example 
 * id = "SDCeCCObservationParent"
