@@ -11,6 +11,7 @@ Usage: #example
 * status = #final
 * category = LNC#LP7839-6 "Pathology"
 * code = LNC#60568-3 "Pathology Synoptic report"
+//This comment https://jira.hl7.org/browse/FHIR-38321 suggests that the subject and performer below are incorrectly represented, but when I try to do just [system/patient] the Published fails. Should I remove these references?
 * subject = Reference(http://example.org/patient)
 * subject.display = "Example Patient"
 * effectiveDateTime = "2021-05-11"

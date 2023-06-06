@@ -8,4 +8,7 @@ template/
 .DS_Store
 .DS_Store
 /fsh-generated
+/fsh-generated/resources
 package-list.json
+package-lock.json
+/node_modules
