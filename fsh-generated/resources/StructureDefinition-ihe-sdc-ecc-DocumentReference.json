@@ -1,20 +1,9 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ihe-sdc-ecc-DocumentReference",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Foundation.Documents"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "not-classified"
-    }
-  ],
   "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-DocumentReference",
-  "version": "1.0.0-STU1",
   "name": "DocumentReferenceSDCeCC",
-  "title": "IHE SDC/eCC on FHIR DocumentReference",
+  "title": "IHE SDC/eCP on FHIR DocumentReference",
   "status": "active",
   "description": "A DocumentReference Profile meant to share an IHE SDC Form whether completed or blank",
   "fhirVersion": "4.0.1",
