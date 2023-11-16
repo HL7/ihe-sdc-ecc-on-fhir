@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ihe-sdc-ecc-DiagnosticReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "oo"
+    }
+  ],
   "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-DiagnosticReport",
   "name": "DiagnosticReportSDCeCC",
   "title": "IHE SDC/eCP on FHIR DiagnosticReport",

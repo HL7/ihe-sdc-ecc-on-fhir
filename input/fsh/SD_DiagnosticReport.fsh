@@ -3,6 +3,7 @@ Parent: DiagnosticReport
 Id: ihe-sdc-ecc-DiagnosticReport
 Title: "IHE SDC/eCP on FHIR DiagnosticReport"
 Description: "A DiagnosticReport Profile meant to capture what should be represented in a report parsed from an IHE SDC Form"
+* ^extension[$WG].valueCode = #oo
 * status 1..1 MS 
 * category MS 
 * code MS 

@@ -10,3 +10,4 @@ Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias:   ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   ObsStatus = http://hl7.org/fhir/observation-status
 Alias:   ObsInt = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+Alias:   $WG = http://hl7.org/fhir/StructureDefinition/structuredefinition-wg

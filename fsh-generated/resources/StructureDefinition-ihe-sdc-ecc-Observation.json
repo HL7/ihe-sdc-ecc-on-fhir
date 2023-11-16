@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ihe-sdc-ecc-Observation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "oo"
+    }
+  ],
   "url": "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ihe-sdc-ecc-Observation",
   "name": "ObservationSDCeCC",
   "title": "IHE SDC/eCP on FHIR Observation",

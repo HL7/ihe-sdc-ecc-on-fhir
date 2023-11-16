@@ -14,14 +14,17 @@ fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: trial-use
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: oo
 publisher:
-  name: HL7 International - Orders and Observations 
-  url: http://hl7.org/Special/committees/orders
+  name: HL7 International / Orders and Observations
+  url: http://www.hl7.org/Special/committees/orders
   email: ord@lists.HL7.org 
 contact: 
-  name: Alexander Goel
+- name: Alexander Goel
   telecom: 
-    system: email 
+  - system: email 
     value: agoel@cap.org
     use: work
 pages: 
@@ -35,7 +38,8 @@ pages:
     title: Downloads
   support.md: 
     title: Support
-
+dependencies:
+  hl7.fhir.uv.extensions: current
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
