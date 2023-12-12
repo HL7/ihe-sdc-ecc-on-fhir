@@ -1,9 +1,9 @@
 {
     "package-id" : "hl7.fhir.uv.ihe-sdc-ecc",
     "version" : "1.0.0",
-    "path" : "http://hl7.org/fhir/uv/ihe-sdc-ecc",
+    "path" : "http://hl7.org/fhir/uv/ihe-sdc-ecc/STU1",
     "mode" : "milestone",
-    "status" : "release",
+    "status" : "trial-use",
     "sequence" : "Releases",
     "desc" : "IHE SDC/electronic Cancer Protocols (eCPs) on FHIR STU1 Release",
     "descmd" : "IHE SDC/electronic Cancer Protocols (eCPs) on FHIR STU1 Release",
