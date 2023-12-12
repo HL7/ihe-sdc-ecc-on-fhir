@@ -64,7 +64,7 @@ For all Sections and Questions, they only reference child and/or parent Question
 
 #### Sections
 
-[Observations groupers](https://www.hl7.org/fhir/observation.html#obsgrouping) should be used to represent sections as a parent Observation. When representing a section in an Observation the implementer is expected to leave the `Observation.value[x]` element blank. The `Observation.code` element should represent the Section's `@ID` and `@title` in IHE SDC.
+[Observations groupers](http://hl7.org/fhir/R4B/observation.html#obsgrouping) should be used to represent sections as a parent Observation. When representing a section in an Observation the implementer is expected to leave the `Observation.value[x]` element blank. The `Observation.code` element should represent the Section's `@ID` and `@title` in IHE SDC.
 
 All sub-questions of the Section should be captured within the `Observation.hasMember` element.
 
