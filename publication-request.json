@@ -4,7 +4,7 @@
     "path" : "http://hl7.org/fhir/uv/ihe-sdc-ecc/STU1",
     "mode" : "milestone",
     "status" : "trial-use",
-    "sequence" : "Releases",
+    "sequence" : "STU1",
     "desc" : "IHE SDC/electronic Cancer Protocols (eCPs) on FHIR STU1 Release",
     "descmd" : "IHE SDC/electronic Cancer Protocols (eCPs) on FHIR STU1 Release",
     "first" : false
