@@ -11,40 +11,8 @@
   "name": "ObservationSDCeCC",
   "title": "IHE SDC/eCP on FHIR Observation",
   "status": "active",
-  "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. If the question is Multiselect multiple Observations with the same Question Code should be created. A section should also be represented as a grouping Observation. If the question has a follow up text or number entry field e.g. Other (Specify) the information from the textbox should be stored in the Observation.component.value, and the Observation.component.code should repeat the Observation.value as the sub-question.",
+  "description": "This Observation Profile describes how to capture Question/Answer Pairs from IHE SDC. If the question is Multiselect multiple Observations with the same Question Code should be created. A section should also be represented as a grouping Observation. If the question has a follow-up text or number entry field e.g. Other (Specify) the information from the textbox should be stored in the Observation.component.value, and the Observation.component.code should repeat the Observation.value as the sub-question.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "sct-concept",
-      "uri": "http://snomed.info/conceptdomain",
-      "name": "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "sct-attr",
-      "uri": "http://snomed.org/attributebinding",
-      "name": "SNOMED CT Attribute Binding"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -53,10 +21,41 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:observationOrder",
+        "path": "Observation.extension",
+        "sliceName": "observationOrder",
+        "short": "Order of the observation",
+        "definition": "This extension allows ordering of related observations within a DiagnosticReport or DocumentReference.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/uv/ihe-sdc-ecc/StructureDefinition/ObservationOrder"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
         "short": "the SDC instanceGUID",
-        "definition": "The identifier should match the SDC answer instanceGUID. If an answer instanceGUID is not available a Question instanceGUID shall be used",
+        "definition": "The identifier should match the SDC answer instanceGUID. If an answer instanceGUID is not available a Question instanceGUID shall be used.",
         "min": 1,
         "mustSupport": true
       },
@@ -64,7 +63,7 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "SDC section/question ID",
-        "definition": "The code should match the question ID from the SDC form. In a given Observation group, there might be repeating codes for multiselect questions, though these Observations will have different values"
+        "definition": "The code should match the question ID from the SDC form. In a given Observation group, there might be repeating codes for multiselect questions, though these Observations will have different values."
       },
       {
         "id": "Observation.subject",
@@ -75,14 +74,14 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "the value for selected answer",
-        "definition": "The value should match the from the SDC form. Unique Observations should be created for each multi-select answer",
+        "definition": "The value should match the from the SDC form. Unique Observations should be created for each multi-select answer.",
         "mustSupport": true
       },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "short": "child observation reference",
-        "definition": "hasMember should be used to capture any child questions in related Observations",
+        "definition": "hasMember should be used to capture any child questions in related Observations.",
         "type": [
           {
             "code": "Reference",
@@ -97,7 +96,7 @@
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "parent observation reference",
-        "definition": "derivedFrom should be used to capture a parent Observation or the parent DocumentReference",
+        "definition": "derivedFrom should be used to capture a parent Observation or the parent DocumentReference.",
         "type": [
           {
             "code": "Reference",
@@ -112,7 +111,7 @@
         "id": "Observation.component",
         "path": "Observation.component",
         "short": "additional entry",
-        "definition": "Any additional list item response fields which were filled in should be captured in the component as their appropriate value type",
+        "definition": "Any additional list item response fields which were filled in should be captured in the component as their appropriate value type.",
         "mustSupport": true
       }
     ]
