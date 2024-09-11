@@ -32,7 +32,7 @@ The `Observation.code` element should be used to represent the `@ID` and `@title
 
 For guidance on how to add standard terminology to these `Observation.code` elements, see the [Terminology](terminology.html) section of this IG.
 
-##### Report Text (reportText) Property
+#### Report Text (reportText) Property
 
 XPath: `Question/Property/@propName="reportText"/@val`
 
@@ -40,7 +40,7 @@ For Single and Multi-select questions the implementer must use the report text (
 
 There may be some reportText properties which have a `@val={no text}`. In these cases the @title attribute should still be used.
 
-##### Title (@title)
+#### Title (@title)
 
 XPath: `Question/@title`
 
@@ -51,6 +51,14 @@ If Report Text has is not present then the report `@title` of the answer _SHALL_
 XPath: `Question/Property/@propName="altText"/@val`
 
 altText should only be used if the report text property and `@title` attribute are not present.-->
+
+#### Order (@order)
+
+xPath: [Element]/@order
+
+The `@order` attribute from in an SDC form or template defines the sequential order of elements like sections, questions, and answer choices. It ensures the correct visual and logical arrangement of these elements when the original XML ordering is disrupted by an implementation technology that does not support ordering (such as object collections or unordered data structures). Additionally, the order attribute can be used to verify that the XML tree is correctly imported and interpreted during implementation.
+
+The order attribute should be represented as a decimal value in the [ObservationOrder Extension](StructureDefinition-ObservationOrder.html). This value indicates the explicit sequence in which the Observations should appear in the context of the form, ensuring consistent display and structure across different systems or implementations.
 
 #### Parent and Child Observations
 

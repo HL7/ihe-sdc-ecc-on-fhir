@@ -9,7 +9,7 @@ Description: "This Observation Profile describes how to capture Question/Answer 
 
 // Add the ObservationOrder extension to the profile
 * extension contains ObservationOrder named observationOrder 0..1
-* extension[ObservationOrder].valueInteger MS
+* extension[ObservationOrder].valueQuantity MS
 * extension[ObservationOrder] ^short = "Order of the observation"
 * extension[ObservationOrder] ^definition = "This extension allows ordering of related observations within a DiagnosticReport or DocumentReference."
 
