@@ -126,6 +126,22 @@ flowchart TD
     TumorSec -- "hasMember" --> TumorSize
 ```
 
+##### Why Observation Groupers for Sections
+
+IHE SDC forms, and CAP eCPs in particular, organize questions into a hierarchy of sections and sub-sections. Each section groups related clinical findings (e.g., Tumor, Margins, Biomarker Studies) and may itself contain nested sub-sections. This hierarchical structure carries clinical meaning: it reflects the logical organization of the pathology report as designed by the CAP.
+
+This IG uses Observation groupers (Observations with `hasMember` references and no value) to preserve this section hierarchy in FHIR for the following reasons:
+
+1. **Hierarchy preservation**: `DiagnosticReport.result` is a flat list and cannot represent nested section structures. Grouper Observations can nest via `hasMember` to faithfully represent the multi-level section hierarchy found in eCPs.
+
+2. **Section identity**: Each section in an eCP has its own `@ID` and `@title`. Representing sections as Observations preserves these identifiers in `Observation.code`, enabling systems to reconstruct the original form structure from FHIR resources.
+
+3. **Alignment with hasMember**: The [FHIR Observation specification](https://www.hl7.org/fhir/observation.html#gr-other) provides explicit guidance for using `hasMember` to group related observations. This pattern is consistent with how other IGs (such as the [International Patient Summary](https://hl7.org/fhir/uv/ips/) and the [EU Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/)) handle observation grouping.
+
+4. **Query support**: Grouper Observations allow FHIR servers to return section-level results, enabling clients to retrieve a specific section of a report (e.g., all Biomarker results) without needing to retrieve the entire report.
+
+This approach does not use `Observation.component` for grouping, consistent with guidance from the HL7 Orders and Observations working group that laboratory and pathology results should use `hasMember` rather than `component` for grouping purposes (see [FHIR-51724](https://jira.hl7.org/browse/FHIR-51724)).
+
 #### ListItems
 
 IHE SDC has two kinds of List items:
