@@ -79,6 +79,8 @@ In this use case information collected through SDC forms could be used to auto-p
 
 This implementation guide establishes a pattern for how to transport IHE SDC forms using FHIR DocumentReference, and DiagnosticReport, and how to extract data from IHE SDC forms to FHIR Resources, namely Observations.
 
+Because IHE SDC forms are defined exclusively in XML, this IG's data extraction guidance references SDC XML elements and attributes. The FHIR output resources produced by this mapping may be serialized in either JSON or XML per standard FHIR conventions.
+
 ### Audience
 
 This implementation guide is intended for those form designers, systems developers and integrators, and clinical informaticists. The audiences for this implementation guide should consider how IHE SDC forms and data may be used within FHIR.

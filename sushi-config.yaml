@@ -17,6 +17,8 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: oo
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
 publisher:
   name: HL7 International / Orders and Observations
   url: http://www.hl7.org/Special/committees/orders
@@ -39,7 +41,7 @@ pages:
   support.md: 
     title: Support
 dependencies:
-  hl7.fhir.uv.extensions: current
+  hl7.fhir.uv.extensions.r4: current
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
