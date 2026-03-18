@@ -1,0 +1,26 @@
+@startuml
+
+skinparam component {
+    BackgroundColor #white
+    BorderColor #333333
+}
+
+component "DiagnosticReport\nBreast Invasive Resection" as DR
+
+component "Observation: BIOMARKER STUDIES\n(Section Grouper, no value)" as BiomarkerSec
+component "Observation: TUMOR\n(Section Grouper, no value)" as TumorSec
+
+component "Observation\ncode: eCC#31161\nProgesterone Receptor PgR Status\nvalueCodeableConcept" as PgR
+component "Observation\ncode: eCC#31159\nEstrogen Receptor ER Status\nvalueCodeableConcept" as ER
+component "Observation\ncode: eCC#2129\nTumor Size\nvalueQuantity" as TumorSize
+
+component "DocumentReference\nBase64 SDC XML" as DocRef
+
+DR --> BiomarkerSec : result
+DR --> TumorSec : result
+DR --> DocRef : result
+BiomarkerSec --> PgR : hasMember
+BiomarkerSec --> ER : hasMember
+TumorSec --> TumorSize : hasMember
+
+@enduml

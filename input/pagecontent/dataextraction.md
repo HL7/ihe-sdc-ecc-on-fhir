@@ -72,80 +72,11 @@ All sub-questions of the Section should be captured within the `Observation.hasM
 
 The following diagram illustrates the general pattern for mapping an eCP form to FHIR resources. An eCP form is organized into Sections, each containing Questions with Answers. The DiagnosticReport references section-level grouper Observations (which carry no value) via `result`. Each grouper Observation uses `hasMember` to reference child Observations that represent individual Question/Answer pairs. Parent/child question hierarchies are linked using `hasMember` (down) and `derivedFrom` (up). The original SDC XML form can be transported as a Base64-encoded DocumentReference.
 
-```plantuml
-@startuml
-
-skinparam rectangle {
-    BackgroundColor<<ecp>> #f5f5f5
-    BorderColor<<ecp>> #999999
-}
-
-skinparam component {
-    BackgroundColor #white
-    BorderColor #333333
-}
-
-rectangle "eCP Form" <<ecp>> {
-    component "Section" as Section1
-    component "Section" as Section2
-    component "Question + Answer" as Q1
-    component "Question + Answer" as Q2
-    component "Question + Answer" as Q3
-    Section1 --> Q1
-    Section1 --> Q2
-    Section2 --> Q3
-}
-
-component "DiagnosticReport" as DR
-component "Observation: Section Grouper\n(no value)" as SecObs1
-component "Observation: Section Grouper\n(no value)" as SecObs2
-component "Observation\ncode = Question @ID\nvalue = Answer" as Obs1
-component "Observation\ncode = Question @ID\nvalue = Answer" as Obs2
-component "Observation\ncode = Question @ID\nvalue = Answer" as Obs3
-component "DocumentReference\n(Base64 SDC XML)" as DocRef
-
-DR --> SecObs1 : result
-DR --> SecObs2 : result
-SecObs1 --> Obs1 : hasMember
-SecObs1 --> Obs2 : hasMember
-SecObs2 --> Obs3 : hasMember
-Obs2 --> Obs3 : hasMember
-Obs3 ..> Obs2 : derivedFrom
-DR --> DocRef : result
-
-@enduml
-```
+{% include img.html img="ecp-to-fhir-general.png" caption="General eCP to FHIR Mapping Pattern" width="70%" %}
 
 The following diagram shows a concrete example using a CAP Breast Invasive Resection eCP. The DiagnosticReport references two section grouper Observations — BIOMARKER STUDIES and TUMOR — each of which groups specific clinical findings via `hasMember`. A DocumentReference carries the original Base64-encoded SDC XML.
 
-```plantuml
-@startuml
-
-skinparam component {
-    BackgroundColor #white
-    BorderColor #333333
-}
-
-component "DiagnosticReport\nBreast Invasive Resection" as DR
-
-component "Observation: BIOMARKER STUDIES\n(Section Grouper, no value)" as BiomarkerSec
-component "Observation: TUMOR\n(Section Grouper, no value)" as TumorSec
-
-component "Observation\ncode: eCC#31161\nProgesterone Receptor PgR Status\nvalueCodeableConcept" as PgR
-component "Observation\ncode: eCC#31159\nEstrogen Receptor ER Status\nvalueCodeableConcept" as ER
-component "Observation\ncode: eCC#2129\nTumor Size\nvalueQuantity" as TumorSize
-
-component "DocumentReference\nBase64 SDC XML" as DocRef
-
-DR --> BiomarkerSec : result
-DR --> TumorSec : result
-DR --> DocRef : result
-BiomarkerSec --> PgR : hasMember
-BiomarkerSec --> ER : hasMember
-TumorSec --> TumorSize : hasMember
-
-@enduml
-```
+{% include img.html img="ecp-to-fhir-breast-example.png" caption="CAP Breast Invasive Resection eCP Example" width="70%" %}
 
 ##### Why Observation Groupers for Sections
 

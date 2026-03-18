@@ -1,0 +1,41 @@
+@startuml
+
+skinparam rectangle {
+    BackgroundColor<<ecp>> #f5f5f5
+    BorderColor<<ecp>> #999999
+}
+
+skinparam component {
+    BackgroundColor #white
+    BorderColor #333333
+}
+
+rectangle "eCP Form" <<ecp>> {
+    component "Section" as Section1
+    component "Section" as Section2
+    component "Question + Answer" as Q1
+    component "Question + Answer" as Q2
+    component "Question + Answer" as Q3
+    Section1 --> Q1
+    Section1 --> Q2
+    Section2 --> Q3
+}
+
+component "DiagnosticReport" as DR
+component "Observation: Section Grouper\n(no value)" as SecObs1
+component "Observation: Section Grouper\n(no value)" as SecObs2
+component "Observation\ncode = Question @ID\nvalue = Answer" as Obs1
+component "Observation\ncode = Question @ID\nvalue = Answer" as Obs2
+component "Observation\ncode = Question @ID\nvalue = Answer" as Obs3
+component "DocumentReference\n(Base64 SDC XML)" as DocRef
+
+DR --> SecObs1 : result
+DR --> SecObs2 : result
+SecObs1 --> Obs1 : hasMember
+SecObs1 --> Obs2 : hasMember
+SecObs2 --> Obs3 : hasMember
+Obs2 --> Obs3 : hasMember
+Obs3 ..> Obs2 : derivedFrom
+DR --> DocRef : result
+
+@enduml
