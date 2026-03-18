@@ -72,11 +72,11 @@ All sub-questions of the Section should be captured within the `Observation.hasM
 
 The following diagram illustrates the general pattern for mapping an eCP form to FHIR resources. An eCP form is organized into Sections, each containing Questions with Answers. The DiagnosticReport references section-level grouper Observations (which carry no value) via `result`. Each grouper Observation uses `hasMember` to reference child Observations that represent individual Question/Answer pairs. Parent/child question hierarchies are linked using `hasMember` (down) and `derivedFrom` (up). The original SDC XML form can be transported as a Base64-encoded DocumentReference.
 
-![General eCP to FHIR Mapping Pattern](ecp-to-fhir-general.png){: width="70%"}
+<img src="../ecp-to-fhir-general.png" alt="General eCP to FHIR Mapping Pattern" width="70%"/>
 
 The following diagram shows a concrete example using a CAP Breast Invasive Resection eCP. The DiagnosticReport references two section grouper Observations — BIOMARKER STUDIES and TUMOR — each of which groups specific clinical findings via `hasMember`. A DocumentReference carries the original Base64-encoded SDC XML.
 
-![CAP Breast Invasive Resection eCP Example](ecp-to-fhir-breast-example.png){: width="70%"}
+<img src="../ecp-to-fhir-breast-example.png" alt="CAP Breast Invasive Resection eCP Example" width="70%"/>
 
 ##### Why Observation Groupers for Sections
 
