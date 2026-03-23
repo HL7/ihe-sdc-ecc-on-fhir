@@ -44,7 +44,7 @@ There may be some reportText properties which have a `@val={no text}`. In these 
 
 XPath: `Question/@title`
 
-If Report Text has is not present then the report `@title` of the answer _SHALL_ be used as the ValueCodeableConcept.
+If Report Text is not present then the report `@title` of the answer **SHALL** be used as the ValueCodeableConcept.
 
 <!--##### Alt Text (altText)
 
