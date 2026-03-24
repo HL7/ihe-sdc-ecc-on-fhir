@@ -95,7 +95,9 @@ The [Data Extraction](dataextraction.html) section of this IG describes how to c
 
 ### Transport of the IHE SDC Forms within FHIR
 
+<div class="fhir-conformance" markdown="1">
 A DocumentReference is the preferred way to transport an IHE SDC form as an attachment within FHIR. The Form **SHALL** be Base64 encoded and included for transport much like a CDA document or PDF might be. The [IHE SDC/eCP on FHIR DocumentReference](StructureDefinition-ihe-sdc-ecc-DocumentReference.html) profile describes the constraints of sending an IHE SDC form using FHIR protocols.
+</div>
 
 #### Support of DocumentReference
 
